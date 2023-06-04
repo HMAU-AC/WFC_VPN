@@ -1,4 +1,4 @@
-Setup ossutil
+name: Setup ossutil
 
 on: [push]
 
@@ -24,5 +24,5 @@ jobs:
 
         
 
-    - run: ossutil cp ./WFC_VPN oss://achmau/ -rf # 将xxxxx改为创建的Bucket名称，-rf表示覆盖
+  - run: ossutil cp ./WFC_VPN oss://achmau/ -rf # 将xxxxx改为创建的Bucket名称，-rf表示覆盖
 
