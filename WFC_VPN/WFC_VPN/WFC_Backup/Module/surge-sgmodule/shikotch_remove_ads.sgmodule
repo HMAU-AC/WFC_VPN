@@ -1,0 +1,27 @@
+#!name = shikotch广告
+#!desc = shikotch去广告
+#!open = shikotch.net
+#!author = 爱吃素的胖子
+#!homepage = https://achmau.oss-cn-shanghai.aliyuncs.com/WFC_Backup/Module/surge-sgmodule/shikotch_remove_ads.sgmodule
+#!icon = https://achmau.oss-cn-shanghai.aliyuncs.com/WFC_Backup/Icon/R18JZ.png
+
+
+[Rule]
+
+DOMAIN-SUFFIX,asmr18.fans,REJECT
+DOMAIN-SUFFIX,exosrv.com,REJECT
+DOMAIN-SUFFIX,cn101.club,REJECT
+DOMAIN-SUFFIX,kgfjrb711.com,REJECT
+
+[URL Rewrite]
+^https:\/\/(rt|img)\.dlsite\.jp\/\S* - reject
+^https:\/\/(img|rt)\.gsspat\.jp\/\S* - reject
+^https:\/\/(edayo|cs|js)\.boost-next\.co\.jp\/\S* - reject
+
+
+[Script]
+
+Remove_ shikotch = type=http-response,pattern="^https?:\/\/shikotch(.com|.net)\/(\S+\/|\S{1}s{1}\S+)$",requires-body=1,max-size=0,script-path=https://achmau.oss-cn-shanghai.aliyuncs.com/WFC_Backup/Module/loon-js/shikotch.js,script-update-interval=1
+
+[MITM]
+hostname = %APPEND% cs.boost-next.co.jp,js.boost-next.co.jp,edayo.boost-next.co.jp,*.dlsite.jp,*.gsspat.jp,shikotch.net

@@ -1,0 +1,17 @@
+#!name=FD
+#!desc=FD
+#!icon=https://github.com/KeiKinn/StickerOnScreen/raw/main/Stickers/Sticker_1075.png
+
+[Rewrite]
+
+^http[s]?:\/\/.*dushu365\.com\/resource-orchestration-system\/play\/duration - reject-200
+
+[Script]
+
+http-response ^http[s]?:\/\/.+dushu.+(v101|v100|program\/v100)\/(content|play\/duration|index|list|userInfo|vipInfo|info|ceiltip|mainList|getMarketInfoByType|share).*$ script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/FD.js, requires-body=true, timeout=60 ,tag=FD_15
+
+http-request ^http[s]?:\/\/.+dushu.+(v101\/content|book\/v100\/info|\/play\/duration|\/v100\/index|lilei-talk-orch\/program\/v100\/info).*$ script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/FDTK.js, requires-body=true, timeout=60 ,tag=FDTK_16
+
+[MITM]
+
+hostname = *dushu*

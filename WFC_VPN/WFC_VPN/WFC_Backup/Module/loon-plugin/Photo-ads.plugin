@@ -1,0 +1,65 @@
+#!name = 写真网站去广告
+#!desc = 写真网站去广告
+#!open = mrcong.com
+#!author = 爱吃素的胖子
+#!homepage = https://achmau.oss-cn-shanghai.aliyuncs.com/WFC_Backup/Module/loon-plugin/Photo-ads.plugin
+#!icon = https://achmau.oss-cn-shanghai.aliyuncs.com/WFC_Backup/Icon/R18JZ.png
+
+
+[Rule]
+
+IP-CIDR,162.252.214.4/32,REJECT-DICT
+DOMAIN,defybrick.com,REJECT-DICT
+DOMAIN,outbrain.com,REJECT-DICT
+DOMAIN,outbrainimg.REJECT-DICT
+
+[Rewrite]
+
+
+^https:\/\/manhuabika\.com\/ad reject
+^https:\/\/manhuabika\.com\/\S*.gif reject
+^https:\/\/[A-Za-z0-9]+\.juicyads\.com\/\S* reject
+^https:\/\/ads-g\.juicyads\.com\/\S* reject
+
+^http[s]?:\/\/ad-delivery\.net reject
+^http[s]?:\/\/xgstemmj\.com\/\S* reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.realsrv\.com\/\S* reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.jads\.co\/\S* reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.fbcdn\.net\/\S* reject-200
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.fbcdn\.net\/\S* reject-200
+^http[s]?:\/\/outbrainimg\.com\/\S* reject
+^http[s]?:\/\/displayvertising\.com\/\S* reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.podsklzegshmnd\.com\/\S* reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.acglottku\.com\/\S* reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.disqus\.com\/\S* reject-200
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.disqus\.com\/\S* reject-200
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.pki\.goog\/\S* reject
+^http[s]?:\/\/hhbypdoecp\.com\/\S* reject-200
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.runative-syndicate\.com\/\S* reject
+^http[s]?:\/\/runative-syndicate\.com\/\S* reject
+^http[s]?:\/\/unicornpride123\.com\/\S* reject
+^http[s]?:\/\/opticlygremio\.com\/\S* reject
+^http[s]?:\/\/scalfebecky\.digital\/\S* reject
+^http[s]?:\/\/adsco\.re\/\S* reject
+^http[s]?:\/\/adsco\.re reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.run-syndicate\.com\/\S* reject
+^http[s]?:\/\/run-syndicate\.com\/\S* reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.adsco\.re\/\S* reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.adsco\.re\/\S* reject
+^http[s]?:\/\/tsyndicate\.com\/\S* reject
+^http[s]?:\/\/pubmatic\.com\/\S* reject
+^http[s]?:\/\/lwonclbench\.com\/\S* reject-200
+^http[s]?:\/\/a-ads\.com\/\S* reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.a-ads\.com\/\S* reject
+
+[Script]
+
+http-response ^https?:\/\/mrcong.com\/\b[\w.%+-]+\/$  script-path = https://achmau.oss-cn-shanghai.aliyuncs.com/WFC_Backup/Module/loon-js/mrcong.js, requires-body = true, tag = 移除mrcong元素
+http-response ^https?:\/\/mrcong.com\/\b[\w.%+-]+\/\b[\w.%+-]+\/$  script-path = https://achmau.oss-cn-shanghai.aliyuncs.com/WFC_Backup/Module/loon-js/mrcong.js, requires-body = true, tag = 移除mrcong元素
+http-response ^https?:\/\/mrcong.com\/\b[\w.%+-]+\/#\b[\w.%+=-]+$  script-path = https://achmau.oss-cn-shanghai.aliyuncs.com/WFC_Backup/Module/loon-js/mrcong.js, requires-body = true, tag = 移除mrcong元素
+http-response ^https?:\/\/mrcong.com\/\b[\w.%+-]+\/.?\b[\w.%&+=-]+$  script-path = https://achmau.oss-cn-shanghai.aliyuncs.com/WFC_Backup/Module/loon-js/mrcong.js, requires-body = true, tag = 移除mrcong元素
+
+
+
+[MITM]
+hostname = mrcong.com,ad-delivery.net,xgstemmj.com,*.jads.co,*.realsrv.com,*.juicyads.com,*.fbcdn.net,static.xx.fbcdn.net,*.podsklzegshmnd.com,*.acglottku.com,outbrainimg.com,displayvertising.com,ouo.io,*.services.disqus.com,*.disqus.com,*.pki.goog,hhbypdoecp.com,ad.a-ads.com,a-ads.com,lwonclbench.com,pubmatic.com,tsyndicate.com,*.n4.adsco.re,*.adsco.re,adsco.re,*.run-syndicate.com,scalfebecky.digital,*.runative-syndicate.com,opticlygremio.com,unicornpride123.com,displayvertising.com
