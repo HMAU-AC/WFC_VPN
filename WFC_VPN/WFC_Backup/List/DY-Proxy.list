@@ -5,6 +5,14 @@ DOMAIN-SUFFIX,fuqing.cz
 DOMAIN-SUFFIX,fuqing.ch
 
 // 其他乱七八糟的
+DOMAIN-KEYWORD,manhuabika
+DOMAIN-KEYWORD,cloudflare
+DOMAIN-KEYWORD,fuqing
+DOMAIN-KEYWORD,terabox
+DOMAIN-KEYWORD,gitlab
+DOMAIN-KEYWORD,pinterest
+DOMAIN-KEYWORD,gitbook
+DOMAIN-KEYWORD,jsdelivr
 DOMAIN-SUFFIX,jsdelivr.net
 DOMAIN-SUFFIX,gitbook.io
 DOMAIN-SUFFIX,ouo.io
