@@ -14,13 +14,13 @@
 
 采用新的方法过滤视频、瀑布流、搜索和Shorts中的广告，并删除底部的上传按钮，增加画中画。Premium订阅用户请勿使用，此插件不能与其他具有YouTube广告过滤能力的插件一起使用，并且需要禁用UDP协议的443端口
 
-### [Surge模块 Mrcong去广告](/WFC_VPN/WFC_Backup/Module/surge-sgmodule/mrcong-remove-ads.sgmodule)  🐵
+### [Surge模块 Mrcong去广告](/WFC_VPN/WFC_Backup/Module/surge-sgmodule/mrcong-remove-ads.sgmodule)  🍒
 
 2023/06/05  😀可用
 
 去除跳转新窗口，去除页面广告，去除底部日历元素，去除分享相关元素，去除配套ouo.io广告等
 
-### [Surge模块 shikotch去广告](/WFC_VPN/WFC_Backup/Module/surge-sgmodule/shikotch_remove_ads.sgmodule)  🐵
+### [Surge模块 shikotch去广告](/WFC_VPN/WFC_Backup/Module/surge-sgmodule/shikotch_remove_ads.sgmodule)  🍒
 
 2023/06/05  😀可用
 
