@@ -21,7 +21,7 @@ DOMAIN-SUFFIX,kgfjrb711.com,REJECT-IMG
 
 [Script]
 
-http-response ^https?:\/\/shikotch(.com|.net)\/(\S+\/|\S{1}s{1}\S+)$  script-path = https://achmau.oss-cn-shanghai.aliyuncs.com/WFC_Backup/Module/loon-js/shikotch.js, requires-body = true, tag = Remove_ shikotch
+http-response ^https?:\/\/shikotch(.com|.net)\/(\S+\/|\S{1}s{1}\S+)$  script-path = https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/WFC_VPN/WFC_Backup/Module/loon-js/shikotch.js, requires-body = true, tag = Remove_ shikotch
 
 
 [MITM]
