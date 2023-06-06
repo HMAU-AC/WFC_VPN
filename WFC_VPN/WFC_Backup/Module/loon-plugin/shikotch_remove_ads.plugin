@@ -16,7 +16,7 @@ DOMAIN-SUFFIX,kgfjrb711.com,REJECT-IMG
 [URL Rewrite]
 ^https:\/\/(rt|img)\.dlsite\.jp\/\S* reject-img
 ^https:\/\/(img|rt)\.gsspat\.jp\/\S* reject-img
-^https:\/\/(edayo|cs|js)\.boost-next\.co\.jp\/\S* reject-img
+^https:\/\/(edayo|cs|js)\.boost-next\.co\.jp\/\S* reject-200
 
 
 [Script]
