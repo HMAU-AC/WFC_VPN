@@ -8,10 +8,7 @@
 
 [Rule]
 
-DOMAIN-SUFFIX,asmr18.fans,REJECT
-DOMAIN-SUFFIX,exosrv.com,REJECT
-DOMAIN-SUFFIX,cn101.club,REJECT
-DOMAIN-SUFFIX,kgfjrb711.com,REJECT
+
 
 [URL Rewrite]
 ^https:\/\/(rt|img)\.dlsite\.jp\/\S* - reject
