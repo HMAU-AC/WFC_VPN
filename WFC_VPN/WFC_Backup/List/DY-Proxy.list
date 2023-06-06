@@ -14,6 +14,11 @@ DOMAIN-KEYWORD,pinterest
 DOMAIN-KEYWORD,gitbook
 DOMAIN-KEYWORD,jsdelivr
 DOMAIN-KEYWORD,nssurge
+DOMAIN-KEYWORD,notion
+DOMAIN-KEYWORD,splunkcloud
+DOMAIN-SUFFIX,notion.so
+DOMAIN,http-inputs-notion.splunkcloud.com
+DOMAIN-SUFFIX,notion.site
 DOMAIN-SUFFIX,nssurge.com
 DOMAIN-SUFFIX,jsdelivr.net
 DOMAIN-SUFFIX,gitbook.io
