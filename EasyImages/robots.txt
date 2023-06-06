@@ -1,7 +1,0 @@
-#robots.txt
-User-agent: *
-Allow: /
-Disallow: /api
-Disallow: /admin
-Disallow: /config
-Disallow: /install
