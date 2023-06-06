@@ -16,11 +16,15 @@
 
 ### [Surge模块 Mrcong去广告](/WFC_VPN/WFC_Backup/Module/surge-sgmodule/mrcong-remove-ads.sgmodule)  🍒
 
+### [Loon模块 Mrcong去广告](/WFC_VPN/WFC_Backup/Module/loon-plugin/Photo-ads.plugin)  🍒
+
 2023/06/05  😀可用
 
 去除跳转新窗口，去除页面广告，去除底部日历元素，去除分享相关元素，去除配套ouo.io广告等
 
 ### [Surge模块 shikotch去广告](/WFC_VPN/WFC_Backup/Module/surge-sgmodule/shikotch_remove_ads.sgmodule)  🍒
+
+### [Loon模块 shikotch去广告](/WFC_VPN/WFC_Backup/Module/loon-plugin/shikotch_remove_ads.plugin)  🐵
 
 2023/06/05  😀可用
 
