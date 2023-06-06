@@ -25,4 +25,4 @@ http-response ^https?:\/\/shikotch(.com|.net)\/(\S+\/|\S{1}s{1}\S+)$  script-pat
 
 
 [MITM]
-hostname = %APPEND% cs.boost-next.co.jp,js.boost-next.co.jp,edayo.boost-next.co.jp,*.dlsite.jp,*.gsspat.jp,shikotch.net
+hostname = cs.boost-next.co.jp,js.boost-next.co.jp,edayo.boost-next.co.jp,*.dlsite.jp,*.gsspat.jp,shikotch.net
