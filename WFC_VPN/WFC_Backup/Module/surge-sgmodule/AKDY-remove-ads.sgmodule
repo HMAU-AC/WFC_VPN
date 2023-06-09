@@ -32,7 +32,6 @@ IP-CIDR,162.252.214.4/32,REJECT-TINYGIF,no-resolve
 ^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.acglottku\.com\/\S* - reject
 ^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.disqus\.com\/\S* - reject
 ^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.disqus\.com\/\S* - reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.pki\.goog\/\S* - reject
 ^http[s]?:\/\/hhbypdoecp\.com\/\S* - reject
 ^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.runative-syndicate\.com\/\S* - reject
 ^http[s]?:\/\/runative-syndicate\.com\/\S* - reject

@@ -33,7 +33,6 @@ DOMAIN,outbrainimg.REJECT-DICT
 ^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.acglottku\.com\/\S* reject
 ^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.disqus\.com\/\S* reject-200
 ^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.disqus\.com\/\S* reject-200
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.pki\.goog\/\S* reject
 ^http[s]?:\/\/hhbypdoecp\.com\/\S* reject-200
 ^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.runative-syndicate\.com\/\S* reject
 ^http[s]?:\/\/runative-syndicate\.com\/\S* reject
@@ -61,4 +60,4 @@ http-response ^https?:\/\/mrcong.com\/\b[\w.%+-]+\/.?\b[\w.%&+=-]+$  script-path
 
 
 [MITM]
-hostname = mrcong.com,ad-delivery.net,xgstemmj.com,*.jads.co,*.realsrv.com,*.juicyads.com,*.fbcdn.net,static.xx.fbcdn.net,*.podsklzegshmnd.com,*.acglottku.com,outbrainimg.com,displayvertising.com,ouo.io,*.services.disqus.com,*.disqus.com,*.pki.goog,hhbypdoecp.com,ad.a-ads.com,a-ads.com,lwonclbench.com,pubmatic.com,tsyndicate.com,*.n4.adsco.re,*.adsco.re,adsco.re,*.run-syndicate.com,scalfebecky.digital,*.runative-syndicate.com,opticlygremio.com,unicornpride123.com,displayvertising.com
+hostname = mrcong.com,ad-delivery.net,xgstemmj.com,*.jads.co,*.realsrv.com,*.juicyads.com,*.fbcdn.net,static.xx.fbcdn.net,*.podsklzegshmnd.com,*.acglottku.com,outbrainimg.com,displayvertising.com,ouo.io,*.services.disqus.com,*.disqus.com,hhbypdoecp.com,ad.a-ads.com,a-ads.com,lwonclbench.com,pubmatic.com,tsyndicate.com,*.n4.adsco.re,*.adsco.re,adsco.re,*.run-syndicate.com,scalfebecky.digital,*.runative-syndicate.com,opticlygremio.com,unicornpride123.com,displayvertising.com
