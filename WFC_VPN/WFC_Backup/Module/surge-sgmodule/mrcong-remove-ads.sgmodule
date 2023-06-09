@@ -2,8 +2,8 @@
 #!desc = 写真网站去广告
 #!open = mrcong.com
 #!author = 爱吃素的胖子
-#!homepage = https://achmau.oss-cn-shanghai.aliyuncs.com/WFC_Backup/Module/loon-plugin/Photo-ads.plugin
-#!icon = https://achmau.oss-cn-shanghai.aliyuncs.com/WFC_Backup/Icon/R18JZ.png
+#!homepage = https://github.com/HMAU-AC/WFC_VPN/blob/main/WFC_VPN/WFC_Backup/Module/surge-sgmodule/mrcong-remove-ads.sgmodule
+
 
 
 [Rule]

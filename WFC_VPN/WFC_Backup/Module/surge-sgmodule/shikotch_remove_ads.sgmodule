@@ -2,9 +2,7 @@
 #!desc = shikotch去广告
 #!open = shikotch.net
 #!author = 爱吃素的胖子
-#!homepage = https://achmau.oss-cn-shanghai.aliyuncs.com/WFC_Backup/Module/surge-sgmodule/shikotch_remove_ads.sgmodule
-#!icon = https://achmau.oss-cn-shanghai.aliyuncs.com/WFC_Backup/Icon/R18JZ.png
-
+#!homepage = https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/WFC_VPN/WFC_Backup/Module/surge-sgmodule/shikotch_remove_ads.sgmodule
 
 [Rule]
 
