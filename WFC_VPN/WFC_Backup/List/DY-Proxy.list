@@ -1,10 +1,10 @@
-// 西部数据代理域名
+# 西部数据代理域名
 DOMAIN-SUFFIX,nameless13.com
 DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,fuqing.cz
 DOMAIN-SUFFIX,fuqing.ch
 
-// 其他乱七八糟的
+# 其他乱七八糟的
 DOMAIN-KEYWORD,manhuabika
 DOMAIN-KEYWORD,cloudflare
 DOMAIN-KEYWORD,fuqing
