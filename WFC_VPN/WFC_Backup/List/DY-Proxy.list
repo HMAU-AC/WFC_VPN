@@ -1,8 +1,6 @@
 # 西部数据代理域名
 DOMAIN-SUFFIX,nameless13.com
 DOMAIN-SUFFIX,cloudflare.com
-DOMAIN-SUFFIX,fuqing.cz
-DOMAIN-SUFFIX,fuqing.ch
 
 # 其他乱七八糟的
 DOMAIN-KEYWORD,manhuabika
@@ -16,6 +14,7 @@ DOMAIN-KEYWORD,jsdelivr
 DOMAIN-KEYWORD,nssurge
 DOMAIN-KEYWORD,notion
 DOMAIN-KEYWORD,splunkcloud
+
 DOMAIN-SUFFIX,notion.so
 DOMAIN,http-inputs-notion.splunkcloud.com
 DOMAIN-SUFFIX,notion.site
