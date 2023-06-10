@@ -52,7 +52,7 @@ IP-CIDR,162.252.214.4/32,REJECT-TINYGIF,no-resolve
 
 [Script]
 
-mrcong_Remove_Ads = type=http-response,pattern="^https?:\/\/mrcong\.com\/\S+\/(|(\#gsc.tab=0|(\?\S+)))$",requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/WFC_VPN/WFC_Backup/Module/loon-js/mrcong.js,script-update-interval=10
+mrcong_Remove_Ads = type=http-response,pattern="^https?:\/\/mrcong\.com\/(|\S+\/|(\#gsc.tab=0|(\?\S+)))$",requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/WFC_VPN/WFC_Backup/Module/loon-js/mrcong.js,script-update-interval=10
 
 [MITM]
 hostname = %APPEND% mrcong.com,*.manhuabika.com,*.picacomic.com,picacomic.com,manhuabika.com,ad-delivery.net,xgstemmj.com,*.jads.co,*.realsrv.com,ads-g.juicyads.com,*.juicyads.com,*.fbcdn.net,static.xx.fbcdn.net,*.podsklzegshmnd.com,*.acglottku.com,outbrainimg.com,displayvertising.com,ouo.io,*.services.disqus.com,*.disqus.com,hhbypdoecp.com,ad.a-ads.com,a-ads.com,lwonclbench.com,pubmatic.com,tsyndicate.com,*.n4.adsco.re,*.adsco.re,adsco.re,*.run-syndicate.com,scalfebecky.digital,*.runative-syndicate.com,opticlygremio.com,unicornpride123.com,displayvertising.com
