@@ -1,58 +1,20 @@
-#!name = 写真网站去广告
-#!desc = 写真网站去广告
-#!open = mrcong.com
+#!name = 爱看电影
+#!desc = 爱看电影去广告
+#!open = https://ikandy.fun/
 #!author = 爱吃素的胖子
-#!homepage = https://achmau.oss-cn-shanghai.aliyuncs.com/WFC_Backup/Module/loon-plugin/Photo-ads.plugin
-#!icon = https://achmau.oss-cn-shanghai.aliyuncs.com/WFC_Backup/Icon/R18JZ.png
+#!homepage = 
 
 
 [Rule]
 
-DOMAIN,defybrick.com,REJECT-TINYGIF
-DOMAIN,outbrain.com,REJECT-TINYGIF
-DOMAIN,outbrainimg,REJECT-TINYGIF
-IP-CIDR,162.252.214.4/32,REJECT-TINYGIF,no-resolve
+
 
 [URL Rewrite]
 
-^https:\/\/manhuabika\.com\/ad - reject
-^https:\/\/manhuabika\.com\/\S*.gif - reject
-^https:\/\/[A-Za-z0-9]+\.juicyads\.com\/\S* - reject
-^https:\/\/ads-g\.juicyads\.com\/\S* - reject
-
-^http[s]?:\/\/ad-delivery\.net - reject
-^http[s]?:\/\/xgstemmj\.com\/\S* - reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.realsrv\.com\/\S* - reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.jads\.co\/\S* - reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.fbcdn\.net\/\S* - reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.fbcdn\.net\/\S* - reject
-^http[s]?:\/\/outbrainimg\.com\/\S* - reject
-^http[s]?:\/\/displayvertising\.com\/\S* - reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.podsklzegshmnd\.com\/\S* - reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.acglottku\.com\/\S* - reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.disqus\.com\/\S* - reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.disqus\.com\/\S* - reject
-^http[s]?:\/\/hhbypdoecp\.com\/\S* - reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.runative-syndicate\.com\/\S* - reject
-^http[s]?:\/\/runative-syndicate\.com\/\S* - reject
-^http[s]?:\/\/unicornpride123\.com\/\S* - reject
-^http[s]?:\/\/opticlygremio\.com\/\S* - reject
-^http[s]?:\/\/scalfebecky\.digital\/\S* - reject
-^http[s]?:\/\/adsco\.re\/\S* - reject
-^http[s]?:\/\/adsco\.re - reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.run-syndicate\.com\/\S* - reject
-^http[s]?:\/\/run-syndicate\.com\/\S* - reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.adsco\.re\/\S* - reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.adsco\.re\/\S* - reject
-^http[s]?:\/\/tsyndicate\.com\/\S* - reject
-^http[s]?:\/\/pubmatic\.com\/\S* - reject
-^http[s]?:\/\/lwonclbench\.com\/\S* - reject
-^http[s]?:\/\/a-ads\.com\/\S* - reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.a-ads\.com\/\S* - reject
 
 [Script]
 
-mrcong删除元素 = type=http-response,pattern="^https?:\/\/mrcong\.com\/\S+\/(|(\#gsc.tab=0|(\?\S+)))$",requires-body=1,max-size=0,script-path=https://achmau.oss-cn-shanghai.aliyuncs.com/WFC_Backup/Module/loon-js/mrcong.js,script-update-interval=10
+AKDY = type=http-response,pattern="https?:\/\/ikandy\.fun\/(.*\/||(.*=[0-9]+))$",requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/WFC_VPN/WFC_Backup/Module/loon-js/AKDY.js,script-update-interval=10
 
 [MITM]
 hostname = %APPEND% ikandy.fun
