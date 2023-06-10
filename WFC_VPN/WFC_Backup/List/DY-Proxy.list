@@ -58,3 +58,14 @@ DOMAIN-SUFFIX,scorecardresearch.com
 DOMAIN-SUFFIX,services.mozilla.com
 DOMAIN-SUFFIX,1024tera.com
 DOMAIN-SUFFIX,teraboxapp.com
+DOMAIN,155.fun
+DOMAIN,hl03.co
+DOMAIN-SUFFIX,wwads.cn
+DOMAIN-KEYWORD,innologica
+DOMAIN-SUFFIX,fanbox.cc
+DOMAIN-SUFFIX,zztt72.com
+DOMAIN-SUFFIX,app-measurement.com
+IP-CIDR,17.248.165.15/32,no-resolve
+IP-CIDR,17.248.166.137/32,no-resolve
+IP-CIDR,17.248.165.68/32,no-resolve
+IP-CIDR,17.248.165.14/32,no-resolve
