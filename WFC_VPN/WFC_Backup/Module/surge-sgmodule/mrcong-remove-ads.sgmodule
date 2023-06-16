@@ -17,20 +17,17 @@ IP-CIDR,162.252.214.4/32,REJECT-TINYGIF,no-resolve
 
 ^https:\/\/manhuabika\.com\/ad - reject
 ^https:\/\/manhuabika\.com\/\S*.gif - reject
-^https:\/\/[A-Za-z0-9]+\.juicyads\.com\/\S* - reject
-^https:\/\/ads-g\.juicyads\.com\/\S* - reject
 
+^https:\/\/.*\.juicyads\.com.* - reject
 ^http[s]?:\/\/ad-delivery\.net - reject
 ^http[s]?:\/\/xgstemmj\.com\/\S* - reject
 ^http[s]?:\/\/.*\.realsrv\.com\/\S* - reject
 ^http[s]?:\/\/.*\.jads\.co\/\S* - reject
 ^http[s]?:\/\/.*\.fbcdn\.net\/\S* - reject
-^http[s]?:\/\/.*\.fbcdn\.net\/\S* - reject
 ^http[s]?:\/\/outbrainimg\.com\/\S* - reject
 ^http[s]?:\/\/displayvertising\.com\/\S* - reject
 ^http[s]?:\/\/.*\.podsklzegshmnd\.com\/\S* - reject
 ^http[s]?:\/\/.*\.acglottku\.com\/\S* - reject
-^http[s]?:\/\/.*\.disqus\.com\/\S* - reject
 ^http[s]?:\/\/.*\.disqus\.com\/\S* - reject
 ^http[s]?:\/\/hhbypdoecp\.com\/\S* - reject
 ^http[s]?:\/\/.*\.runative-syndicate\.com\/\S* - reject
