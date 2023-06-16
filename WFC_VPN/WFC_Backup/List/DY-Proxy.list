@@ -14,7 +14,9 @@ DOMAIN-KEYWORD,jsdelivr
 DOMAIN-KEYWORD,nssurge
 DOMAIN-KEYWORD,notion
 DOMAIN-KEYWORD,splunkcloud
+DOMAIN-KEYWORD,splunkcloud
 
+DOMAIN-SUFFIX,nicesss.com
 DOMAIN-SUFFIX,notion.so
 DOMAIN,http-inputs-notion.splunkcloud.com
 DOMAIN-SUFFIX,notion.site
