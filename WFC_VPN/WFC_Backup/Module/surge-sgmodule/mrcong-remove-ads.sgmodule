@@ -16,7 +16,6 @@ IP-CIDR,162.252.214.4/32,REJECT-TINYGIF,no-resolve
 [URL Rewrite]
 
 ^https:\/\/manhuabika\.com\/ad - reject
-^https:\/\/manhuabika\.com\/\S*.gif - reject
 
 ^https:\/\/.*\.juicyads\.com.* - reject
 ^http[s]?:\/\/ad-delivery\.net - reject
