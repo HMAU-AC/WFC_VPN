@@ -15,7 +15,40 @@ IP-CIDR,162.252.214.4/32,REJECT-TINYGIF,no-resolve
 
 [URL Rewrite]
 
+^https:\/\/manhuabika\.com\/ad - reject
+^https:\/\/manhuabika\.com\/\S*.gif - reject
+^https:\/\/[A-Za-z0-9]+\.juicyads\.com\/\S* - reject
+^https:\/\/ads-g\.juicyads\.com\/\S* - reject
 
+^http[s]?:\/\/ad-delivery\.net - reject
+^http[s]?:\/\/xgstemmj\.com\/\S* - reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.realsrv\.com\/\S* - reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.jads\.co\/\S* - reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.fbcdn\.net\/\S* - reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.fbcdn\.net\/\S* - reject
+^http[s]?:\/\/outbrainimg\.com\/\S* - reject
+^http[s]?:\/\/displayvertising\.com\/\S* - reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.podsklzegshmnd\.com\/\S* - reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.acglottku\.com\/\S* - reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.disqus\.com\/\S* - reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.disqus\.com\/\S* - reject
+^http[s]?:\/\/hhbypdoecp\.com\/\S* - reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.runative-syndicate\.com\/\S* - reject
+^http[s]?:\/\/runative-syndicate\.com\/\S* - reject
+^http[s]?:\/\/unicornpride123\.com\/\S* - reject
+^http[s]?:\/\/opticlygremio\.com\/\S* - reject
+^http[s]?:\/\/scalfebecky\.digital\/\S* - reject
+^http[s]?:\/\/adsco\.re\/\S* - reject
+^http[s]?:\/\/adsco\.re - reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.run-syndicate\.com\/\S* - reject
+^http[s]?:\/\/run-syndicate\.com\/\S* - reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.adsco\.re\/\S* - reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.adsco\.re\/\S* - reject
+^http[s]?:\/\/tsyndicate\.com\/\S* - reject
+^http[s]?:\/\/pubmatic\.com\/\S* - reject
+^http[s]?:\/\/lwonclbench\.com\/\S* - reject
+^http[s]?:\/\/a-ads\.com\/\S* - reject
+^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.a-ads\.com\/\S* - reject
 
 [Script]
 
