@@ -8,55 +8,41 @@
 
 [Rule]
 
-IP-CIDR,162.252.214.4/32,REJECT-DICT
-DOMAIN,defybrick.com,REJECT-DICT
-DOMAIN,outbrain.com,REJECT-DICT
-DOMAIN,outbrainimg.REJECT-DICT
+IP-CIDR,162.252.214.4/32,reject-DICT
+DOMAIN,defybrick.com,reject-DICT
+DOMAIN,outbrain.com,reject-DICT
+DOMAIN,outbrainimg.reject-DICT
 
 [Rewrite]
-
-
 ^https:\/\/manhuabika\.com\/ad reject
-^https:\/\/manhuabika\.com\/\S*.gif reject
-^https:\/\/[A-Za-z0-9]+\.juicyads\.com\/\S* reject
-^https:\/\/ads-g\.juicyads\.com\/\S* reject
-
+^https:\/\/.*\.juicyads\.com.* reject
 ^http[s]?:\/\/ad-delivery\.net reject
 ^http[s]?:\/\/xgstemmj\.com\/\S* reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.realsrv\.com\/\S* reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.jads\.co\/\S* reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.fbcdn\.net\/\S* reject-200
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.fbcdn\.net\/\S* reject-200
+^http[s]?:\/\/.*\.realsrv\.com\/\S* reject
+^http[s]?:\/\/.*\.jads\.co\/\S* reject
+^http[s]?:\/\/.*\.fbcdn\.net\/\S* reject
 ^http[s]?:\/\/outbrainimg\.com\/\S* reject
 ^http[s]?:\/\/displayvertising\.com\/\S* reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.podsklzegshmnd\.com\/\S* reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.acglottku\.com\/\S* reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.disqus\.com\/\S* reject-200
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.disqus\.com\/\S* reject-200
-^http[s]?:\/\/hhbypdoecp\.com\/\S* reject-200
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.runative-syndicate\.com\/\S* reject
+^http[s]?:\/\/.*\.podsklzegshmnd\.com\/\S* reject
+^http[s]?:\/\/.*\.acglottku\.com\/\S* reject
+^http[s]?:\/\/.*\.disqus\.com\/\S* reject
+^http[s]?:\/\/hhbypdoecp\.com\/\S* reject
+^http[s]?:\/\/.*\.runative-syndicate\.com\/\S* reject
 ^http[s]?:\/\/runative-syndicate\.com\/\S* reject
 ^http[s]?:\/\/unicornpride123\.com\/\S* reject
 ^http[s]?:\/\/opticlygremio\.com\/\S* reject
 ^http[s]?:\/\/scalfebecky\.digital\/\S* reject
-^http[s]?:\/\/adsco\.re\/\S* reject
-^http[s]?:\/\/adsco\.re reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.run-syndicate\.com\/\S* reject
-^http[s]?:\/\/run-syndicate\.com\/\S* reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.adsco\.re\/\S* reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.adsco\.re\/\S* reject
-^http[s]?:\/\/tsyndicate\.com\/\S* reject
-^http[s]?:\/\/pubmatic\.com\/\S* reject
-^http[s]?:\/\/lwonclbench\.com\/\S* reject-200
-^http[s]?:\/\/a-ads\.com\/\S* reject
-^http[s]?:\/\/([\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*)\.a-ads\.com\/\S* reject
+^http[s]?:\/\/adsco\.re.* reject
+^http[s]?:\/\/.*\.run-syndicate\.com.* reject
+^http[s]?:\/\/tsyndicate\.com.* reject
+^http[s]?:\/\/pubmatic\.com.* reject
+^http[s]?:\/\/lwonclbench\.com.* reject
+^http[s]?:\/\/a-ads\.com.* reject
+^http[s]?:\/\/.*\.a-ads\.com.* reject
 
 [Script]
 
-http-response ^https?:\/\/mrcong.com\/\b[\w.%+-]+\/$  script-path = https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/WFC_VPN/WFC_Backup/Module/loon-js/mrcong.js, requires-body = true, tag = 移除mrcong元素
-http-response ^https?:\/\/mrcong.com\/\b[\w.%+-]+\/\b[\w.%+-]+\/$  script-path = https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/WFC_VPN/WFC_Backup/Module/loon-js/mrcong.js, requires-body = true, tag = 移除mrcong元素
-http-response ^https?:\/\/mrcong.com\/\b[\w.%+-]+\/#\b[\w.%+=-]+$  script-path = https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/WFC_VPN/WFC_Backup/Module/loon-js/mrcong.js, requires-body = true, tag = 移除mrcong元素
-http-response ^https?:\/\/mrcong.com\/\b[\w.%+-]+\/.?\b[\w.%&+=-]+$  script-path = https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/WFC_VPN/WFC_Backup/Module/loon-js/mrcong.js, requires-body = true, tag = 移除mrcong元素
+http-response ^https?:\/\/mrcong\.com\/(|\S+\/|(\#gsc.tab=0|(\?\S+)))$ script-path = https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/WFC_VPN/WFC_Backup/Module/loon-js/mrcong.js, requires-body = true, tag = 移除mrcong元素
 
 
 [MITM]
