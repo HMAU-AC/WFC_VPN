@@ -11,7 +11,7 @@
 IP-CIDR,162.252.214.4/32,reject-DICT
 DOMAIN,defybrick.com,reject-DICT
 DOMAIN,outbrain.com,reject-DICT
-DOMAIN,outbrainimg.reject-DICT
+DOMAIN,outbrainimg,reject-DICT
 
 [Rewrite]
 ^https:\/\/manhuabika\.com\/ad reject
