@@ -18,8 +18,7 @@ USER-AGENT,*pximg*
 DOMAIN-KEYWORD,pximg
 DOMAIN-KEYWORD,pixiv
 USER-AGENT,*ytimg*
-USER-AGENT,*nicegram*
-DOMAIN-KEYWORD,nicegram
+
 
 DOMAIN-KEYWORD,google
 USER-AGENT,*google*
@@ -32,6 +31,8 @@ DOMAIN-KEYWORD,applovin
 DOMAIN,t.me
 USER-AGENT,*telegram*
 DOMAIN-KEYWORD,telegram
+USER-AGENT,*nicegram*
+DOMAIN-KEYWORD,nicegram
 IP-CIDR,17.248.165.143/32,no-resolve
 IP-CIDR,17.248.165.143/32,no-resolve 
 IP-CIDR,149.154.165.120/32,no-resolve 
