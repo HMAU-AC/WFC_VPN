@@ -18,6 +18,8 @@ USER-AGENT,*pximg*
 DOMAIN-KEYWORD,pximg
 DOMAIN-KEYWORD,pixiv
 USER-AGENT,*ytimg*
+USER-AGENT,*nicegram*
+DOMAIN-KEYWORD,nicegram
 
 DOMAIN-KEYWORD,google
 USER-AGENT,*google*
