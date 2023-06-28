@@ -1,6 +1,23 @@
+//github
 USER-AGENT,*github*
 DOMAIN-KEYWORD,github
+USER-AGENT,*gitbook*
+DOMAIN-KEYWORD,gitbook
+DOMAIN-KEYWORD,jsdelivr
 
+//other
+DOMAIN-KEYWORD,manhuabika
+USER-AGENT,*manhuabika*
+DOMAIN-KEYWORD,fuqing
+DOMAIN-KEYWORD,terabox
+DOMAIN-KEYWORD,gitlab
+USER-AGENT,*gitlab*
+DOMAIN-KEYWORD,pinterest
+USER-AGENT,*pinterest*
+DOMAIN-KEYWORD,nssurge
+DOMAIN-KEYWORD,notion
+DOMAIN-KEYWORD,splunkcloud
+DOMAIN-KEYWORD,nicesss
 DOMAIN-KEYWORD,imgasd
 DOMAIN-KEYWORD,tumblr
 USER-AGENT,ggpht
@@ -19,15 +36,17 @@ DOMAIN-KEYWORD,pximg
 DOMAIN-KEYWORD,pixiv
 USER-AGENT,*ytimg*
 
-
+//google
 DOMAIN-KEYWORD,google
 USER-AGENT,*google*
 
+//youtube
 DOMAIN-SUFFIX,ytimg.com
 USER-AGENT,*youtube*
 DOMAIN-KEYWORD,youtube
 DOMAIN-KEYWORD,applovin
 
+//telegram
 DOMAIN,t.me
 USER-AGENT,*telegram*
 DOMAIN-KEYWORD,telegram
