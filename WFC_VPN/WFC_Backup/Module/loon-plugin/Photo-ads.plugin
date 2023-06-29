@@ -42,7 +42,7 @@ DOMAIN,outbrainimg,reject-DICT
 
 [Script]
 
-http-response ^https?:\/\/mrcong\.com\/(|\S+\/|(\#gsc.tab=0|(\?\S+)))$ script-path = https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/WFC_VPN/WFC_Backup/Module/loon-js/mrcong.js, requires-body = true, tag = 移除Mrcong元素
+//http-response ^https?:\/\/mrcong\.com\/(|\S+\/|(\#gsc.tab=0|(\?\S+)))$ script-path = https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/WFC_VPN/WFC_Backup/Module/loon-js/mrcong.js, requires-body = true, tag = 移除Mrcong元素
 
 
 [MITM]
