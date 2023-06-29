@@ -6,6 +6,11 @@ DOMAIN-KEYWORD,gitbook
 DOMAIN-KEYWORD,jsdelivr
 
 //other
+DOMAIN-KEYWORD,nudeok
+DOMAIN-SUFFIX,mrcong.com
+DOMAIN-SUFFIX,ouo.io
+DOMAIN-SUFFIX,ouo.press
+DOMAIN-SUFFIX,loon-gallery.vercel.app
 DOMAIN-KEYWORD,manhuabika
 USER-AGENT,*manhuabika*
 DOMAIN-KEYWORD,fuqing
