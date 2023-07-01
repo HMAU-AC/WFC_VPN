@@ -57,6 +57,8 @@ USER-AGENT,*telegram*
 DOMAIN-KEYWORD,telegram
 USER-AGENT,*nicegram*
 DOMAIN-KEYWORD,nicegram
+DOMAIN-SUFFIX,tdesktop.com
+DOMAIN-SUFFIX,telesco.pe,force-remote-dns
 IP-CIDR,17.248.165.143/32,no-resolve
 IP-CIDR,17.248.165.143/32,no-resolve 
 IP-CIDR,149.154.165.120/32,no-resolve 
