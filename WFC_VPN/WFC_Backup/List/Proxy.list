@@ -5,6 +5,21 @@ USER-AGENT,*gitbook*
 DOMAIN-KEYWORD,gitbook
 DOMAIN-KEYWORD,jsdelivr
 
+
+DOMAIN-SUFFIX,awsstatic.com
+DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,digitalocean.com
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,office.com
+DOMAIN-SUFFIX,sharepoint.com
+DOMAIN-SUFFIX,microsoft.com
+DOMAIN-KEYWORD,microsoft
+DOMAIN-SUFFIX,acctcdn.msauth.net
+DOMAIN-SUFFIX,onedrive.live.com
+DOMAIN-KEYWORD,onedrive
+DOMAIN-KEYWORD,adguard
+DOMAIN-KEYWORD,adguard-dns
+
 //other
 DOMAIN-KEYWORD,nudeok
 DOMAIN-SUFFIX,mrcong.com
