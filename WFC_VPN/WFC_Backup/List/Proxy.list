@@ -21,6 +21,8 @@ DOMAIN-KEYWORD,adguard
 DOMAIN-KEYWORD,adguard-dns
 
 //other
+DOMAIN-KEYWORD,facebook
+DOMAIN-KEYWORD,mozilla
 DOMAIN-KEYWORD,nudeok
 DOMAIN-SUFFIX,mrcong.com
 DOMAIN-SUFFIX,ouo.io
