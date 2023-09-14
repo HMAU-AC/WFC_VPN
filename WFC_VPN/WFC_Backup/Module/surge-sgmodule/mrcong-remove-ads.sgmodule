@@ -7,16 +7,11 @@
 
 
 [Rule]
-DOMAIN,mrcong.com,AVPN
-DOMAIN,defybrick.com,REJECT-TINYGIF
-DOMAIN,outbrain.com,REJECT-TINYGIF
-DOMAIN,outbrainimg,REJECT-TINYGIF
-IP-CIDR,162.252.214.4/32,REJECT-TINYGIF,no-resolve
+
 
 [URL Rewrite]
 
 ^https:\/\/manhuabika\.com\/ad - reject
-
 ^https:\/\/.*\.juicyads\.com.* - reject
 ^http[s]?:\/\/ad-delivery\.net - reject
 ^http[s]?:\/\/xgstemmj\.com\/\S* - reject
