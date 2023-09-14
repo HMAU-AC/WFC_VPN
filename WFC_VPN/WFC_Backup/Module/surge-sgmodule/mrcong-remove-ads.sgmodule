@@ -7,7 +7,7 @@
 
 
 [Rule]
-
+DOMAIN,mrcong.com,AVPN
 DOMAIN,defybrick.com,REJECT-TINYGIF
 DOMAIN,outbrain.com,REJECT-TINYGIF
 DOMAIN,outbrainimg,REJECT-TINYGIF
