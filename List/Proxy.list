@@ -21,6 +21,11 @@ DOMAIN-KEYWORD,adguard
 DOMAIN-KEYWORD,adguard-dns
 
 //other
+DOMAIN-SUFFIX,hath.network
+DOMAIN-SUFFIX,ehgt.org
+DOMAIN-SUFFIX,exhentai.org
+DOMAIN-SUFFIX,e-hentai.org
+DOMAIN-SUFFIX,gmail.com
 DOMAIN-SUFFIX,sijisheb.com
 DOMAIN-SUFFIX,gravatar.com
 DOMAIN,www&google.com
