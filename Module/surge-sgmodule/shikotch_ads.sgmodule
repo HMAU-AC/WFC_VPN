@@ -14,6 +14,6 @@ URL-REGEX,^https?:\/\/shikotch\.net\/.*\/asmr18\.(js|css)$,REJECT
 
 [Script]
 
-shikotch = type=http-response,pattern=^https?:\/\/shikotch\.net\/(|\S+\/|\S{1}s{1}\S+)$,requires-body=1,max-size=0,debug=1,script-path=shikotch.js
+shikotch = type=http-response,pattern=^https?:\/\/shikotch\.net\/(|\S+\/|\S{1}s{1}\S+)$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Module/js/shikotch.js
 [MITM]
 hostname = %APPEND% shikotch.net, *.boost-next.co.jp
