@@ -5,18 +5,15 @@
 #!homepage = https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/WFC_VPN/WFC_Backup/Module/surge-sgmodule/shikotch_remove_ads.sgmodule
 
 [Rule]
-
+URL-REGEX,^https?:\/\/[a-z]*\.boost-next.co.jp\/t\/.*$,REJECT
+URL-REGEX,^https?:\/\/shikotch\.net\/.*\/asmr18\.(js|css)$,REJECT
 
 
 [URL Rewrite]
-^https:\/\/(rt|img)\.dlsite\.jp\/\S* - reject
-^https:\/\/(img|rt)\.gsspat\.jp\/\S* - reject
-^https:\/\/(edayo|cs|js)\.boost-next\.co\.jp\/\S* - reject
 
 
 [Script]
 
-Remove_ shikotch = type=http-response,pattern="^https?:\/\/shikotch(.com|.net)\/(\S+\/|\S{1}s{1}\S+)$",requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/WFC_VPN/WFC_Backup/Module/loon-js/shikotch.js,script-update-interval=1
-
+shikotch = type=http-response,pattern=^https?:\/\/shikotch\.net\/(|\S+\/|\S{1}s{1}\S+)$,requires-body=1,max-size=0,debug=1,script-path=shikotch.js
 [MITM]
-hostname = %APPEND% cs.boost-next.co.jp,js.boost-next.co.jp,edayo.boost-next.co.jp,*.dlsite.jp,*.gsspat.jp,shikotch.net
+hostname = %APPEND% shikotch.net, *.boost-next.co.jp

@@ -21,6 +21,14 @@ DOMAIN-KEYWORD,adguard
 DOMAIN-KEYWORD,adguard-dns
 
 //other
+DOMAIN-SUFFIX,hanime.tv
+DOMAIN-SUFFIX,urlimage.cc
+DOMAIN-SUFFIX,hotmediahub.com
+DOMAIN-SUFFIX,statically.io
+DOMAIN-SUFFIX,pages.dev
+DOMAIN-SUFFIX,rsshub.app
+DOMAIN-SUFFIX,dlsite.jp
+DOMAIN-SUFFIX,shikotch.net
 DOMAIN-SUFFIX,hath.network
 DOMAIN-SUFFIX,ehgt.org
 DOMAIN-SUFFIX,exhentai.org
