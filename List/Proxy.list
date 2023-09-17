@@ -21,6 +21,8 @@ DOMAIN-KEYWORD,adguard
 DOMAIN-KEYWORD,adguard-dns
 
 //other
+
+DOMAIN-SUFFIX,madou.club
 DOMAIN-SUFFIX,hanime.tv
 DOMAIN-SUFFIX,urlimage.cc
 DOMAIN-SUFFIX,hotmediahub.com
