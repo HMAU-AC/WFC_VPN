@@ -21,7 +21,11 @@ DOMAIN-KEYWORD,adguard
 DOMAIN-KEYWORD,adguard-dns
 
 //other
-
+DOMAIN-SUFFIX,npmjs.org
+DOMAIN-SUFFIX,brew.sh
+DOMAIN-SUFFIX,hitomi.la
+DOMAIN-SUFFIX,idope.se
+DOMAIN-SUFFIX,skrbtju.top
 DOMAIN-SUFFIX,madou.club
 DOMAIN-SUFFIX,hanime.tv
 DOMAIN-SUFFIX,urlimage.cc
