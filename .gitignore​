@@ -1,4 +1,3 @@
-/target/
-/.idea/
+# misc
 .DS_Store
-.gitignore​
+*.pem
