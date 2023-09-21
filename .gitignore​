@@ -1,7 +1,5 @@
 # misc
 *.pem
-# OS generated files #
-######################
 .DS_Store
 .DS_Store?
 .Spotlight-V100
