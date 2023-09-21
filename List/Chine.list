@@ -3,5 +3,3 @@ DOMAIN,workingcopyapp.com
 DOMAIN-SUFFIX,workingcopy.app
 USER-AGENT,*workingcopy*
 DOMAIN-KEYWORD,workingcopy
-IP-ASN,56046,no-resolve
-IP-ASN,714,no-resolve
