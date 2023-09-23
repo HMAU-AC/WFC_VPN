@@ -1,2 +1,8 @@
+#!name = 去广告规则解密
+#!desc = 自己制作的去广告规则解密
+#!open = https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Module/surge-sgmodule/othermiti.sgmodule
+#!author = 爱吃素的胖子
+#!time = 2023/09/26
+
 [MITM]
 hostname = %APPEND% shikotch.net, js.boost-next.co.jp
