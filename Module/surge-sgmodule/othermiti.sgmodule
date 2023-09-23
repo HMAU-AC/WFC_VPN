@@ -1,0 +1,2 @@
+[MITM]
+hostname = %APPEND% shikotch.net, js.boost-next.co.jp
