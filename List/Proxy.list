@@ -81,6 +81,8 @@ USER-AGENT,*ytimg*
 DOMAIN-SUFFIX,npmjs.com
 DOMAIN-SUFFIX,typora.io
 DOMAIN-SUFFIX,nanocat.cloud
+DOMAIN-SUFFIX,rsshub.app
+DOMAIN-SUFFIX,replit.com
 
 //哔卡漫画
 DOMAIN-SUFFIX,manhuapica.com
@@ -95,6 +97,13 @@ DOMAIN-SUFFIX,ytimg.com
 USER-AGENT,*youtube*
 DOMAIN-KEYWORD,youtube
 DOMAIN-KEYWORD,applovin
+
+//pikpak
+IP-CIDR,8.209.248.151/32,no-resolve
+IP-CIDR,198.11.172.147/32,no-resolve
+IP-CIDR,149.129.132.58/32,no-resolve
+IP-CIDR,8.222.208.40/32,no-resolve
+
 
 //telegram
 DOMAIN,t.me
