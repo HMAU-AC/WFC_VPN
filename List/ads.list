@@ -40,5 +40,6 @@ DOMAIN-SUFFIX,academicvast.com
 DOMAIN-SUFFIX,xpmikami.com
 DOMAIN-SUFFIX,hotcoin.com
 DOMAIN-SUFFIX,okx.com
+DOMAIN-SUFFIX,app-measurement.com  // Added for: https://app-measurement.com/a
 URL-REGEX,^https?:\/\/[a-z]*\.boost-next.co.jp\/t\/.*$
 URL-REGEX,^https?:\/\/shikotch\.net\/.*\/asmr18\.(js|css)$
