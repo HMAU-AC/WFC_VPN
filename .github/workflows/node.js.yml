@@ -1,0 +1,59 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - name: HTTP Server Action
+  # You may pin to the exact commit or the version.
+  # uses: Eun/http-server-action@9f8504206c8dd903271f7db90554473466199804
+  uses: Eun/http-server-action@v1.0.10
+  with:
+    # Directory to serve
+    directory: # optional, default is .
+    # Port to serve on
+    port: # optional, default is 8080
+    # Whether to set the Cache-Control header or not
+    no-cache: # optional
+    # If set and directory is requested, look for those files, instead of show directory listing
+    index-files: # optional, default is []
+
+    # Throw HTTP-Error 405 on other methods than the methods given
+    allowed-methods: # optional, default is ["GET", "HEAD"]
+
+    # Content Types to serve
+    content-types: # optional, default is {
+  "appcache": "text/cache-manifest"，
+  "css": "text/css",
+  "gif": "image/gif",
+  "html": "text/html",
+  "ico": "image/x-icon",
+  "jpeg": "image/jpeg",
+  "jpg": "image/jpeg",
+  "js": "text/javascript",
+  "json": "application/json",
+  "png": "image/png",
+  "txt": "text/plain",
+  "xml": "text/xml"
+}
+
+    # Create a log file with given name
+    log: # optional, default is 
+    # Whether to include the time of access in the log file or not
+    logTime: # optional, default is true
