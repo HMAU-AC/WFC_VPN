@@ -8,7 +8,4 @@
   },
   "author": "",
   "license": "ISC"
-  "build": "webpack --mode production" // 示例构建脚本，使用 webpack 进行生产模式构建
 }
-
-
