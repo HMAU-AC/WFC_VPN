@@ -1,0 +1,11 @@
+{
+  "name": "wfc_vpn",
+  "version": "1.0.0",
+  "description": "这里的并不一定适合所有人，仅个人使用说需要 除了js是通用，其他都有对应分类，软件不通用",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
