@@ -5,6 +5,7 @@
 #!homepage = https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/WFC_VPN/WFC_Backup/Module/surge-sgmodule/shikotch_remove_ads.sgmodule
 
 [Rule]
+DOMAIN-SUFFIX,boost-next.co.jp,REJECT
 URL-REGEX,^https?:\/\/[a-z]*\.boost-next.co.jp\/t\/.*$,REJECT
 URL-REGEX,^https?:\/\/shikotch\.net\/.*\/asmr18\.(js|css)$,REJECT
 
