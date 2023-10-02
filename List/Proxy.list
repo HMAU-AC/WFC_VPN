@@ -16,6 +16,7 @@ DOMAIN-KEYWORD,adguard
 DOMAIN-KEYWORD,adguard-dns
 
 //other
+DOMAIN-SUFFIX,visualstudio.com
 DOMAIN-SUFFIX,framercanvas.com
 DOMAIN-SUFFIX,framer.com
 DOMAIN-SUFFIX,npmjs.org
