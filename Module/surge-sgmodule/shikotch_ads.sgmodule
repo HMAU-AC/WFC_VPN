@@ -8,7 +8,6 @@
 URL-REGEX,^https?:\/\/[a-z]*\.boost-next.co.jp\/t\/.*$,REJECT
 URL-REGEX,^https?:\/\/shikotch\.net\/.*\/asmr18\.(js|css)$,REJECT
 
-
 [URL Rewrite]
 
 
