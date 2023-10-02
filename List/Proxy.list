@@ -77,15 +77,16 @@ USER-AGENT,*twimg*
 DOMAIN-KEYWORD,twimg
 DOMAIN-KEYWORD,twitter
 USER-AGENT,*twitter*
-USER-AGENT,*pximg*
-DOMAIN-KEYWORD,pximg
-DOMAIN-KEYWORD,pixiv
-USER-AGENT,*ytimg*
 DOMAIN-SUFFIX,npmjs.com
 DOMAIN-SUFFIX,typora.io
 DOMAIN-SUFFIX,nanocat.cloud
 DOMAIN-SUFFIX,rsshub.app
 DOMAIN-SUFFIX,replit.com
+
+//pixiv
+USER-AGENT,*pximg*
+DOMAIN-KEYWORD,pximg
+DOMAIN-KEYWORD,pixiv
 
 //哔卡漫画
 DOMAIN-SUFFIX,manhuapica.com
@@ -96,6 +97,7 @@ DOMAIN-KEYWORD,google
 USER-AGENT,*google*
 
 //youtube
+USER-AGENT,*ytimg*
 DOMAIN-SUFFIX,ytimg.com
 USER-AGENT,*youtube*
 DOMAIN-KEYWORD,youtube
