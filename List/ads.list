@@ -43,3 +43,5 @@ DOMAIN-SUFFIX,okx.com
 DOMAIN-SUFFIX,app-measurement.com  //app-measurement.com
 URL-REGEX,^https?:\/\/[a-z]*\.boost-next.co.jp\/t\/.*$
 URL-REGEX,^https?:\/\/shikotch\.net\/.*\/asmr18\.(js|css)$
+
+
