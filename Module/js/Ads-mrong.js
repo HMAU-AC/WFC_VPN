@@ -1,15 +1,11 @@
-//let headers = $response.headers;
-//headers['X-Frame-Options'] = "deny";
-//headers['Content-Security-Policy'] = "frame-ancestors 'self'";
-let regex_head='<head>';
-let style=`<head><style>
-.share-post, iframe[src*="a-ads"], #fb-root, .gfycatresponsive, .e3lan.e3lan-bottom, .e3lan.e3lan-top, .social-icons, div#sub-frame-error {
-display: none !important;
-}
-</style>`
+// 定义 CSS/JS
+const regex = '<head>';
+const replace_str = '<head>\
+<link rel="stylesheet" href="https://hmau.oss-cn-shanghai.aliyuncs.com/mrcong.css" type="text/css">\
+<script type="text/javascript" async="async" src="https://hmau.oss-cn-shanghai.aliyuncs.com/mrcong.js">'
 
-let body=$response.body.replace(regex_head,style);
+// 定义响应体
+const body = $response.body.replace(regex, replace_str);
 
-$done({body});
-
+$done({ body:body })
 

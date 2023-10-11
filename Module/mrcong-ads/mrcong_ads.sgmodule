@@ -1,0 +1,27 @@
+#!name = mrong广告
+#!desc = 删除广告
+#!open = shikotch.net
+#!author = 爱吃素的胖子
+#!homepage = https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/WFC_VPN/WFC_Backup/Module/surge-sgmodule/shikotch_remove_ads.sgmodule
+
+[Rule]
+DOMAIN-SUFFIX,viglink.com,REJECT 
+URL-REGEX,^https:\/\/mrcong\.com\/wp-content\/cache\/min\/1\/wp-content\/plugins\/disqus-comment-system\/public\/js\/comment_count\.js\?.*,REJECT
+URL-REGEX,^https:\/\/mr-cong\.disqus\.com\/embed\.js$,REJECT 
+URL-REGEX,^https:\/\/mrcong\.com\/wp-content\/cache\/min\/1\/wp-content\/themes\/mrcong\/js\/tie-scripts\.js\?.*,REJECT 
+URL-REGEX,^https:\/\/disqus\.com\/api\/3\.0\/.*,REJECT 
+URL-REGEX,^https:\/\/referrer\.disqus\.com\/juggler\/event\.gif\?.*,REJECT 
+URL-REGEX,^https:\/\/links\.services\.disqus\.com\/api\/ping$,REJECT 
+
+[Header Rewrite]
+^https?:\/\/mrcong\.com\.* header-del cookie
+http-response ^https?:\/\/mrcong\.com\.* header-del cookie
+
+
+[Script]
+mrcong-ads-home = type=http-response,pattern=^https?:\/\/mrcong\.com($|\/$),requires-body=1,max-size=1048576,script-path=Ads-mrong.js
+mrcong-ads-post = type=http-response,pattern=^https?:\/\/mrcong\.com\/.*\/$,requires-body=1,max-size=1048576,script-path=Ads-mrong.js
+mrcong-ads-sc = type=http-response,pattern=^https?:\/\/mrcong\.com\/.*\/#gsc.tab=.*$,requires-body=1,max-size=1048576,script-path=Ads-mrong.js
+
+[MITM]
+hostname = %APPEND% *.disqus.com, connect.facebook.net, assets.pinterest.com, mrcong.com
