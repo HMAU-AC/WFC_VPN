@@ -22,6 +22,7 @@
   const jetpacks = document.getElementById('jetpack-stats-js');
   jetpacks.remove();
     }
+/* 
     // 删除所有没有id的 scripts
 {
   var scripts = document.querySelectorAll('script:not([id])');
@@ -29,22 +30,25 @@
   script.remove();
   });
     }
+    
+*/ 
 
-  // 删除所有a标签中的about:blank
+// 删除所有a标签中的about:blank
 {
   // 获取所有标签
 const tabs = document.querySelectorAll('a');
 
-// 遍历每个标签
+  // 遍历每个标签
 tabs.forEach(tab => {
   // 检查标签的URL是否为"about:blank"
   if (tab.href === 'about:blank') {
-    // 删除标签
+  // 删除标签
     tab.remove();
   }
 });
     }
-    // 删除所有img标签中的about:blank
+    
+// 删除所有img标签中的about:blank
 {
 // 获取所有img标签
 const images = document.querySelectorAll('img');
@@ -53,16 +57,17 @@ const images = document.querySelectorAll('img');
 images.forEach(image => {
   // 检查img标签的src属性是否为"about:blank"
   if (image.src === 'about:blank') {
-    // 删除img标签
+  // 删除img标签
     image.remove();
   }
 });
     }
+// 删除所有span标签中的about:blank    
 {
 // 获取所有的<span>标签
 const spans = document.querySelectorAll('span');
 
-// 遍历每个<span>标签
+  // 遍历每个<span>标签
 spans.forEach(span => {
   // 删除<span>标签
   span.remove();
