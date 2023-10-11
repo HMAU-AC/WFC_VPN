@@ -14,8 +14,7 @@ URL-REGEX,^https:\/\/referrer\.disqus\.com\/juggler\/event\.gif\?.*,REJECT
 URL-REGEX,^https:\/\/links\.services\.disqus\.com\/api\/ping$,REJECT 
 
 [Header Rewrite]
-^https?:\/\/mrcong\.com\.* header-del cookie
-http-response ^https?:\/\/mrcong\.com\.* header-del cookie
+
 
 
 [Script]
