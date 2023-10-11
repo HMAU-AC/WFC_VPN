@@ -5,7 +5,7 @@
 #!homepage = https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Module/mrcong-ads/mrcong_ads.sgmodule
 
 [Rule]
-DOMAIN-SUFFIX,viglink.com,REJECT 
+
 URL-REGEX,^https:\/\/mrcong\.com\/wp-content\/cache\/min\/1\/wp-content\/plugins\/disqus-comment-system\/public\/js\/comment_count\.js\?.*,REJECT
 URL-REGEX,^https:\/\/mr-cong\.disqus\.com\/embed\.js$,REJECT 
 URL-REGEX,^https:\/\/mrcong\.com\/wp-content\/cache\/min\/1\/wp-content\/themes\/mrcong\/js\/tie-scripts\.js\?.*,REJECT 
