@@ -12,7 +12,8 @@ URL-REGEX,^https:\/\/mrcong\.com\/wp-content\/cache\/min\/1\/wp-content\/themes\
 URL-REGEX,^https:\/\/disqus\.com\/api\/3\.0\/.*,REJECT 
 URL-REGEX,^https:\/\/referrer\.disqus\.com\/juggler\/event\.gif\?.*,REJECT 
 URL-REGEX,^https:\/\/links\.services\.disqus\.com\/api\/ping$,REJECT 
-
+URL-REGEX,^https?:\/\/assets\.pinterest\.com\/js\/.*?.js.*,REJECT // mrcong跳转屏蔽
+# URL-REGEX,^https?:\/\/connect\.facebook\.net\/vi_VN\/.*?.js.*,REJECT
 [Header Rewrite]
 
 
