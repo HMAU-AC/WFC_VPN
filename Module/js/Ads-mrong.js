@@ -114,7 +114,7 @@ spans.forEach(span => {
     
 </script>`
 
-let scriptb =`<script id="remove" type='text/javascript'>
+let scriptb =`<script id="removemrcong" type='text/javascript'>
 var scripts = document.querySelectorAll('script:not([id])');
   scripts.forEach(function(script) {
   script.remove();
