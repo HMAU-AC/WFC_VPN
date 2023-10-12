@@ -112,7 +112,13 @@ spans.forEach(span => {
       ad.remove();
     };
     
-</script>`
+</script>\
+<script id="removevd" type='text/javascript'>
+const advd = document.getElementById('__stay_inject_parse_video_js');
+      advd.remove();
+</script>\
+
+`
 
 let scriptb =`<script id="removemrcong" type='text/javascript'>
 var scripts = document.querySelectorAll('script:not([id])');
