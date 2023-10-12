@@ -124,7 +124,7 @@ let scriptb =`<script id="removemrcong" type='text/javascript'>
 var scripts = document.querySelectorAll('script:not([id])');
   scripts.forEach(function(script) {
   script.remove();
-  });
+  };
 </script></body>`
 
 let body=$response.body.replace(regex_head,style,scriptb);
