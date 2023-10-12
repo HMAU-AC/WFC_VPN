@@ -5,23 +5,23 @@
   Array.from(iframes).forEach((iframe) => {
     iframe.remove();
   });
-    }
+    };
 {
   const disqus_count = document.getElementById('disqus_count-js-extra');
   disqus_count.remove();
-    }
+    };
 {
   const tie = document.getElementById('tie-scripts-js-extra');
   tie.remove();
-    }
+    };
 {
   const jetpack = document.getElementById('jetpack-stats-js-after');
   jetpack.remove();
-    }
+    };
 {
   const jetpacks = document.getElementById('jetpack-stats-js');
   jetpacks.remove();
-    }
+    };
 /* 
     // 删除所有没有id的 scripts
 {
@@ -46,7 +46,7 @@ tabs.forEach(tab => {
     tab.remove();
   }
 });
-    }
+    };
     
 // 删除所有img标签中的about:blank
 {
@@ -61,7 +61,7 @@ images.forEach(image => {
     image.remove();
   }
 });
-    }
+    };
 // 删除所有span标签中的about:blank    
 {
 // 获取所有的<span>标签
@@ -73,4 +73,9 @@ spans.forEach(span => {
   span.remove();
 });
 
-    }
+    };
+{
+      const ad = document.getElementById('__stay_inject_selecte_ad_tag_js_');
+      ad.remove();
+    };
+    
