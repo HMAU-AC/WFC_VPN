@@ -22,16 +22,6 @@
   const jetpacks = document.getElementById('jetpack-stats-js');
   jetpacks.remove();
     };
-/* 
-    // 删除所有没有id的 scripts
-{
-  var scripts = document.querySelectorAll('script:not([id])');
-  scripts.forEach(function(script) {
-  script.remove();
-  });
-    }
-    
-*/ 
 
 // 删除所有a标签中的about:blank
 {
@@ -75,7 +65,18 @@ spans.forEach(span => {
 
     };
 {
-      const ad = document.getElementById('__stay_inject_selecte_ad_tag_js_');
+const ad = document.getElementById('__stay_inject_selecte_ad_tag_js_');
       ad.remove();
     };
+/* 
+    // 删除所有没有id的 scripts
+{
+  var scripts = document.querySelectorAll('script:not([id])');
+  scripts.forEach(function(script) {
+  script.remove();
+  });
+    }
+    
+*/ 
+ 
     
