@@ -15,8 +15,8 @@
   tie.remove();
     };
 {
-  const jetpack = document.getElementById('jetpack-stats-js-after');
-  jetpack.remove();
+  const jetpackaf = document.getElementById('jetpack-stats-js-after');
+  jetpackaf.remove();
     };
 {
   const jetpacks = document.getElementById('jetpack-stats-js');
