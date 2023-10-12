@@ -30,7 +30,7 @@ div.social-icons {display: none !important;}
 div#sub-frame-error {display: none !important;}
 div#text-html-widget-6 {display: none !important;}
 </style>\
-<script>
+<script id="remove" type='text/javascript'>
 {
   // 使用document.getElementsByTagName方法获取到所有的iframe标签，并将其存储在一个NodeList中
   const iframes = document.getElementsByTagName('iframe');
@@ -114,6 +114,13 @@ spans.forEach(span => {
     
 </script>`
 
-let body=$response.body.replace(regex_head,style);
+let scriptb =`<script id="remove" type='text/javascript'>
+var scripts = document.querySelectorAll('script:not([id])');
+  scripts.forEach(function(script) {
+  script.remove();
+  });
+</script></body>`
+
+let body=$response.body.replace(regex_head,style,scriptb);
 
 $done({headers, body:body});
