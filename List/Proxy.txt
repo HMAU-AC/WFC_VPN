@@ -1605,10 +1605,9 @@ USER-AGENT,hearthstone*
 
 HOST-SUFFIX,manhuapica.com
 HOST-SUFFIX,manhuabika.com
-
-host-suffix,jsdelivr.net
-host-suffix,wp.com
-host-suffix,mrcong.com
+DOMAIN-SUFFIX,jsdelivr.net
+DOMAIN-SUFFIX,wp.com
+DOMAIN-SUFFIX,mrcong.com
 DOMAIN-SUFFIX,awsstatic.com
 DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,digitalocean.com
