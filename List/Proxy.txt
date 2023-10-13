@@ -1601,10 +1601,8 @@ USER-AGENT,battleroyale*
 USER-AGENT,com.apple.trustd*
 USER-AGENT,hearthstone*
 
-
-
-HOST-SUFFIX,manhuapica.com
-HOST-SUFFIX,manhuabika.com
+DOMAIN-SUFFIX,manhuapica.com
+DOMAIN-SUFFIX,manhuabika.com
 DOMAIN-SUFFIX,jsdelivr.net
 DOMAIN-SUFFIX,wp.com
 DOMAIN-SUFFIX,mrcong.com
