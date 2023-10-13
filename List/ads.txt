@@ -55,3 +55,9 @@ DOMAIN-SUFFIX,exdynsrv.com
 DOMAIN-SUFFIX,tubecup.net
 DOMAIN-SUFFIX,pemsrv.com
 DOMAIN-SUFFIX,viglink.com
+DOMAIN-SUFFIX,azmxagvucr.com
+DOMAIN-SUFFIX,ruldraakvmro.com
+DOMAIN-SUFFIX,nfysrerisguq.com
+DOMAIN-SUFFIX,jkyamwfabov.com
+DOMAIN-SUFFIX,limurol.com
+DOMAIN-SUFFIX,hhbypdoecp.com
