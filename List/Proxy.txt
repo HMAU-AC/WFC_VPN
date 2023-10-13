@@ -1,6 +1,6 @@
 # NAME: YouTube
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:17:47
 # DOMAIN-KEYWORD: 1
 # DOMAIN-SUFFIX: 178
@@ -195,8 +195,8 @@ USER-AGENT,YouTube*
 USER-AGENT,com.google.ios.youtube*
 
 # NAME: YouTubeMusic
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:17:48
 # DOMAIN: 1
 # USER-AGENT: 4
@@ -208,8 +208,8 @@ USER-AGENT,YouTubeMusic*
 USER-AGENT,com.google.ios.youtubemusic*
 
 # NAME: GitHub
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:17:48
 # DOMAIN-KEYWORD: 1
 # DOMAIN-SUFFIX: 29
@@ -246,8 +246,8 @@ DOMAIN-SUFFIX,thegithubshop.com
 DOMAIN-KEYWORD,github
 
 # NAME: GitBook
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:21:14
 # DOMAIN-SUFFIX: 3
 # TOTAL: 3
@@ -256,8 +256,8 @@ DOMAIN-SUFFIX,gitbook.io
 DOMAIN-SUFFIX,gitbook.zendesk.com
 
 # NAME: Google
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:17:47
 # DOMAIN-KEYWORD: 5
 # DOMAIN-SUFFIX: 724
@@ -1010,16 +1010,16 @@ PROCESS-NAME,com.google.android.play.games
 PROCESS-NAME,BackupandSync
 
 # NAME: GoogleSearch
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:21:22
 # DOMAIN-KEYWORD: 1
 # TOTAL: 1
 DOMAIN-KEYWORD,www.google.
 
 # NAME: GoogleDrive
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:17:48
 # DOMAIN: 1
 # DOMAIN-SUFFIX: 4
@@ -1037,24 +1037,24 @@ USER-AGENT,Google.Drive*
 PROCESS-NAME,BackupandSync
 
 # NAME: GoogleVoice
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:21:22
 # DOMAIN: 1
 # TOTAL: 1
 DOMAIN,lens.l.google.com
 
 # NAME: Chromecast
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:21:24
 # DOMAIN-KEYWORD: 1
 # TOTAL: 1
 DOMAIN-KEYWORD,pa.google
 
 # NAME: GoogleFCM
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:21:45
 # DOMAIN: 9
 # IP-CIDR: 26
@@ -1096,8 +1096,8 @@ IP-CIDR,74.125.24.188/32,no-resolve
 IP-CIDR,74.125.28.188/32,no-resolve
 
 # NAME: OneDrive
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:17:48
 # DOMAIN-KEYWORD: 3
 # DOMAIN-SUFFIX: 18
@@ -1131,8 +1131,8 @@ PROCESS-NAME,OneDrive
 PROCESS-NAME,OneDriveUpdater
 
 # NAME: Teams
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:21:43
 # DOMAIN: 1
 # DOMAIN-SUFFIX: 3
@@ -1143,8 +1143,8 @@ DOMAIN-SUFFIX,teams.live.com
 DOMAIN-SUFFIX,teams.microsoft.com
 
 # NAME: Pixiv
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:21:17
 # DOMAIN-SUFFIX: 9
 # TOTAL: 9
@@ -1159,8 +1159,8 @@ DOMAIN-SUFFIX,pixiv.org
 DOMAIN-SUFFIX,pximg.net
 
 # NAME: Tumblr
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:21:18
 # DOMAIN-SUFFIX: 3
 # TOTAL: 3
@@ -1169,8 +1169,8 @@ DOMAIN-SUFFIX,tumblr.co
 DOMAIN-SUFFIX,tumblr.com
 
 # NAME: Twitter
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:20:11
 # DOMAIN-KEYWORD: 1
 # DOMAIN-SUFFIX: 25
@@ -1211,8 +1211,8 @@ IP-CIDR,209.237.192.0/19,no-resolve
 IP-CIDR,69.195.160.0/19,no-resolve
 
 # NAME: Telegram
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:20:10
 # DOMAIN-KEYWORD: 1
 # DOMAIN-SUFFIX: 20
@@ -1265,8 +1265,8 @@ PROCESS-NAME,telegram-desktop
 OR,((IP-ASN,44907,no-resolve),(IP-ASN,59930,no-resolve),(IP-ASN,62014,no-resolve),(IP-ASN,62041,no-resolve),(IP-ASN,211157,no-resolve))
 
 # NAME: TelegramNL
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:21:22
 # IP-CIDR: 3
 # IP-CIDR6: 2
@@ -1278,8 +1278,8 @@ IP-CIDR6,2001:67c:4e8::/48,no-resolve
 IP-CIDR6,2001:b28:f23c::/48,no-resolve
 
 # NAME: TelegramSG
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:21:22
 # IP-CIDR: 2
 # IP-CIDR6: 1
@@ -1289,8 +1289,8 @@ IP-CIDR,91.108.56.0/22,no-resolve
 IP-CIDR6,2001:b28:f23f::/48,no-resolve
 
 # NAME: TelegramUS
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:21:22
 # IP-CIDR: 1
 # IP-CIDR6: 1
@@ -1299,8 +1299,8 @@ IP-CIDR,91.108.12.0/22,no-resolve
 IP-CIDR6,2001:b28:f23d::/48,no-resolve
 
 # NAME: Pinterest
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:21:17
 # DOMAIN-SUFFIX: 52
 # TOTAL: 52
@@ -1358,8 +1358,8 @@ DOMAIN-SUFFIX,pinterest.vn
 DOMAIN-SUFFIX,pinterestmail.com
 
 # NAME: Imgur
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:21:15
 # DOMAIN-SUFFIX: 3
 # TOTAL: 3
@@ -1368,8 +1368,8 @@ DOMAIN-SUFFIX,imgur.io
 DOMAIN-SUFFIX,imgurinc.com
 
 # NAME: Steam
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:17:46
 # DOMAIN: 4
 # DOMAIN-KEYWORD: 3
@@ -1430,8 +1430,8 @@ DOMAIN-KEYWORD,steamstore
 DOMAIN-KEYWORD,steamuserimages
 
 # NAME: SteamCN
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 14:17:46
 # DOMAIN: 12
 # DOMAIN-SUFFIX: 5
@@ -1455,8 +1455,8 @@ DOMAIN-SUFFIX,steamserver.net
 DOMAIN-SUFFIX,steamusercontent.com
 
 # NAME: Proxy
-# 
-# 
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2023-10-07 15:41:13
 # DOMAIN: 11
 # DOMAIN-KEYWORD: 29
