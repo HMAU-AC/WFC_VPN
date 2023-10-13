@@ -1,0 +1,119 @@
+* {
+                margin: 0;
+                padding: 0;
+                text-decoration: none;
+                list-style: none;
+                transition: .3s;
+            }
+
+            body {
+                font-size: 12px;
+                padding: 2%;
+                color: #2f353d;
+                display: flex;
+                justify-content: center;
+                background-color: #fff;
+            }
+
+            .main {
+                width:666px;
+                border-radius: 8px;
+                padding: 2vh 3vw;
+                background-color: #fff;
+                box-shadow: 0 30px 60px #eaedf9;
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                min-height: 60px;
+            }
+
+            h1 {
+                font-size: 24px;
+                line-height: 26px;
+                word-break: break-all
+            }
+
+            a {
+                color: #2f353d;
+            }
+
+            a:hover {
+                color: #eeb92b;
+            }
+
+            table {
+                width: 100%;
+                text-align: left;
+                border-collapse: collapse;
+            }
+
+            tr {
+                padding: 0;
+                margin: 0;
+                background-color: #fff;
+                border-radius: 8px;
+                border-bottom: 1px solid #eff1f3;
+            }
+
+            tr:nth-child(even) {
+            }
+
+            tr:hover {
+                background-color: #f4f4f4;
+            }
+
+            th {
+                opacity: .5;
+                height: 22px;
+            }
+
+            td,
+            th {
+                padding: 4px;
+                margin: 0;
+                color:#9b9c9e;
+            }
+
+            td a {
+                font-size: 16px;
+                box-lines: 22px;
+                align-items: center;
+                font-weight: 900;
+            }
+
+
+            .icon {
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                margin-right: 7px;
+                flex-shrink: 0;
+
+            }
+
+
+
+            .logo {
+                
+                flex-shrink: 0;
+            }
+
+            tr td:nth-child(1){
+                min-width: 200px;
+                max-width: 700px;
+                word-break: break-all;
+                display: flex;
+                align-items: center;
+            }
+            tr td:nth-child(2){
+                width: 80px;
+            }
+            tr td:nth-child(3){
+                width: 80px;
+            }
+            tr td:nth-child(4){
+                width: 20px;
+            }
