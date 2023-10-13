@@ -1,0 +1,276 @@
+
+           
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>WFC_VPN</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEm0lEQVR4AWLQNjAHNGsOTLYkURBeI7z6Fc+2bdu2bdu2bdu2bdtj51YubzSrem7X9BeRDzOtLNc5ZaefhOoJrRS6IxQtBM2KFrojtFKontBPQl9ZyeqH3wi1EXothIDptVBboW/cjPwqtF8IulS7fhNMmDwdK9esx9r1mzBj9jx06tYbuQsUd7rvAL/Vzgh/cUWXgaYt2+H2nbuwIzY2Fus3bUHJspXtnsFv/c1o5FudNTFl+iykpKRAhujoGAwcOtLuWfv57aFG2ugyMXHKDHhh2co1yJg1j9Uz2/5r5Gd2Ij3Nqb2pJiKjotiE0G/QMNRp0BSt23fBoqUrWBMwsnP3PmTOkd9qAPiZRuroMMEPePzkKUI5fPQ4ChQpZXl90VIVcPXaDRg5d+EiipYsb7y+Co2s0mFk2KhxCOXIsRPmpmJQ1pwFaBZGIiIjMWvuQlSv3QC58xdDsdIVF9PIHb9NpM+SG48ePwltTqwJ6Zo8ePgoXLj7lY4Zu2HTVsaOq3R/puz5sGPXHsfBjUbgt7r06Ivde/f/p5p1G3t6zvDR4xEVFQ0rfDWybcdunDx91lE0qfJMzvhjJ0zGgUNHcOnKVRw+cgyz5y3yz0j2PIWRnJwMN3r2HRiO9/lnpG7D5pCB/SfQRoaNHAsZipeuFGwjXMm6kZSUhIzZ8gbbCGdlN16+esVrg2uEM3ZsXBzcuHDxcrCNVKxaGzJs37k72EZ69BkIGeYtXBJMI9lyFcTEKdMREREBGbi95TosMEY48gwePhpv372DKpyh8xUqmbZGWJrdevXjPsN5mHWZ4V+/eYvGzdukjZGWbTvhxs3bcIPLlGvXb0hdN2f+ItauPiNs27Js3LwNb95KNzkuBDnb6zFy/8FDyBATE4M2HbpClY5de/lvhFWfmJgIGabPmoepM+ZAlTIVqvlvpHzlmpCBHThb7kLg7E0IIyi3bt/BkuWruO+2rcUM3Mv7baR95x6Qoe/AochbqAQ+fPwEhnH4/0LFyoLPmDV3AWzgGk1DZ5cMsHE0Y6lmyZnfFCmp06CZ03DMGJceI5u3bocbTVq0td01Pnn6DE6MGjtRj5ErV687D5+Xr4IjFTv5vgOH8PDRYy5dZPcoDG7rMcKYlArHTpzifTQnFbhmvMt3I0VKlIMqI8dMQP7CpfDu/Xu4wWt8W6Jw3mjWqj2o0eMnQ5XS5auCTUwGbsY4wg0cMiL8RgoXLwevsH9w2FWFK4ewG6lRpxG8snf/QeU+RXbs3ht+I1zleoXpMy9wrlI34hLEZtPQTat2nVWNxLimFbh11YwhkSOlu66JnkHDRjHYrEvc+noZfhfTSF2HFDKHXe1iOEnRSBXbZGiufEWRGtRHK/X1ljEZSrU1XsD8nFdevXqNT58/wysVqtRSMdLO8cAAEzCpmD9SVQgKJg4YDwxQv/NYRDhGq/kLl0Id5f0Iv/UPp0M1B+1u/vz5C4xcvHRF6sWcrQ1wNcztsJdR6iC/VeaYE9vdG2PuzgputGRefv3mLct9vaKBN/w2+2NO7gfP7tWq1yQGZnhARuojrOLBZ89fdJ2x+W6Zg2d/Al2Skd0lfMAeAAAAAElFTkSuQmCC">
+    </head>
+
+    <body>
+    <!-- 文件样式 -->
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                text-decoration: none;
+                list-style: none;
+                transition: .3s;
+            }
+
+            body {
+                font-size: 12px;
+                padding: 2%;
+                color: #2f353d;
+                display: flex;
+                justify-content: center;
+                background-color: #fff;
+            }
+
+            .main {
+                width:666px;
+                border-radius: 8px;
+                padding: 2vh 3vw;
+                background-color: #fff;
+                box-shadow: 0 30px 60px #eaedf9;
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                min-height: 60px;
+            }
+
+            h1 {
+                font-size: 24px;
+                line-height: 26px;
+                word-break: break-all
+            }
+
+            a {
+                color: #2f353d;
+            }
+
+            a:hover {
+                color: #eeb92b;
+            }
+
+            table {
+                width: 100%;
+                text-align: left;
+                border-collapse: collapse;
+            }
+
+            tr {
+                padding: 0;
+                margin: 0;
+                background-color: #fff;
+                border-radius: 8px;
+                border-bottom: 1px solid #eff1f3;
+            }
+
+            tr:nth-child(even) {
+            }
+
+            tr:hover {
+                background-color: #f4f4f4;
+            }
+
+            th {
+                opacity: .5;
+                height: 22px;
+            }
+
+            td,
+            th {
+                padding: 4px;
+                margin: 0;
+                color:#9b9c9e;
+            }
+
+            td a {
+                font-size: 16px;
+                box-lines: 22px;
+                align-items: center;
+                font-weight: 900;
+            }
+
+
+            .icon {
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                margin-right: 7px;
+                flex-shrink: 0;
+
+            }
+
+
+
+            .logo {
+                
+                flex-shrink: 0;
+            }
+
+            tr td:nth-child(1){
+                min-width: 200px;
+                max-width: 700px;
+                word-break: break-all;
+                display: flex;
+                align-items: center;
+            }
+            tr td:nth-child(2){
+                width: 80px;
+            }
+            tr td:nth-child(3){
+                width: 80px;
+            }
+            tr td:nth-child(4){
+                width: 20px;
+            }
+        </style>
+
+        <div class="main">
+            <header>
+                <h1>
+                    <a href="#">↵
+                    主页
+                    </a> 
+                </h1>
+            </header>
+
+            <table>
+      <!-- 文件说明 -->
+     <tr>
+                    <th>文件名</th>
+                    <th>更新时间</th>
+                    <th>文件大小</th>
+                    <th>文件数量</th>
+         </tr>
+
+
+<tr>
+                    <td>
+                        <sapn class="icon">
+                            
+                    <svg t="1594365202577" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="21498" width="200" height="200">
+                        <path d="M800 512H32V160c0-70.4 57.6-128 128-128h416l224 480z" fill="#5d6f83" p-id="21499"></path>
+                        <path d="M896 992H160c-70.4 0-128-57.6-128-128V320c0-70.4 57.6-128 128-128h736c70.4 0 128 57.6 128 128v544c0 70.4-57.6 128-128 128z" fill="#7b899c" p-id="21500"></path>
+                    </svg>
+                    
+                        </sapn>
+                        
+                        <a href="/Icon/">
+                            Icon
+                        </a>
+                    </td>
+                    <td>28天前</td>
+                    <td>-</td>
+                    <td>21</td>
+</tr>
+            
+<tr>
+                    <td>
+                        <sapn class="icon">
+                            
+                    <svg t="1594365202577" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="21498" width="200" height="200">
+                        <path d="M800 512H32V160c0-70.4 57.6-128 128-128h416l224 480z" fill="#5d6f83" p-id="21499"></path>
+                        <path d="M896 992H160c-70.4 0-128-57.6-128-128V320c0-70.4 57.6-128 128-128h736c70.4 0 128 57.6 128 128v544c0 70.4-57.6 128-128 128z" fill="#7b899c" p-id="21500"></path>
+                    </svg>
+                    
+                        </sapn>
+                        
+                        <a href="/List/">
+                            List
+                        </a>
+                    </td>
+                    <td>18分钟前</td>
+                    <td>-</td>
+                    <td>3</td>
+</tr>
+            
+<tr>
+                    <td>
+                        <sapn class="icon">
+                            
+                    <svg t="1594365202577" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="21498" width="200" height="200">
+                        <path d="M800 512H32V160c0-70.4 57.6-128 128-128h416l224 480z" fill="#5d6f83" p-id="21499"></path>
+                        <path d="M896 992H160c-70.4 0-128-57.6-128-128V320c0-70.4 57.6-128 128-128h736c70.4 0 128 57.6 128 128v544c0 70.4-57.6 128-128 128z" fill="#7b899c" p-id="21500"></path>
+                    </svg>
+                    
+                        </sapn>
+                        
+                        <a href="/Module/">
+                            Module
+                        </a>
+                    </td>
+                    <td>1天前</td>
+                    <td>-</td>
+                    <td>4</td>
+</tr>
+            
+<tr>
+                    <td>
+                        <sapn class="icon">
+                            
+                    <svg t="1594365294707" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="24070" width="16" height="16">
+                        <path d="M725.333 0H196.267c-84.48 0-153.6 69.12-153.6 153.6v716.8c0 84.48 69.12 153.6 153.6 153.6h631.466c84.48 0 153.6-69.12 153.6-153.6V256l-256-256zM896 870.4c0 37.547-30.72 68.267-68.267 68.267H196.267c-37.547 0-68.267-30.72-68.267-68.267V153.6c0-37.547 30.72-68.267 68.267-68.267h409.6V307.2c0 37.547 30.72 68.267 68.266 68.267H896V870.4zM708.267 290.133c-9.387 0-17.067-7.68-17.067-17.066V85.333l204.8 204.8H708.267z" fill="#5d6f83" p-id="24071"></path>
+                        <path d="M588.8 716.8H298.667c-23.894 0-42.667 18.773-42.667 42.667s18.773 42.666 42.667 42.666H588.8c23.893 0 42.667-18.773 42.667-42.666S612.693 716.8 588.8 716.8zM256 571.733c0 23.894 18.773 42.667 42.667 42.667h426.666c23.894 0 42.667-18.773 42.667-42.667s-18.773-42.666-42.667-42.666H298.667c-23.894 0-42.667 18.773-42.667 42.666z" fill="#7b899c" p-id="24072"></path>
+                    </svg>
+                    
+                        </sapn>
+                        
+                        <a href="/README.md">
+                            README.md
+                        </a>
+                    </td>
+                    <td>14天前</td>
+                    <td>0.31 KB</td>
+                    <td>-</td>
+</tr>
+            
+            </table>
+        </div>
+
+        
+    <script>
+    // form https://developer.mozilla.org/zh-CN/docs/Web/API/Page_Visibility_API
+    let WATCH_HTTP_PLUG_OBJECT = {
+        fun: function() {
+            this.set = setInterval(() => {
+            fetch('/Hereistheheadquartersyoucancheckforfileupdatesrenzhehilu').then(d => d.json())
+                    .then(d => {
+                        if (!d.time) {} else if (d.time && !this.time) {
+                            this.time = d.time
+                        } else if (d.time > this.time) {
+                            console.log('可以刷新了！！！！');
+                            location.reload();
+                            this.time = d.time
+                        }
+                    })
+            }, 1000);
+        },
+        set: null,
+        time: null
+    };
+    WATCH_HTTP_PLUG_OBJECT.fun()
+    document.addEventListener("visibilitychange", function() {
+        if (!document.hidden) {
+        WATCH_HTTP_PLUG_OBJECT.fun()
+        } else {
+            clearInterval(WATCH_HTTP_PLUG_OBJECT.set)
+        }
+
+    });
+        
+    </script>
+
+    </body>
+    </html>
+
+        
