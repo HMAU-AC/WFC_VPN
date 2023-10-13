@@ -1,0 +1,128 @@
+# = Apple
+# > Apple Websites
+host-suffix,aaplimg.com, direct
+host-suffix,apple.co, direct
+host-suffix,apple.com, direct
+host-suffix,apple.com.cn, direct
+host-wildcard,apple.*, direct
+host-wildcard,apple.com.*, direct
+host-suffix,itunes.com, direct
+host-suffix,me.com, direct
+host-wildcard,ipod.*, direct
+host-wildcard,imac.*, direct
+host-wildcard,iphone.*, direct
+host-wildcard,macbook.*, direct
+
+# > Apple CIDR
+ip-cidr,17.0.0.0/8, direct
+ip-cidr,63.92.224.0/19, direct
+ip-cidr,65.199.22.0/23, direct
+ip-cidr,139.178.128.0/18, direct
+ip-cidr,144.178.0.0/19, direct
+ip-cidr,144.178.36.0/22, direct
+ip-cidr,144.178.48.0/20, direct
+ip-cidr,192.35.50.0/24, direct
+ip-cidr,198.183.17.0/24, direct
+ip-cidr,205.180.175.0/24, direct
+
+# > Apple Stores
+host,apps.apple.com, direct
+host,iosapps.itunes.apple.com, direct
+host,osxapps.itunes.apple.com, direct
+host-suffix,appsto.re, direct
+host-suffix,mzstatic.com, direct
+
+# > Apple Developer
+host-wildcard,appleworldwidedeveloper.*.net, direct
+host-suffix,adcdownload.apple.com, direct
+host-suffix,developer.apple.com, direct
+
+# > Beats
+
+
+# > iCloud
+host-keyword,icloud, direct
+host-keyword,icoudo, direct
+host-keyword,icoudos, direct
+host-suffix,applemx-icloud.com, direct
+host-suffix,icloud-content.com, direct
+host-suffix,icloud-isupport.com, direct
+host-suffix,icloudads.net, direct
+host-suffix,icloudbox.net, direct
+host-suffix,icloudbrowser.net, direct
+host-suffix,icloude.com, direct
+host-suffix,icloudmusic.net, direct
+host-suffix,icloudmail.net, direct
+host-suffix,icloudnet.net, direct
+host-suffix,icloudpay.net, direct
+host-suffix,icloudsecure.net, direct
+host-suffix,myicloud.net, direct
+host-suffix,mail.me.com.akadns.net, direct
+host-suffix,www-cdn.icloud.com.akadns.net, direct
+host-suffix,icloud-sandbox.com, direct
+host-suffix,icloud.com.cn, direct
+host-suffix,icloud.net.cn, direct
+
+# > Apple APIs
+# >> Location Service
+host-suffix,ls.apple.com, direct
+# >> Push Service
+host,init-p01md.apple.com, direct
+host,init-p01st.push.apple.com, direct
+host,init-s01st.push.apple.com, direct
+host-suffix,courier-push-apple.com.akadns.net, direct
+host-suffix,push.apple.com, direct
+
+# >> Other Service
+HOST,amp-api.apps.apple.com, direct
+host,api.smoot.apple.cn, HMAU
+host-suffix,safebrowsing.apple, HMAU
+
+# > Apple Music
+host,hls.itunes.apple.com, direct
+host,aod.itunes.apple.com, direct
+host,mvod.itunes.apple.com, direct
+host-suffix,itunes.apple.com, direct
+host-suffix,music.apple.com, direct
+host-suffix,play.itunes.apple.com, direct
+host-suffix,phobos.apple.com, direct
+host-suffix,radio.itunes.apple.com, direct
+host-suffix,radio-activity.itunes.apple.com, direct
+host-suffix,radio-services.itunes.apple.com, direct
+host-suffix,streamingaudio.itunes.apple.com, direct
+
+# > Apple Kit
+host-suffix,apple-cloudkit.com, direct
+host-suffix,apple-mapkit.com, direct
+host-suffix,apple-livephotoskit.com, direct
+
+# > Apple Resources Server
+host,testflight.apple.com, HMAU
+host-suffix,appldnld.apple.com, direct
+host-suffix,secure-appldnld.apple.com, direct
+host-suffix,itunesu.assets.itunes.com, HMAU
+
+# > Apple CDNs
+host,updates-http.cdn-apple.com, direct
+host-suffix,apple-support.akadns.net, direct
+host-suffix,apple.com.akadns.net, direct
+host,adcdownload.apple.com.akadns.net, direct
+host-suffix,apple.com.cdn20.com, direct
+host-suffix,apple.com.edgekey.net.globalredir.akadns.net, direct
+host-suffix,apple.com.mwcname.com, direct
+host-suffix,apple.com.mwcloudcdn.com, direct
+host-suffix,cdn-apple.com, direct
+host-suffix,cdn-apple.com.akadns.net, direct
+host-suffix,isu.apple.com.akadns.net, direct
+host-suffix,itunes-apple.com.akadns.net, HMAU
+host-suffix,itunes.com.edgekey.net, HMAU
+host-suffix,origin-apple.com.akadns.net, direct
+host-suffix,push-apple.com.akadns.net, direct 
+host-suffix,prod-support.apple-support.akadns.net, direct
+
+#以下内容规则需要通过代理访问
+host,news-assets.apple.com, HMAU
+host,news-client.apple.com, HMAU
+host,news-edge.apple.com, HMAU
+host,news-events.apple.com, HMAU
+host-suffix,apple.news, HMAU
