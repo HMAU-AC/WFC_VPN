@@ -24,4 +24,4 @@ mrcong-ads-post = type=http-response,pattern=^https?:\/\/mrcong\.com\/.*\/$,requ
 mrcong-ads-sc = type=http-response,pattern=^https?:\/\/mrcong\.com\/.*\/#gsc.tab=.*$,requires-body=1,max-size=1048576,script-path=https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Module/js/Ads-mrong.js
 
 [MITM]
-hostname = %APPEND% *.disqus.com, connect.facebook.net, assets.pinterest.com, mrcong.com
+hostname = %APPEND% fvcwqkkqmuv.com, static.xx.fbcdn.net, dpyozpogdabz.com, disqus.com, ad.a-ads.com, *.disqus.com, connect.facebook.net, assets.pinterest.com, mrcong.com
