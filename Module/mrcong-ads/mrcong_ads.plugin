@@ -1,0 +1,27 @@
+#!name = mrong广告
+#!desc = 对于一些烦人的广告删除它，看不惯就是盘它
+#!open = mrong.com
+#!author = 爱吃素的胖子
+#!homepage = https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Module/mrcong-ads/mrcong_ads.sgmodule
+
+[Rule]
+
+URL-REGEX,^https:\/\/mrcong\.com\/wp-content\/cache\/min\/1\/wp-content\/plugins\/disqus-comment-system\/public\/js\/comment_count\.js\?.*,REJECT
+URL-REGEX,^https:\/\/mr-cong\.disqus\.com\/embed\.js$,REJECT 
+URL-REGEX,^https:\/\/mrcong\.com\/wp-content\/cache\/min\/1\/wp-content\/themes\/mrcong\/js\/tie-scripts\.js\?.*,REJECT 
+URL-REGEX,^https:\/\/disqus\.com\/api\/3\.0\/.*,REJECT 
+URL-REGEX,^https:\/\/referrer\.disqus\.com\/juggler\/event\.gif\?.*,REJECT 
+URL-REGEX,^https:\/\/links\.services\.disqus\.com\/api\/ping$,REJECT 
+URL-REGEX,^https?:\/\/assets\.pinterest\.com\/js\/.*?.js.*,REJECT // mrcong跳转屏蔽
+# URL-REGEX,^https?:\/\/connect\.facebook\.net\/vi_VN\/.*?.js.*,REJECT
+[Rewrite]
+
+
+
+[Script]
+http-response ^https?:\/\/mrcong\.com($|\/$) script-path=https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Module/js/Ads-mrong.js, requires-body = true, binary-body-mode = true, tag = mrconghome
+http-response ^https?:\/\/mrcong\.com\/.*\/$ script-path=https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Module/js/Ads-mrong.js, requires-body = true, binary-body-mode = true, tag = mrcongpost
+http-response ^https?:\/\/mrcong\.com\/.*\/#gsc.tab=.*$ script-path=https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Module/js/Ads-mrong.js, requires-body = true, binary-body-mode = true, tag = mrcongsc
+
+[MITM]
+hostname = %APPEND% fvcwqkkqmuv.com, static.xx.fbcdn.net, dpyozpogdabz.com, disqus.com, ad.a-ads.com, *.disqus.com, connect.facebook.net, assets.pinterest.com, mrcong.com
