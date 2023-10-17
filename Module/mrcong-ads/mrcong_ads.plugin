@@ -19,9 +19,9 @@ URL-REGEX,^https?:\/\/assets\.pinterest\.com\/js\/.*?.js.*,REJECT // mrcongè·³è½
 
 
 [Script]
-http-response ^https?:\/\/mrcong\.com($|\/$) script-path=https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Module/js/Ads-mrong.js, requires-body = true, binary-body-mode = true, tag = mrconghome
-http-response ^https?:\/\/mrcong\.com\/.*\/$ script-path=https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Module/js/Ads-mrong.js, requires-body = true, binary-body-mode = true, tag = mrcongpost
-http-response ^https?:\/\/mrcong\.com\/.*\/#gsc.tab=.*$ script-path=https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Module/js/Ads-mrong.js, requires-body = true, binary-body-mode = true, tag = mrcongsc
+http-response ^https?:\/\/mrcong\.com($|\/$) script-path=https://www.gitt.top/Module/js/Ads-mrong.js, requires-body = true, binary-body-mode = true, tag = mrconghome
+http-response ^https?:\/\/mrcong\.com\/.*\/$ script-path=https://www.gitt.top/Module/js/Ads-mrong.js, requires-body = true, binary-body-mode = true, tag = mrcongpost
+http-response ^https?:\/\/mrcong\.com\/.*\/#gsc.tab=.*$ script-path=https://www.gitt.top/Module/js/Ads-mrong.js, requires-body = true, binary-body-mode = true, tag = mrcongsc
 
 [MITM]
 hostname = %APPEND% fvcwqkkqmuv.com, static.xx.fbcdn.net, dpyozpogdabz.com, disqus.com, ad.a-ads.com, *.disqus.com, connect.facebook.net, assets.pinterest.com, mrcong.com
