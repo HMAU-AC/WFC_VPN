@@ -24,8 +24,7 @@ DOMAIN-SUFFIX,otnolatrnup.com
 DOMAIN-SUFFIX,amplitude.com 
 DOMAIN-SUFFIX,googlesyndication.com 
 DOMAIN-SUFFIX,ltmsphrcl.net 
-DOMAIN-SUFFIX,doubleclick.net 
-DOMAIN-SUFFIX,cloudfront.net 
+DOMAIN-SUFFIX,doubleclick.net
 DOMAIN-SUFFIX,rtzjnhkpll.com 
 DOMAIN-SUFFIX,chengrenn18.xyz 
 DOMAIN-SUFFIX,defybrick.com 
