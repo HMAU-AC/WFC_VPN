@@ -17,9 +17,9 @@ URL-REGEX,^https:\/\/disqus\.com\/embed\/comments\/.*,REJECT
 
 
 [Script]
-http-response ^https?:\/\/mrcong\.com($|\/$) script-path=https://www.gitt.top/Module/js/Ads-mrong.js, requires-body=true, timeout=500, tag=mrconghome
-http-response ^https?:\/\/mrcong\.com\/.*\/$ script-path=https://www.gitt.top/Module/js/Ads-mrong.js, requires-body=true, timeout=500, tag=mrcongpost
-http-response ^https?:\/\/mrcong\.com\/.*\/#gsc.tab=.*$ script-path=https://www.gitt.top/Module/js/Ads-mrong.js, requires-body=true, timeout=500, tag=mrcongsc
+http-response ^https?:\/\/mrcong\.com($|\/$) script-path=https://www.gitt.top/Module/js/Ads-mrong.js, requires-body=true, timeout=1500, tag=mrconghome
+http-response ^https?:\/\/mrcong\.com\/.*\/$ script-path=https://www.gitt.top/Module/js/Ads-mrong.js, requires-body=true, timeout=1500, tag=mrcongpost
+http-response ^https?:\/\/mrcong\.com\/.*\/#gsc.tab=.*$ script-path=https://www.gitt.top/Module/js/Ads-mrong.js, requires-body=true, timeout=1500, tag=mrcongsc
 
 [Mitm]
 hostname = disqus.com, *.disqus.com, mrcong.com, *.mrcong.com
