@@ -4,6 +4,7 @@ for (var i = 0; i < iframes.length; i++) {
     iframes[i].src = "about:blank";
 }
 
+/*
 // DOMContentLoaded会在DOM树构建完成后就触发，不需要等待其他资源加载完成
 document.addEventListener('DOMContentLoaded', function() {
     // 选择所有iframe元素
@@ -14,8 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
         iframeElements[i].remove();
     }
 });
-
-/*
 
 // 创建一个观察器实例
 var observer = new MutationObserver(function(mutations) {
@@ -43,7 +42,7 @@ iframesToRemove.forEach(iframe => {
 });
 
 
-
+/*
 // 网页内容加载之前删除所有<div class="pc-ads-01">元素及其所有子元素，你可以在DOMContentLoaded事件处理器中执行此操作
 document.addEventListener('DOMContentLoaded', function() {
     // 选择所有class为'pc-ads-01'的元素
@@ -65,8 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-
-/*
 // 这段代码将创建一个MutationObserver实例，该实例将监听document.body及其所有子节点和后代的变化。每当DOM发生变化时，它都会选择所有<div class="pc-ads-01">元素并删除它们
 // 创建一个观察器实例
 // 创建一个观察器实例
