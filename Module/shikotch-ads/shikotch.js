@@ -34,7 +34,7 @@ var config = { childList: true, subtree: true };
 // 传入目标节点和观察选项
 observer.observe(document.body, config);
 
-*/
+
 
 // 删除网页中所有的iframe标签
 const iframesToRemove = document.querySelectorAll('iframe');
@@ -42,7 +42,7 @@ iframesToRemove.forEach(iframe => {
     iframe.remove();
 });
 
-
+*/
 /*
 // 网页内容加载之前删除所有<div class="pc-ads-01">元素及其所有子元素，你可以在DOMContentLoaded事件处理器中执行此操作
 document.addEventListener('DOMContentLoaded', function() {
