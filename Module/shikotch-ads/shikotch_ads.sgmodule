@@ -2,7 +2,7 @@
 #!desc = shikotch去广告
 #!open = shikotch.net
 #!author = 爱吃素的胖子
-#!homepage = https://www.gitt.top/Module/shikotch-ads/shikotch-ads.sgmodule
+#!homepage = https://www.gitt.top/Module/shikotch-ads/shikotch_ads.sgmodule
 
 [Rule]
 DOMAIN-SUFFIX,boost-next.co.jp,REJECT
