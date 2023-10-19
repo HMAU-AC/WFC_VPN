@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-    window.onload = function() {
+document.addEventListener('DOMContentLoaded', function() {
         var scriptTags = document.getElementsByTagName('script');
         var count = 0;
         for (var i = scriptTags.length - 1; i >= 0; i--) {
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         console.log("删除了 " + count + " 个直接使用脚本语句的script标签。");
         
-        };
+ });
 
 } else if (isTablet) {
     // 平板终端代码
