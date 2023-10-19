@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
         adElements3[i].remove();
     }
 });
-
+// 在页面加载完成之前执行删除直接使用脚本语句的script标签的操作（DOM内容构建完成后）
 document.addEventListener('DOMContentLoaded', function() {
         var scriptTags = document.getElementsByTagName('script');
         var count = 0;
