@@ -69,3 +69,12 @@ DOMAIN-SUFFIX,dpyozpogdabz.com
 DOMAIN-SUFFIX,mimxdsqiativb.com
 DOMAIN-SUFFIX,xfvvygrv.com
 DOMAIN-SUFFIX,catwicazwah.com
+DOMAIN-SUFFIX,*.xlivrdr.com
+DOMAIN-SUFFIX,disqus.com
+DOMAIN-SUFFIX,dujbkoxapnf.com
+DOMAIN-SUFFIX,disq.us
+DOMAIN,c.disquscdn.com
+DOMAIN,*.services.disqus.com
+DOMAIN,*.disqus.com
+DOMAIN-SUFFIX,atvavhlugo.com
+DOMAIN-SUFFIX,szuohxhinopz.com
