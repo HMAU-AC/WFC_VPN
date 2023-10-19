@@ -25,9 +25,12 @@ var isDesktop = !isMobile && !isTablet;
 if (isMobile) {
     // 手机终端代码
     var divElements = document.querySelectorAll('div[style="width: 300px; height: 250px; margin: 0 auto 20px auto;"]');
+    var count = 0;
     divElements.forEach(function(divElement) {
         divElement.parentNode.removeChild(divElement);
+        count++;
     });
+    console.log("删除了 " + count + " 个div元素。");
 
     window.onload = function() {
         var scriptTags = document.getElementsByTagName('script');
