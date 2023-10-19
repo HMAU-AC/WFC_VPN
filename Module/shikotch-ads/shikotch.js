@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function() {
     var scripts = document.getElementsByTagName('script');
     var regex = /https:\/\/[A-Za-z0-9]+\.boost-next\.co\.jp\/.*/;
     for (var i = scripts.length - 1; i >= 0; i--) {
@@ -24,7 +24,7 @@ window.onload = function() {
             console.log('window.onload jp')
         }
     }
-};
+});
 
 // 判断终端类型
 var userAgent = navigator.userAgent.toLowerCase();
