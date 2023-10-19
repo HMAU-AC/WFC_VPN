@@ -19,7 +19,7 @@ DOMAIN-SUFFIX,boost-next.co.jp,REJECT
 URL-REGEX,^https?:\/\/shikotch\.net\/.*\/asmr18\.(js|css)$,REJECT
 
 [Header Rewrite]
-^https?:\/\/z2\.shikotch\.net\/.*\/$ header-add Access-Control-Allow-Origin: https://shikotch.net
+^https?:\/\/z2\.shikotch\.net\/.*\.webp header-add Access-Control-Allow-Origin https://shikotch.net
 
 
 [Script]
