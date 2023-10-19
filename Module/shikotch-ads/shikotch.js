@@ -112,3 +112,8 @@ window.onload = function() {
         }
     }
 };
+
+var divElements = document.querySelectorAll('div[style="width: 300px; height: 250px; margin: 0 auto 20px auto;"]');
+divElements.forEach(function(divElement) {
+    divElement.parentNode.removeChild(divElement);
+});
