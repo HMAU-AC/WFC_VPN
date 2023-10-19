@@ -100,60 +100,14 @@ window.onload = function() {
 
 }
 
+var scriptTags = document.getElementsByTagName('script');
+var count = 0;
 
-window.onload = function() {
-if (false) {
-(function(window, document) {
-var adTag = '<script type="text/javascript" src="https://js.boost-next.co.jp/t/010/184/a100010184.js"></sc'+'ript>';
-document.write('<div id="bcon" style="position: relative;width:0px;"></div><div id="is_w_area" style="display: none; opacity: 0; width: 100%; height: 100%; position: fixed; left: 0px; bottom: 0px; z-index: 1000000000; background-color: rgba(0, 0, 0, 0.8);text-align: center;"><div id="inview_inner" style="position: absolute;top: 0px;bottom: 0px;left: 0px;right: 0px;margin: auto;height: 524px;"><div id="ad_top_area">'+adTag+'</div><span id="ad_middle_area" style="z-index: 1000000001;display: block!important;background-color: rgba(0,0,0,0.6);margin: auto;padding: 0!important;height: 24px;"><div id="close_button" style="color:#FFF; margin:0 auto; font-size:10px; line-height:22px; width:30px; height:22px; border: solid 1px #999; background-color:#000; text-align: center; cursor:default;">&times;</div></span><div id="ad_bottom_area">'+adTag+'</div></div></div><style id="inview_style"></style>');
-window.addEventListener('load', function() {
-var inview_area = document.getElementById('is_w_area');
-var inview_inner = document.getElementById('inview_inner');
-var top_area = document.getElementById('ad_top_area');
-var middle_area = document.getElementById('ad_middle_area');
-var bottom_area = document.getElementById('ad_bottom_area');
-var inview_style = document.getElementById('inview_style');
-var sc_rate = window.innerWidth / 300;var VisTime = 1000;
-var iframe = inview_inner.getElementsByTagName('iframe');
-for(var i=0;i<iframe.length;i++) {
-if(/gn_delivery/.test(iframe[i].id)){
-iframe[i].style.transform='scale('+sc_rate+')';
-iframe[i].style.transformOrigin='top';
+for (var i = scriptTags.length - 1; i >= 0; i--) {
+    if (scriptTags[i].attributes.length === 0) {
+        scriptTags[i].parentNode.removeChild(scriptTags[i]);
+        count++;
+    }
 }
-}
-inview_style.innerText = '#is_w_area img{width:'+300*sc_rate+'px;height:'+250*sc_rate+'px;}#ad_top_area,#ad_bottom_area{width:'+300*sc_rate+'px!important;height:'+250*sc_rate+'px!important;}';
-inview_inner.style.height = (250*sc_rate-250)*2+524+'px';
 
-var Y_CHECK = function(){
-fade_in();
-};
-document.addEventListener('scroll',Y_CHECK, false );
-document.addEventListener('touchmove',Y_CHECK, false );
-
-var fade_in = function(){
-var bodyHeight=document.body.scrollHeight;
-var devHeight=window.innerHeight;
-var docElm = document.documentElement , docBody = document.body;
-var scroll_Y = docElm.scrollTop || docBody.scrollTop;
-if(bodyHeight-devHeight<=scroll_Y){
-is_w_area.style.display = 'block';
-var VisCount = new Date() - 0;
-var OpaAct = setInterval(function() {
-var ComTime = new Date() - VisCount;
-if (ComTime > VisTime) {
-clearInterval(OpaAct);
-ComTime = VisTime;
-}
-inview_area.style.opacity = (ComTime / VisTime);
-}, 10);
-document.removeEventListener('scroll',Y_CHECK, false );
-document.removeEventListener('touchmove',Y_CHECK, false );
-}
-};
-var close_button = document.getElementById('close_button');
-close_button.addEventListener('click', function() {inview_area.style.display = 'none';});
-});
-})(window, document);
-
-}
-};
+console.log("删除了 " + count + " 个没有任何属性的script标签。");
