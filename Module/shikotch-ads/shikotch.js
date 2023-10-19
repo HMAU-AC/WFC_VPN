@@ -35,6 +35,7 @@ var isDesktop = !isMobile && !isTablet;
 // 执行相应的代码块
 if (isMobile) {
     // 手机终端代码
+    window.onload = function() {
     function removeDivElements(selector) {
         var divElements = document.querySelectorAll(selector);
         var count = 0;
@@ -43,10 +44,11 @@ if (isMobile) {
             count++;
         });
         console.log("删除了 " + count + " 个div元素。");
-    }
+    } // removeDivElements结束
     removeDivElements('div[style="width: 300px; height: 250px; margin: 0 auto 20px auto;"]');
     removeDivElements('div[style="width: 300px; height: 250px; margin: 0 auto;"]');
     removeDivElements('div[style="width: 300px; height: 250px; margin: 10px auto 15px auto;"]');
+} //window.onload 结束
 
 // 网页内容加载之前删除所有<div class="pc-ads-01">元素及其所有子元素，你可以在DOMContentLoaded事件处理器中执行此操作
 document.addEventListener('DOMContentLoaded', function() {
@@ -85,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 } else if (isTablet) {
     // 平板终端代码
-    
+
 // 网页内容加载之前删除所有<div class="pc-ads-01">元素及其所有子元素，你可以在DOMContentLoaded事件处理器中执行此操作
 document.addEventListener('DOMContentLoaded', function() {
     // 选择所有class为'pc-ads-01'的元素
