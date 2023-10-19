@@ -8,6 +8,7 @@ for (var i = 0; i < iframes.length; i++) {
 const iframesToRemove = document.querySelectorAll('iframe');
 iframesToRemove.forEach(iframe => {
     iframe.remove();
+    console.log( iframesToRemove );
 });
 
 
