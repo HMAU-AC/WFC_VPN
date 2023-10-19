@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i = scripts.length - 1; i >= 0; i--) {
         if (regex.test(scripts[i].src)) {
             scripts[i].parentNode.removeChild(scripts[i]);
-            console.log('window.onload jp')
+            console.log("删除了 " + scripts + " 个div元素。")
         }
     }
 });
