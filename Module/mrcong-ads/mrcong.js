@@ -27,6 +27,7 @@ window.onload = function() {
         const element = document.getElementById(id);
         if (element) {
             element.remove();
+            console.log( 'window.onload' );
         }
     });
 }
@@ -46,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const element = document.getElementById(id);
         if (element) {
             element.remove();
+            console.log( 'DOMContentLoaded' );
         }
     });
 });
@@ -61,6 +63,7 @@ var urlsToRemove = [
 for (var i = 0; i < scripts.length; i++) {
     if (urlsToRemove.includes(scripts[i].src)) {
         scripts[i].parentNode.removeChild(scripts[i]);
+        console.log( '删除book' );
     }
 }
 
