@@ -5,7 +5,16 @@
 #!homepage = https://www.gitt.top/Module/shikotch-ads/shikotch_ads.sgmodule
 
 [Rule]
-
+DOMAIN-SUFFIX,lmadps.jp,REJECT
+DOMAIN-SUFFIX,criteo.com,REJECT
+DOMAIN-SUFFIX,im-apps.net,REJECT
+DOMAIN-SUFFIX,gsspat.jp,REJECT
+DOMAIN-SUFFIX,amoad.com,REJECT
+DOMAIN-SUFFIX,zucks.net,REJECT
+DOMAIN-KEYWORD,octopus,REJECT
+DOMAIN-KEYWORD,advision,REJECT
+DOMAIN-KEYWORD,i-mobile,REJECT
+DOMAIN-SUFFIX,boost-next.co.jp,REJECT
 URL-REGEX,^https?:\/\/[a-z]*\.boost-next.co.jp\/t\/.*$,REJECT
 URL-REGEX,^https?:\/\/shikotch\.net\/.*\/asmr18\.(js|css)$,REJECT
 
