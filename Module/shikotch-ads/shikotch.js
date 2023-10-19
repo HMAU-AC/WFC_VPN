@@ -4,7 +4,17 @@ for (var i = 0; i < iframes.length; i++) {
     iframes[i].src = "about:blank";
 }
 
+// 根据scripts中的scr“”中的链接来定位删除scripts标签
+var scripts = document.getElementsByTagName('script');
+var regex = /https:\/\/js\.boost-next\.co\.jp\/.*/;
 
+for (var i = 0; i < scripts.length; i++) {
+    if (regex.test(scripts[i].src)) {
+        scripts[i].parentNode.removeChild(scripts[i]);
+    }
+}
+
+/*
 // DOMContentLoaded会在DOM树构建完成后就触发，不需要等待其他资源加载完成
 document.addEventListener('DOMContentLoaded', function() {
     // 选择所有iframe元素
@@ -91,3 +101,5 @@ var config = { childList: true, subtree: true };
 
 // 传入目标节点和观察选项
 observer.observe(document.body, config);
+
+*/
