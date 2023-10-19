@@ -21,9 +21,9 @@ URL-REGEX,^https:\/\/disqus\.com\/embed\/comments\/.*,REJECT
 
 
 [Script]
-mrcong-ads-home = type=http-response,pattern=^https?:\/\/mrcong\.com($|\/$),requires-body=1,max-size=1048576,script-path=https://www.gitt.top/Module/js/Ads-mrong.js
-mrcong-ads-post = type=http-response,pattern=^https?:\/\/mrcong\.com\/.*\/$,requires-body=1,max-size=1048576,script-path=https://www.gitt.top/Module/js/Ads-mrong.js
-mrcong-ads-sc = type=http-response,pattern=^https?:\/\/mrcong\.com\/.*\/#gsc.tab=.*$,requires-body=1,max-size=1048576,script-path=https://www.gitt.top/Module/js/Ads-mrong.js
+mrcong-ads-home = type=http-response,pattern=^https?:\/\/mrcong\.com($|\/$),requires-body=1,max-size=1048576,script-path=https://www.gitt.top/Module/mrcong-ads/mrong-ads.js
+mrcong-ads-post = type=http-response,pattern=^https?:\/\/mrcong\.com\/.*\/$,requires-body=1,max-size=1048576,script-path=https://www.gitt.top/Module/mrcong-ads/mrong-ads.js
+mrcong-ads-sc = type=http-response,pattern=^https?:\/\/mrcong\.com\/.*\/#gsc.tab=.*$,requires-body=1,max-size=1048576,script-path=https://www.gitt.top/Module/mrcong-ads/mrong-ads.js
 
 [MITM]
 hostname = %APPEND% disqus.com, *.disqus.com, mrcong.com, *.mrcong.com, assets.pinterest.com
