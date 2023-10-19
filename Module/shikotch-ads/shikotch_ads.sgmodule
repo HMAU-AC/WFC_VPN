@@ -21,7 +21,7 @@ URL-REGEX,^https?:\/\/shikotch\.net\/.*\/asmr18\.(js|css)$,REJECT
 
 [Script]
 
-shikotch-home = type=http-response,pattern=^https?:\/\/shikotch\.net$,requires-body=1,max-size=1048576,script-path=https://www.gitt.top/Module/shikotch-ads/shikotch-ads.js
+shikotch-home = type=http-response,pattern=^https?:\/\/shikotch\.net($|\/$),requires-body=1,max-size=1048576,script-path=https://www.gitt.top/Module/shikotch-ads/shikotch-ads.js
 
 
 
