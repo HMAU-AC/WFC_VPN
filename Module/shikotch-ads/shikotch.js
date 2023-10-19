@@ -1,4 +1,3 @@
-/*
 // 替换iframes scr""中的链接为about:blank
 var iframes = document.getElementsByTagName('iframe');
 for (var i = 0; i < iframes.length; i++) {
@@ -65,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 这段代码将创建一个MutationObserver实例，该实例将监听document.body及其所有子节点和后代的变化。每当DOM发生变化时，它都会选择所有<div class="pc-ads-01">元素并删除它们
 // 创建一个观察器实例
-// 创建一个观察器实例
 var observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
         // 选择所有class为'pc-ads-01'的元素
@@ -93,22 +91,3 @@ var config = { childList: true, subtree: true };
 
 // 传入目标节点和观察选项
 observer.observe(document.body, config);
-*/
-
-
-    var adElements1 = document.querySelectorAll('.pc-ads-01');
-    var adElements2 = document.querySelectorAll('.pc-ads-02');
-    var adElements3 = document.querySelectorAll('.asmr18');
-
-    // 遍历所有选定的元素并删除它们
-    for (var i = 0; i < adElements1.length; i++) {
-        adElements1[i].remove();
-    }
-
-    for (var i = 0; i < adElements2.length; i++) {
-        adElements2[i].remove();
-    }
-
-    for (var i = 0; i < adElements3.length; i++) {
-        adElements3[i].remove();
-    }
