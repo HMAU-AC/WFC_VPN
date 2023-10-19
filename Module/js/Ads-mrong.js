@@ -30,23 +30,32 @@ div#sub-frame-error {display: none !important;}
 div#text-html-widget-6 {display: none !important;}
 </style>\
 <script id="remove" type='text/javascript'>
-const iframes = document.querySelectorAll('iframe');
-iframes.forEach(iframe => {
-  iframe.remove();
+
+var iframes = document.getElementsByTagName('iframe');
+for (var i = 0; i < iframes.length; i++) {
+    iframes[i].src = "about:blank";
+}
+
+const iframesToRemove = document.querySelectorAll('iframe');
+iframesToRemove.forEach(iframe => {
+    iframe.remove();
 });
 
-const advd = document.getElementById('__stay_inject_parse_video_js');
-			advd.remove();
-const ad = document.getElementById('__stay_inject_selecte_ad_tag_js_');
-			ad.remove();
-const jetpacks = document.getElementById('jetpack-stats-js');
-			jetpacks.remove();
-const jetpack = document.getElementById('jetpack-stats-js-after');
-			jetpack.remove();
-const tie = document.getElementById('tie-scripts-js-extra');
-			tie.remove();
-const disqus_count = document.getElementById('disqus_count-js-extra');
-		disqus_count.remove();
+const ids = [
+    '__stay_inject_parse_video_js',
+    '__stay_inject_selecte_ad_tag_js_',
+    'jetpack-stats-js',
+    'jetpack-stats-js-after',
+    'tie-scripts-js-extra',
+    'disqus_count-js-extra'
+];
+
+ids.forEach(id => {
+    const element = document.getElementById(id);
+    if (element) {
+        element.remove();
+    }
+});
 </script>`
 
 let body = $response.body.replace(regex_head,style);
