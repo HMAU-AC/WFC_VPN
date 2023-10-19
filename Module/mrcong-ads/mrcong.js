@@ -90,9 +90,12 @@ for (var i = 0; i < allElements.length; i++) {
 }
 
 document.addEventListener("click", function(event) {
-    // 阻止默认行为（跳转到新页面）
-    event.preventDefault();
-    
-    // 这里可以添加你自己的逻辑，比如展示其他内容或提示信息
-    console.log("点击事件已禁止");
-  });
+    // 检查点击的元素是否具有 prevent-default 类名
+    if (event.target.classList.contains("post-thumbnail")) {
+        // 阻止默认行为（跳转到新页面）
+        event.preventDefault();
+        
+        // 这里可以添加你自己的逻辑，比如展示其他内容或提示信息
+        console.log("点击事件已禁止");
+    }
+});
