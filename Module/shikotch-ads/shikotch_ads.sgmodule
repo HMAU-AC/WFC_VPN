@@ -18,6 +18,10 @@ DOMAIN-KEYWORD,i-mobile,REJECT
 DOMAIN-SUFFIX,boost-next.co.jp,REJECT
 URL-REGEX,^https?:\/\/shikotch\.net\/.*\/asmr18\.(js|css)$,REJECT
 
+[Header Rewrite]
+^https?:\/\/z2\.shikotch\.net\/.*\/$ header-add Access-Control-Allow-Origin: https://shikotch.net
+
+
 [Script]
 
 shikotch-home = type=http-response,pattern=^https?:\/\/shikotch\.net($|\/$),requires-body=1,max-size=1048576,script-path=https://www.gitt.top/Module/shikotch-ads/shikotch-ads.js

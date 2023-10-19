@@ -12,10 +12,7 @@ URL-REGEX,^https?:\/\/[a-z]*\.boost-next.co.jp\/t\/.*$,REJECT
 URL-REGEX,^https?:\/\/shikotch\.net\/.*\/asmr18\.(js|css)$,REJECT
 
 
-[Header Rewrite]
 
-^https?:\/\/shikotch\.net\/(|\S+\/|\S{1}s{1}\S+)$ header-add Access-Control-Allow-Origin: https://shikotch.net
-^https?:\/\/z2\.shikotch\.net\/(|\S+\/|\S{1}s{1}\S+)$ header-add Access-Control-Allow-Origin: https://shikotch.net
 
 [Script]
 http-response ^https?:\/\/shikotch\.net\/(|\S+\/|\S{1}s{1}\S+)$ script-path=https://www.gitt.top/Module/shikotch-ads/shikotch-ads.js, requires-body=true, timeout=1500, tag=mrconghome
