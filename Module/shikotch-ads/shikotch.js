@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+/*
+
 // 创建一个观察器实例
 var observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
@@ -32,7 +34,7 @@ var config = { childList: true, subtree: true };
 // 传入目标节点和观察选项
 observer.observe(document.body, config);
 
-
+*/
 
 // 删除网页中所有的iframe标签
 const iframesToRemove = document.querySelectorAll('iframe');
