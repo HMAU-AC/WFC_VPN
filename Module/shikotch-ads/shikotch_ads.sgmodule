@@ -16,15 +16,15 @@ DOMAIN-KEYWORD,octopus,REJECT
 DOMAIN-KEYWORD,advision,REJECT
 DOMAIN-KEYWORD,i-mobile,REJECT
 DOMAIN-SUFFIX,boost-next.co.jp,REJECT
-URL-REGEX,^https?:\/\/[a-z]*\.boost-next.co.jp\/t\/.*$,REJECT
 URL-REGEX,^https?:\/\/shikotch\.net\/.*\/asmr18\.(js|css)$,REJECT
 
 [Script]
 
 shikotch-home = type=http-response,pattern=^https?:\/\/shikotch\.net($|\/$),requires-body=1,max-size=1048576,script-path=https://www.gitt.top/Module/shikotch-ads/shikotch-ads.js
 
-shikotch = type=http-response,pattern=^https?:\/\/shikotch\.net\/(\S+\/|\S{1}s{1}\S+)$,requires-body=1,max-size=1048576,script-path=https://www.gitt.top/Module/shikotch-ads/shikotch-ads.js
+shikotch-tag = type=http-response,pattern=^https?:\/\/shikotch\.net\/.*\/$,requires-body=1,max-size=1048576,script-path=https://www.gitt.top/Module/shikotch-ads/shikotch-ads.js
 
+shikotch-sc = type=http-response,pattern=^https?:\/\/shikotch\.net\/.*\/?s=.*$,requires-body=1,max-size=1048576,script-path=https://www.gitt.top/Module/shikotch-ads/shikotch-ads.js
 
 [MITM]
-hostname = %APPEND% shikotch.net, *.shikotch.net, *.boost-next.co.jp, boost-next.co.jp
+hostname = %APPEND% shikotch.net, *.shikotch.net
