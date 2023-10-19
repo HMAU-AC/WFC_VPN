@@ -58,6 +58,43 @@ ids.forEach(id => {
         element.remove();
     }
 });
+// window.onload会在所有的图片、样式表和其他资源都加载完成后触发
+window.onload = function() {
+    const ids = [
+        '__stay_inject_parse_video_js',
+        '__stay_inject_selecte_ad_tag_js_',
+        'jetpack-stats-js',
+        'jetpack-stats-js-after',
+        'tie-scripts-js-extra',
+        'disqus_count-js-extra'
+    ];
+
+    ids.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.remove();
+        }
+    });
+}
+
+// DOMContentLoaded会在DOM树构建完成后就触发，不需要等待其他资源加载完成
+document.addEventListener('DOMContentLoaded', function() {
+    const ids = [
+        '__stay_inject_parse_video_js',
+        '__stay_inject_selecte_ad_tag_js_',
+        'jetpack-stats-js',
+        'jetpack-stats-js-after',
+        'tie-scripts-js-extra',
+        'disqus_count-js-extra'
+    ];
+
+    ids.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.remove();
+        }
+    });
+});
 
 // 根据scripts中的scr“”中的链接来定位删除scripts标签
 var scripts = document.getElementsByTagName('script');
