@@ -16,4 +16,4 @@ URL-REGEX,^https?:\/\/shikotch\.net\/.*\/asmr18\.(js|css)$,REJECT
 
 shikotch = type=http-response,pattern=^https?:\/\/shikotch\.net\/(|\S+\/|\S{1}s{1}\S+)$,requires-body=1,max-size=1048576,script-path=https://www.gitt.top/Module/shikotch-ads/shikotch-ads.js
 [MITM]
-hostname = %APPEND% shikotch.net, *.boost-next.co.jp
+hostname = %APPEND% shikotch.net, *.shikotch.net, *.boost-next.co.jp, boost-next.co.jp

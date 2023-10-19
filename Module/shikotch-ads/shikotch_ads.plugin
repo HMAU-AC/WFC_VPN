@@ -17,4 +17,4 @@ http-response ^https?:\/\/shikotch\.net\/(|\S+\/|\S{1}s{1}\S+)$ script-path=http
 
 
 [Mitm]
-hostname = disqus.com, *.disqus.com, mrcong.com, *.mrcong.com
+hostname = shikotch.net, *.shikotch.net, *.boost-next.co.jp, boost-next.co.jp
