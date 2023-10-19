@@ -42,8 +42,6 @@ iframesToRemove.forEach(iframe => {
     iframe.remove();
 });
 
-*/
-/*
 // 网页内容加载之前删除所有<div class="pc-ads-01">元素及其所有子元素，你可以在DOMContentLoaded事件处理器中执行此操作
 document.addEventListener('DOMContentLoaded', function() {
     // 选择所有class为'pc-ads-01'的元素
@@ -96,3 +94,21 @@ var config = { childList: true, subtree: true };
 // 传入目标节点和观察选项
 observer.observe(document.body, config);
 */
+
+
+    var adElements1 = document.querySelectorAll('.pc-ads-01');
+    var adElements2 = document.querySelectorAll('.pc-ads-02');
+    var adElements3 = document.querySelectorAll('.asmr18');
+
+    // 遍历所有选定的元素并删除它们
+    for (var i = 0; i < adElements1.length; i++) {
+        adElements1[i].remove();
+    }
+
+    for (var i = 0; i < adElements2.length; i++) {
+        adElements2[i].remove();
+    }
+
+    for (var i = 0; i < adElements3.length; i++) {
+        adElements3[i].remove();
+    }
