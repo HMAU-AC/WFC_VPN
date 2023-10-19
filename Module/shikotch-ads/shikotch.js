@@ -104,10 +104,11 @@ var scriptTags = document.getElementsByTagName('script');
 var count = 0;
 
 for (var i = scriptTags.length - 1; i >= 0; i--) {
-    if (scriptTags[i].attributes.length === 0) {
+    var scriptContent = scriptTags[i].textContent.trim();
+    if (scriptContent !== "") {
         scriptTags[i].parentNode.removeChild(scriptTags[i]);
         count++;
     }
 }
 
-console.log("删除了 " + count + " 个没有任何属性的script标签。");
+console.log("删除了 " + count + " 个直接使用脚本语句的script标签。");
