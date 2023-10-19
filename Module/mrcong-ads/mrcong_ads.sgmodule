@@ -8,20 +8,22 @@
 
 URL-REGEX,^https:\/\/mrcong\.com\/wp-content\/cache\/min\/1\/wp-content\/plugins\/disqus-comment-system\/public\/js\/comment_count\.js\?.*,REJECT
 URL-REGEX,^https:\/\/mr-cong\.disqus\.com\/embed\.js$,REJECT 
-URL-REGEX,^https:\/\/mrcong\.com\/wp-content\/cache\/min\/1\/wp-content\/themes\/mrcong\/js\/tie-scripts\.js\?.*,REJECT 
-URL-REGEX,^https:\/\/disqus\.com\/api\/3\.0\/.*,REJECT 
-URL-REGEX,^https:\/\/referrer\.disqus\.com\/juggler\/event\.gif\?.*,REJECT 
-URL-REGEX,^https:\/\/links\.services\.disqus\.com\/api\/ping$,REJECT 
+URL-REGEX,^https:\/\/mrcong\.com\/wp-content\/cache\/min\/1\/wp-content\/themes\/mrcong\/js\/tie-scripts\.js\?.*,REJECT  
 URL-REGEX,^https?:\/\/assets\.pinterest\.com\/js\/.*?.js.*,REJECT // mrcong跳转屏蔽
 # URL-REGEX,^https?:\/\/connect\.facebook\.net\/vi_VN\/.*?.js.*,REJECT
-[Header Rewrite]
+URL-REGEX,^https:\/\/disqus\.com\/recommendations\/.*,REJECT
+URL-REGEX,^https:\/\/mr-cong\.disqus\.com\/count-data\.*$,REJECT
+URL-REGEX,^https:\/\/mrcong\.com\/.*\/?relatedposts=1$,REJECT
+URL-REGEX,^https:\/\/mr-cong\.disqus\.com\/(ecommendations|count|embed)\.*,REJECT
+URL-REGEX,^https:\/\/disqus\.com\/api\/3\.0\/.*,REJECT
+URL-REGEX,^https:\/\/disqus\.com\/embed\/comments\/.*,REJECT
 
 
 
 [Script]
-mrcong-ads-home = type=http-response,pattern=^https?:\/\/mrcong\.com($|\/$),requires-body=1,max-size=1048576,script-path=https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Module/js/Ads-mrong.js
-mrcong-ads-post = type=http-response,pattern=^https?:\/\/mrcong\.com\/.*\/$,requires-body=1,max-size=1048576,script-path=https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Module/js/Ads-mrong.js
-mrcong-ads-sc = type=http-response,pattern=^https?:\/\/mrcong\.com\/.*\/#gsc.tab=.*$,requires-body=1,max-size=1048576,script-path=https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Module/js/Ads-mrong.js
+mrcong-ads-home = type=http-response,pattern=^https?:\/\/mrcong\.com($|\/$),requires-body=1,max-size=1048576,script-path=https://www.gitt.top/Module/js/Ads-mrong.js
+mrcong-ads-post = type=http-response,pattern=^https?:\/\/mrcong\.com\/.*\/$,requires-body=1,max-size=1048576,script-path=https://www.gitt.top/Module/js/Ads-mrong.js
+mrcong-ads-sc = type=http-response,pattern=^https?:\/\/mrcong\.com\/.*\/#gsc.tab=.*$,requires-body=1,max-size=1048576,script-path=https://www.gitt.top/Module/js/Ads-mrong.js
 
 [MITM]
-hostname = %APPEND% fvcwqkkqmuv.com, static.xx.fbcdn.net, dpyozpogdabz.com, disqus.com, ad.a-ads.com, *.disqus.com, connect.facebook.net, assets.pinterest.com, mrcong.com
+hostname = %APPEND% disqus.com, *.disqus.com, mrcong.com, *.mrcong.com, assets.pinterest.com
