@@ -29,6 +29,20 @@ if (isMobile) {
         divElement.parentNode.removeChild(divElement);
     });
 
+    window.onload = function() {
+        var scriptTags = document.getElementsByTagName('script');
+        var count = 0;
+        for (var i = scriptTags.length - 1; i >= 0; i--) {
+            var scriptContent = scriptTags[i].textContent.trim();
+            if (scriptContent !== "") {
+                scriptTags[i].parentNode.removeChild(scriptTags[i]);
+                count++;
+            }
+        }
+        console.log("删除了 " + count + " 个直接使用脚本语句的script标签。");
+        
+        };
+
 } else if (isTablet) {
     // 平板终端代码
 // 网页内容加载之前删除所有<div class="pc-ads-01">元素及其所有子元素，你可以在DOMContentLoaded事件处理器中执行此操作
@@ -99,16 +113,5 @@ window.onload = function() {
 };
 
 }
+// 判断终端结束
 
-var scriptTags = document.getElementsByTagName('script');
-var count = 0;
-
-for (var i = scriptTags.length - 1; i >= 0; i--) {
-    var scriptContent = scriptTags[i].textContent.trim();
-    if (scriptContent !== "") {
-        scriptTags[i].parentNode.removeChild(scriptTags[i]);
-        count++;
-    }
-}
-
-console.log("删除了 " + count + " 个直接使用脚本语句的script标签。");
