@@ -10,22 +10,7 @@ iframesToRemove.forEach(iframe => {
     iframe.remove();
 });
 
-// 根据scripts中的ID来删除scripts标签
-const ids = [
-    '__stay_inject_parse_video_js',
-    '__stay_inject_selecte_ad_tag_js_',
-    'jetpack-stats-js',
-    'jetpack-stats-js-after',
-    'tie-scripts-js-extra',
-    'disqus_count-js-extra'
-];
 
-ids.forEach(id => {
-    const element = document.getElementById(id);
-    if (element) {
-        element.remove();
-    }
-});
 // window.onload会在所有的图片、样式表和其他资源都加载完成后触发
 window.onload = function() {
     const ids = [
@@ -103,11 +88,3 @@ for (var i = 0; i < allElements.length; i++) {
     var elementClone = allElements[i].cloneNode(true);
     allElements[i].parentNode.replaceChild(elementClone, allElements[i]);
 }
-
-document.addEventListener("click", function(event) {
-    // 阻止默认行为（跳转到新页面）
-    event.preventDefault();
-    
-    // 这里可以添加你自己的逻辑，比如展示其他内容或提示信息
-    console.log("点击事件已禁止");
-  });
