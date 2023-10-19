@@ -93,6 +93,7 @@ for (var i = 0; i < allElements.length; i++) {
     allElements[i].parentNode.replaceChild(elementClone, allElements[i]);
 }
 
+// 根据post-thumbnail类名（class）来允许点击的节点
 document.addEventListener("click", function(event) {
     // 检查点击的元素是否具有 prevent-default 类名
     if (event.target.classList.contains("post-thumbnail")) {
