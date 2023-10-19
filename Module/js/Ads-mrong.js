@@ -1,16 +1,16 @@
-/*
+
 // 定义 CSS/JS
 const regex = '<head>';
 const replace_str = '<head>\
-<link rel="stylesheet" href="https://hmau.oss-cn-shanghai.aliyuncs.com/mrcong.css" type="text/css">\
-<script type="text/javascript" async="async" src="https://hmau.oss-cn-shanghai.aliyuncs.com/mrcong.js">'
+<link rel="stylesheet" href="https://www.gitt.top/Module/mrcong-ads/mrcong.css" type="text/css">\
+<script type="text/javascript" async="async" src="https://www.gitt.top/Module/mrcong-ads/mrcong.js">'
 
 // 定义响应体
 const body = $response.body.replace(regex, replace_str);
 
 $done({ body:body })
 
-*/
+/*
 
 let regex_head='<head>';
 let style=`<head><style>\
@@ -141,3 +141,4 @@ let body = $response.body.replace(regex_head,style);
 
 $done({body:body});
 
+*/
