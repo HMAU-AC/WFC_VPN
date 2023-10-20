@@ -30,6 +30,22 @@
       .footer { text-align: center; color: #e3e3e3; margin-bottom: 40px; }
       .footer .logo { margin: 0 auto 10px; opacity: 0.2; background-size: 32px 32px; width: 32px; height: 32px; -webkit-filter: grayscale(100%); filter: gray; filter: grayscale(100%); }
     </style>
+    <script>
+      var now = new Date();
+      var year = now.getFullYear();
+      var month = now.getMonth() + 1;
+      var day = now.getDate();
+      var hour = now.getHours();
+      var minute = now.getMinutes();
+      var second = now.getSeconds();
+      if (month < 10) month = '0' + month;
+      if (day < 10) day = '0' + day;
+      if (hour < 10) hour = '0' + hour;
+      if (minute < 10) minute = '0' + minute;
+      if (second < 10) second = '0' + second;
+      var currentTime = year + "/" + month + "/" + day + " " + hour + ":" + minute;
+      document.getElementById("current-time").innerText = currentTime;
+    </script>
   </head>
   <body>
     <div class="header">
@@ -43,7 +59,7 @@
     </div>
     <div class="footer">
       <div class="logo surge"></div>
-      SGErrorDomain - 1<br />Generated 2023/10/21 03:08 by Surge Mac/5.4.0
+      SGErrorDomain - 1<br />Generated <span id="current-time"></span> by Surge Mac/5.4.0
     </div>
   </body>
 </html>
