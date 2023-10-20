@@ -18,6 +18,7 @@ def generate_links(root_dir, repo_url, branch_name, ignore_files=None):
             links.append(f'<a href="{file_url}">{filename}</a>')     
     return '\n'.join(links)
 
+
 if __name__ == "__main__":
     repo_url = "https://raw.githubusercontent.com/HMAU-AC"  # 替换为你的仓库 URL
     branch_name = "main"  # 替换为你的分支名
