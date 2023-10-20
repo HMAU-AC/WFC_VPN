@@ -43,7 +43,6 @@ jobs:
         curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Imgur/Imgur.list" | sed '/^#/d' >> List/Proxy.list
         curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Steam/Steam.list" | sed '/^#/d' >> List/Proxy.list
         curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/SteamCN/SteamCN.list" | sed '/^#/d' >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Proxy/Proxy.list" | sed '/^#/d' >> List/Proxy.list
         curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/SublimeText/SublimeText.list" | sed '/^#/d' >> List/Proxy.list
         curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Npmjs/Npmjs.list" | sed '/^#/d' >> List/Proxy.list
         curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TeraBox/TeraBox.list" | sed '/^#/d' >> List/Proxy.list
