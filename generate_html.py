@@ -44,8 +44,7 @@ if __name__ == "__main__":
             box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
         }}
         a {{
-            --tw-text-opacity: 1;
-            color:rgb(255 255 255/var(--tw-text-opacity))
+            color:hsla(0, 0%, 100%, .48);
             text-decoration: none;
             display: block;
             position: relative;
@@ -53,7 +52,7 @@ if __name__ == "__main__":
         }}
         a:hover {{
             --tw-text-opacity: 1;
-            color:rgb(255 255 255/var(--tw-text-opacity))
+            color:rgb(255 255 255/var(--tw-text-opacity));
         }}
         a:hover::before {{
             content: "打开链接";
