@@ -8,14 +8,14 @@ def generate_links(root_dir, repo_url, branch_name, ignore_files=None):
         folder_path = foldername.replace("\\", "/")
         if any(ignore in folder_path for ignore in ignore_files):
             continue
-        clean_foldername = foldername.replace(".", "#").lstrip('/')
-        links.append(f'<h2>{clean_foldername}</h2>')
+        clean_foldername = foldername.replace(".", "").lstrip('/')
+        links.append(f'<span class="item-label">{clean_foldername}</span>')
         for filename in filenames:
             file_path = os.path.join(foldername, filename).replace("\\", "/")
             if any(ignore in file_path for ignore in ignore_files):
                 continue
             file_url = f"{repo_url}/WFC_VPN/{branch_name}/{file_path}"
-            links.append(f'<button><a href="{file_url}">{filename}</a></button>')     
+            links.append(f'<li><a href="{file_url}">{filename}</a></li>')     
     return '\n'.join(links)
 
 
@@ -58,22 +58,17 @@ if __name__ == "__main__":
             position: relative;
             padding-left: 25px;
         }}
-        a:hover {{
-            display: inline-block;
-            --tw-text-opacity: 1;
-            color:rgb(255 255 255/var(--tw-text-opacity));
-        }}
-        a:hover::before {{
-            content: "打开链接";
-            position: absolute;
-            left: 0;
-            top: 0;
-        }}
-        button {{
-            display: block;
-            --tw-bg-opacity: 1;
-            color: rgb(7 10 15/var(--tw-bg-opacity));
-        }}
+        .item-label {{
+            display: flex;
+            align-items: center;
+            min-width: 3ch;
+            line-height: var(--text-body-lineHeight-medium, 1.4285714286);
+            color: inherit;
+            text-decoration: none !important;
+            border-radius: var(--borderRadius-medium, 6px);
+            padding-inline: var(--control-medium-paddingInline-condensed, 8px);
+            padding-block: var(--control-medium-paddingBlock, 6px);
+            }}
     </style>
 </head>
 <body>
