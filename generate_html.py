@@ -63,6 +63,7 @@ if __name__ == "__main__":
             width: fit-content;
             }}
         li {{
+        
             display: inline-block;
             align-items: center;
             flex: 0 99999 auto;
