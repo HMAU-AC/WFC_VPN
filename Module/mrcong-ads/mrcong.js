@@ -4,33 +4,18 @@ for (var i = 0; i < iframes.length; i++) {
     iframes[i].src = "about:blank";
 }
 
-// 删除网页中所有的iframe标签
-const iframesToRemove = document.querySelectorAll('iframe');
-iframesToRemove.forEach(iframe => {
-    iframe.remove();
-    console.log( iframesToRemove );
+// DOMContentLoaded会在DOM树构建完成后就触发，不需要等待其他资源加载完成
+document.addEventListener('DOMContentLoaded', function() {
+    // 选择所有iframe元素
+    var iframeElements = document.querySelectorAll('iframe');
+
+    // 遍历所有选定的元素并删除它们
+    for (var i = 0; i < iframeElements.length; i++) {
+        iframeElements[i].remove();
+        console.log("删除了 " + i + " 个div元素。")
+    }
 });
 
-
-// window.onload会在所有的图片、样式表和其他资源都加载完成后触发
-window.onload = function() {
-    const ids = [
-        '__stay_inject_parse_video_js',
-        '__stay_inject_selecte_ad_tag_js_',
-        'jetpack-stats-js',
-        'jetpack-stats-js-after',
-        'tie-scripts-js-extra',
-        'disqus_count-js-extra'
-    ];
-
-    ids.forEach(id => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.remove();
-            console.log( 'window.onload' );
-        }
-    });
-}
 
 // DOMContentLoaded会在DOM树构建完成后就触发，不需要等待其他资源加载完成
 document.addEventListener('DOMContentLoaded', function() {
@@ -47,12 +32,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const element = document.getElementById(id);
         if (element) {
             element.remove();
-            console.log( 'DOMContentLoaded' );
+            console.log("删除了 " + element + " 个script-ad元素。")
         }
     });
 });
 
 // 根据scripts中的scr“”中的链接来定位删除scripts标签
+document.addEventListener('DOMContentLoaded', function() {
 var scripts = document.getElementsByTagName('script');
 var urlsToRemove = [
     "https://connect.facebook.net/vi_VN/sdk.js?hash=925333dad855fb0487f4308cfcb70762",
@@ -63,9 +49,9 @@ var urlsToRemove = [
 for (var i = 0; i < scripts.length; i++) {
     if (urlsToRemove.includes(scripts[i].src)) {
         scripts[i].parentNode.removeChild(scripts[i]);
-        console.log( '删除book' );
+        console.log( "删除了 " + i + " 个script元素。" );
     }
-}
+});
 
 // 要删除特定的<style>标签,你可以使用JavaScript的DOM操作。你可以通过type和data-fbcssmodules属性找到特定的<style>标签，然后删除它
 // 这段代码会在页面加载完成后，找到所有的<style>元素,检查它们的type和data-fbcssmodules属性是否与给定的值匹配,如果匹配,则从它们的父节点中删除它们。
