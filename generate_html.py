@@ -56,13 +56,18 @@ if __name__ == "__main__":
             color: #008800;
         }}
         .item-label {{
+            border-color: #747bff;
+            color: #ffffff;
+            background-color: #747bff;
             flex-shrink: 0;
-            padding: 6px;
             font-weight:900;
-            color: #00bb8a;
             display: inline-block;
             align-items: center;
             width: fit-content;
+            border-radius: 20px;
+            padding: 0 20px;
+            line-height: 38px;
+            font-size: 14px;
             }}
         li {{
         
