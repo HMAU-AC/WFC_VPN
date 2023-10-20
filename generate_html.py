@@ -18,9 +18,10 @@ if __name__ == "__main__":
     branch_name = "main"  # 替换为你的分支名
     links = generate_links('.', repo_url, branch_name, ignore_files=['.pyc', '.git', '.gitignore', '.github', 'html.css', 'index.html', 'generate_html.py', 'README.md'])
     html_content = f"""
-<!DOCTYPE html>
+<!DOCTYPE html lang="zh-CN">
 <html>
 <head>
+    <meta charset="utf-8">
     <title>文件目录</title>
     <style>
         body {{
@@ -47,7 +48,7 @@ if __name__ == "__main__":
             color: #0056b3;
         }}
         a:hover::before {{
-            content: "🔗 打开链接";
+            content: "打开链接";
             position: absolute;
             left: 0;
             top: 0;
