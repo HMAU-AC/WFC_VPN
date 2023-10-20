@@ -78,6 +78,3 @@ if __name__ == "__main__":
 """
     with open('index.html', 'w') as file:
         file.write(html_content)
-
-
-        background-image: url(https://cursor.sh/_next/image?url=%2Flanding%2Fgradients%2Fleft-gradient%401x.png&w=1080&q=75);
