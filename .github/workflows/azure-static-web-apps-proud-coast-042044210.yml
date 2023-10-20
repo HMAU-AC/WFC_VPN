@@ -7,9 +7,9 @@ on:
         - completed
         status: ["success", "failure"]
   # 以上为在执行完main.yml之后在执行此段，这种方法有一个限制必须在默认分支（通常是 main 或 master）中定义。如果被触发的工作流程在其他分支中定义，那么 workflow_run 事件将不会触发
-#  push:
-#    branches:
-#      - main
+  push:
+    branches:
+      - main
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
