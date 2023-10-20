@@ -11,7 +11,7 @@ def generate_links(root_dir, repo_url):
 
 if __name__ == "__main__":
     repo_url = "https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main"  # 替换为你的仓库 URL
-    links = generate_links('.', repo_url)
+    links = generate_links(repo_url)
     html_content = f"""
     <!DOCTYPE html>
     <html>
