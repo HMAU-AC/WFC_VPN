@@ -72,10 +72,10 @@ if __name__ == "__main__":
             padding-block: var(--control-medium-paddingBlock, 6px);
             }}
         li {{
-            display: inline-grid;
-            grid-auto-flow: column;
-            align-items: center;
-            flex: 0 99999 auto;
+            display: grid;
+            border-radius: var(--borderRadius-medium, 6px);
+            padding-inline: var(--control-medium-paddingInline-condensed, 8px);
+            padding-block: var(--control-medium-paddingBlock, 6px);
         }}
     </style>
 </head>
