@@ -58,7 +58,7 @@ if __name__ == "__main__":
             background: #9d9d9da0;
         }}
         .item-label {{
-            color: #f8f8f8;
+            color: #00bb8a;
             display: inline-block;
             align-items: center;
             width: fit-content;
