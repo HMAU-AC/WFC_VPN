@@ -15,7 +15,7 @@ def generate_links(root_dir, repo_url, ignore_files=None):
             if any(ignore in file_path for ignore in ignore_files):
                 continue
             file_url = f"{repo_url}/{file_path}"  # 修改了这里
-            links.append(f'<li><a href="{file_url}">{filename}</a></li>')     
+            links.append(f'<li><a class="list" href="{file_url}">{filename}</a></li>')     
     return '\n'.join(links)
 
 
@@ -56,8 +56,9 @@ if __name__ == "__main__":
             color: #008800;
         }}
         .item-label {{
-            font-weight:1000;
-            
+            flex-shrink: 0;
+            padding: 6px;
+            font-weight:900;
             color: #00bb8a;
             display: inline-block;
             align-items: center;
@@ -68,7 +69,7 @@ if __name__ == "__main__":
             display: inline-block;
             align-items: center;
             flex: 0 99999 auto;
-            padding: 4px 4px 4px 25px;
+            padding: 2px 2px 2px 15px;
         }}
     </style>
 </head>
