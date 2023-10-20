@@ -1,4 +1,4 @@
-name: Merge Proxy Lists
+name: 合并ProxyLists文件
 
 on:
   push:
