@@ -9,13 +9,13 @@ def generate_links(root_dir, repo_url, branch_name, ignore_files=None):
         if any(ignore in folder_path for ignore in ignore_files):
             continue
         clean_foldername = foldername.replace(".", "").lstrip('/')
-        links.append(f'<span class="item-label">{clean_foldername}</span></li>')
+        links.append(f'<span class="item-label">{clean_foldername}</span>')
         for filename in filenames:
             file_path = os.path.join(foldername, filename).replace("\\", "/")
             if any(ignore in file_path for ignore in ignore_files):
                 continue
             file_url = f"{repo_url}/WFC_VPN/{branch_name}/{file_path}"
-            links.append(f'<li><a href="{file_url}">{filename}</a>')     
+            links.append(f'<li><a href="{file_url}">{filename}</a></li>')     
     return '\n'.join(links)
 
 
