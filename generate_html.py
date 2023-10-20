@@ -62,7 +62,6 @@ if __name__ == "__main__":
             background: #9d9d9da0;
         }}
         .item-label {{
-            content: "# " attr(data-content);
             background: rgba(135, 32, 32, 0.5);
             display: inline-block;
             align-items: center;
