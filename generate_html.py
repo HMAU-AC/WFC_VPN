@@ -74,7 +74,6 @@ if __name__ == "__main__":
             display: block;
             --tw-bg-opacity: 1;
             color: rgb(7 10 15/var(--tw-bg-opacity));
-
         }}
     </style>
 </head>
