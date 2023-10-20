@@ -31,6 +31,9 @@
       .footer .logo { margin: 0 auto 10px; opacity: 0.2; background-size: 32px 32px; width: 32px; height: 32px; -webkit-filter: grayscale(100%); filter: gray; filter: grayscale(100%); }
     </style>
     <script>
+      document.getElementById("referrer-url").innerText = document.referrer;
+    </script>
+    <script>
       var now = new Date();
       var year = now.getFullYear();
       var month = now.getMonth() + 1;
@@ -55,8 +58,14 @@
     <div class="header-bottom"></div>
     <div class="wrapper">
       <h1>Unable to connect</h1>
-      <div class="error-detail"><p>访问的 URL 不可用: <br /><b>http://2323.com/</b></p><p><br /></p><p>Policy: DIRECT</p><p><br /></p><p>错误描述：</p><li>DNS lookup failed: Timeout</li></div>     
-    </div>
+      <div class="error-detail">
+        <p>访问的 URL 不可用: <br /><b id="referrer-url"></b></p>
+        <p><br /></p>
+        <p>Policy: DIRECT</p>
+        <p><br /></p>
+        <p>错误描述：</p>
+        <li>DNS lookup failed: Timeout</li>
+      </div>
     <div class="footer">
       <div class="logo surge"></div>
       SGErrorDomain - 1<br />Generated <span id="current-time"></span> by Surge Mac/5.4.0
