@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Page</title>
+    <title>文件目录</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,9 +20,18 @@
         a {
             color: #333;
             text-decoration: none;
+            display: block;
+            position: relative;
+            padding-left: 25px;
         }
         a:hover {
             color: #0056b3;
+        }
+        a:hover::before {
+            content: "🔗 打开链接";
+            position: absolute;
+            left: 0;
+            top: 0;
         }
     </style>
 </head>
