@@ -6,9 +6,9 @@ def generate_links(root_dir, repo_url, branch_name, ignore_files=None):
     links = []
     for foldername, subfolders, filenames in os.walk(root_dir):
         for filename in filenames:
-            if any(filename.endswith(ext) for ext in ignore_files):
-                continue
             path = os.path.join(foldername, filename).replace("\\", "/")
+            if any(ignore in path for ignore in ignore_files):
+                continue
             url = f"{repo_url}/WFC_VPN/{branch_name}/{path}"
             links.append(f'<a href="{url}">{filename}</a>')
     return '\n'.join(links)
@@ -16,7 +16,7 @@ def generate_links(root_dir, repo_url, branch_name, ignore_files=None):
 if __name__ == "__main__":
     repo_url = "https://raw.githubusercontent.com/HMAU-AC"  # 替换为你的仓库 URL
     branch_name = "main"  # 替换为你的分支名
-    links = generate_links('.', repo_url, branch_name, ignore_files=['.pyc', '.git', '.gitignore', '.github', 'html.css', 'index.html', 'generate_html.py'])
+    links = generate_links('.', repo_url, branch_name, ignore_files=['.pyc', '.git', '.gitignore', '.github', 'html.css', 'index.html', 'generate_html.py', 'README.md'])
     html_content = f"""
 <!DOCTYPE html>
 <html>
