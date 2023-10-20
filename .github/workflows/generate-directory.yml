@@ -16,34 +16,34 @@ jobs:
     - name: Merge proxy lists
       run: |
         echo "" > List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTubeMusic/YouTubeMusic.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitBook/GitBook.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Google/Google.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleSearch/GoogleSearch.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleDrive/GoogleDrive.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleVoice/GoogleVoice.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Chromecast/Chromecast.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleFCM/GoogleFCM.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleEarth/GoogleEarth.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OneDrive/OneDrive.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Teams/Teams.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Pixiv/Pixiv.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Tumblr/Tumblr.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TelegramNL/TelegramNL.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TelegramSG/TelegramSG.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TelegramUS/TelegramUS.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Pinterest/Pinterest.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Imgur/Imgur.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Steam/Steam.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/SteamCN/SteamCN.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Proxy/Proxy.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/SublimeText/SublimeText.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Npmjs/Npmjs.list" >> List/Proxy.list
-        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TeraBox/TeraBox.list" >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTubeMusic/YouTubeMusic.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitBook/GitBook.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Google/Google.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleSearch/GoogleSearch.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleDrive/GoogleDrive.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleVoice/GoogleVoice.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Chromecast/Chromecast.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleFCM/GoogleFCM.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleEarth/GoogleEarth.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OneDrive/OneDrive.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Teams/Teams.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Pixiv/Pixiv.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Tumblr/Tumblr.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TelegramNL/TelegramNL.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TelegramSG/TelegramSG.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TelegramUS/TelegramUS.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Pinterest/Pinterest.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Imgur/Imgur.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Steam/Steam.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/SteamCN/SteamCN.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Proxy/Proxy.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/SublimeText/SublimeText.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Npmjs/Npmjs.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TeraBox/TeraBox.list" | sed '/^#/d' >> List/Proxy.list
         # Add more curl commands for each URL
 
     - name: Commit and push changes
@@ -53,21 +53,3 @@ jobs:
         git add List/Proxy.list
         git commit -m "Merge proxy lists"
         git push
-
-jobs:
-  remove-comments:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Remove comments
-        run: sed -i '/^#/d' List/Proxy.list
-
-      - name: Commit changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git commit -am "Remove comments"
-          git push
