@@ -48,7 +48,7 @@ if __name__ == "__main__":
             gap: 4px;
         }}
         a {{
-            
+            color: #000000;
             text-decoration: none;
             width: fit-content;
         }}
