@@ -40,7 +40,6 @@ if __name__ == "__main__":
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            
         }}
         .container {{
             width: 80%;
