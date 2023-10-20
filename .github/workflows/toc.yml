@@ -1,0 +1,28 @@
+name: "添加TOC目录"
+on:
+  push:
+    branches:
+      - main  # or the name of your default branch
+
+jobs:
+  update-readme-with-toc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install markdown-toc
+        run: npm install -g markdown-toc
+      - name: Generate TOC and update README.md
+        run: |
+          markdown-toc -i README.md
+      - name: Commit and push if it changed
+        run: |
+          git diff
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git commit -am "Automatically update TOC" || exit 0
+          git push
