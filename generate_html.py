@@ -56,6 +56,7 @@ if __name__ == "__main__":
             color: #008800;
         }}
         .item-label {{
+            border-radius: 5px;
             border-color: #747bff;
             color: #ffffff;
             background-color: #747bff;
