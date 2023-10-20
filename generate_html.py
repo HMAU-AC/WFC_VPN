@@ -8,7 +8,7 @@ def generate_links(root_dir, repo_url, branch_name, ignore_files=None):
         folder_path = foldername.replace("\\", "/")
         if any(ignore in folder_path for ignore in ignore_files):
             continue
-        clean_foldername = foldername.replace(".", "")
+        clean_foldername = foldername.replace("./", "")
         links.append(f'<h2>{clean_foldername}</h2>')
         for filename in filenames:
             file_path = os.path.join(foldername, filename).replace("\\", "/")
