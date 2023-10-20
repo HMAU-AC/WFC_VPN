@@ -46,36 +46,33 @@ if __name__ == "__main__":
             margin: auto;
             padding: 20px;
             box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-        }}
-        h2 {{
-            --tw-text-opacity: 1;
-            color:rgb(255 255 255/var(--tw-text-opacity));
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
         }}
         a {{
             color:hsla(0, 0%, 100%, .48);
             text-decoration: none;
             display: inline-block;
             position: relative;
-            padding-left: 25px;
+            transition: all 0.3s ease;
+        }}
+        a:hover {{
+            box-shadow: 0 0 4px rgba(211,211,211,0.5);
+            background: #9d9d9da0;
         }}
         .item-label {{
-            background: var(--control-transparent-bgColor-hover, var(--color-action-list-item-default-hover-bg));
-            display: flex;
+            content: "# " attr(data-content);
+            background: rgba(135, 32, 32, 0.5);
+            display: inline-block;
             align-items: center;
             min-width: 3ch;
-            line-height: var(--text-body-lineHeight-medium, 1.4285714286);
-            --tw-bg-opacity: 1;
-            background-color: rgb(230 230 230/var(--tw-bg-opacity));
-            text-decoration: none !important;
-            border-radius: var(--borderRadius-medium, 6px);
-            padding-inline: var(--control-medium-paddingInline-condensed, 8px);
-            padding-block: var(--control-medium-paddingBlock, 6px);
             }}
         li {{
-            display: grid;
-            border-radius: var(--borderRadius-medium, 6px);
-            padding-inline: var(--control-medium-paddingInline-condensed, 8px);
-            padding-block: var(--control-medium-paddingBlock, 6px);
+            display: inline-block;
+            align-items: center;
+            flex: 0 99999 auto;
+            padding: 4px 4px 4px 25px;
         }}
     </style>
 </head>
