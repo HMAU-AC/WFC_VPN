@@ -62,7 +62,7 @@ if __name__ == "__main__":
             background: #9d9d9da0;
         }}
         .item-label {{
-            background: rgba(135, 32, 32, 0.5);
+            background: #ffffff;
             display: inline-block;
             align-items: center;
             min-width: 3ch;
