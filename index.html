@@ -34,16 +34,24 @@
             padding-left: 25px;
         }
         .item-label {
+            background: var(--control-transparent-bgColor-hover, var(--color-action-list-item-default-hover-bg));
             display: flex;
             align-items: center;
             min-width: 3ch;
             line-height: var(--text-body-lineHeight-medium, 1.4285714286);
-            color: inherit;
+            --tw-bg-opacity: 1;
+            background-color: rgb(7 10 15/var(--tw-bg-opacity));
             text-decoration: none !important;
             border-radius: var(--borderRadius-medium, 6px);
             padding-inline: var(--control-medium-paddingInline-condensed, 8px);
             padding-block: var(--control-medium-paddingBlock, 6px);
             }
+        li {
+            display: inline-grid;
+            grid-auto-flow: column;
+            align-items: center;
+            flex: 0 99999 auto;
+        }
     </style>
 </head>
 <body>
