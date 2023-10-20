@@ -21,8 +21,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
-      - name: Delay for 1 minute # 添加一分钟的延迟
-        run: sleep 60
+      - name: Delay for 2 minute # 添加一分钟的延迟
+        run: sleep 120
       - uses: actions/checkout@v3 # 添加一分钟的延迟结束
         with:
           submodules: true
