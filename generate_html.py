@@ -1,18 +1,22 @@
 import os
 
-def generate_links(root_dir, repo_url, branch_name):
+def generate_links(root_dir, repo_url, branch_name, ignore_files=None):
+    if ignore_files is None:
+        ignore_files = []
     links = []
     for foldername, subfolders, filenames in os.walk(root_dir):
         for filename in filenames:
+            if any(filename.endswith(ext) for ext in ignore_files):
+                continue
             path = os.path.join(foldername, filename).replace("\\", "/")
-            url = f"{repo_url}/blob/{branch_name}/{path}?raw=true"
+            url = f"{repo_url}/blob/{branch_name}/{path}"
             links.append(f'<a href="{url}">{filename}</a>')
     return '\n'.join(links)
 
 if __name__ == "__main__":
     repo_url = "https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main"  # 替换为你的仓库 URL
     branch_name = "main"  # 替换为你的分支名
-    links = generate_links('.', repo_url)
+    links = generate_links('.', repo_url, branch_name, ignore_files=['.pyc', '.git', '.gitignore', '.github'])
     html_content = f"""
 <!DOCTYPE html>
 <html>
