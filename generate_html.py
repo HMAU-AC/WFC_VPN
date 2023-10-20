@@ -53,7 +53,7 @@ if __name__ == "__main__":
             width: fit-content;
         }}
         a:hover {{
-            box-shadow: 0 0 4px rgba(211,211,211,0.5);
+            color: #008800;
             
         }}
         .item-label {{
