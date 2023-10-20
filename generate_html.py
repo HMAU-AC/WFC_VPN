@@ -15,7 +15,7 @@ def generate_links(root_dir, repo_url, ignore_files=None):
             if any(ignore in file_path for ignore in ignore_files):
                 continue
             file_url = f"{repo_url}/{file_path}"  # 修改了这里
-            links.append(f'<li><a class="list" href="{file_url}">{filename}</a></li>')     
+            links.append(f'<a class="list" href="{file_url}">{filename}</a>')     
     return '\n'.join(links)
 
 
@@ -69,13 +69,6 @@ if __name__ == "__main__":
             line-height: 38px;
             font-size: 14px;
             }}
-        li {{
-        
-            display: inline-block;
-            align-items: center;
-            flex: 0 99999 auto;
-            padding: 2px 2px 2px 15px;
-        }}
     </style>
 </head>
 <body>
