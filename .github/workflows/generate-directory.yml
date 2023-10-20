@@ -53,3 +53,21 @@ jobs:
         git add List/Proxy.list
         git commit -m "Merge proxy lists"
         git push
+
+jobs:
+  remove-comments:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Remove comments
+        run: sed -i '/^#/d' List/Proxy.list
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -am "Remove comments"
+          git push
