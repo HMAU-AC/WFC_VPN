@@ -35,7 +35,6 @@ if __name__ == "__main__":
             padding: 0;
             --tw-bg-opacity: 1;
             background-color: rgb(7 10 15/var(--tw-bg-opacity));
-            background-image: url(https://www.gitt.top/Flie-html/100x100.png);
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
