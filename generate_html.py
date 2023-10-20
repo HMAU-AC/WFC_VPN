@@ -21,7 +21,7 @@ def generate_links(root_dir, repo_url, ignore_files=None):
 
 if __name__ == "__main__":
     repo_url = "https://www.gitt.top"  # 替换为你的仓库 URL
-    links = generate_links('.', repo_url, ignore_files=['.pyc', '.git', '.gitignore', '.github', 'html.css', 'index.html', 'generate_html.py', 'README.md', 'Flie-html', '.json'])
+    links = generate_links('.', repo_url, ignore_files=['.pyc', '.git', '.gitignore', '.github', 'html.css', 'index.html', 'generate_html.py', 'README.md', 'Flie-html', '.json', '.config.json'])
     html_content = f"""
 <!DOCTYPE html lang="zh-CN">
 <html>
