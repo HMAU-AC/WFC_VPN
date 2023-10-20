@@ -1,23 +1,23 @@
-   name: Generate Directory
+name: Generate Directory
 
-   on:
-     push:
-       branches:
-         - main
+on:
+  push:
+    branches:
+      - main
 
-   jobs:
-     generate:
-       runs-on: ubuntu-latest
+jobs:
+  generate:
+    runs-on: ubuntu-latest
 
-       steps:
-         - name: Checkout repository
-           uses: actions/checkout@v2
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-         - name: Generate directory
-           run: |
-             echo "## Repository File Directory" > DIRECTORY.md
-             tree -I 'node_modules|dist' >> DIRECTORY.md
-             git add DIRECTORY.md
-             git config user.name "Automated"
-             git config user.email "actions@users.noreply.github.com"
-             git diff --quiet && git diff --staged --quiet || git commit -m "Update directory" && git push
+      - name: Generate directory
+        run: |
+          echo "## Repository File Directory" > DIRECTORY.md
+          tree -I 'node_modules|dist' >> DIRECTORY.md
+          git add DIRECTORY.md
+          git config user.name "Automated"
+          git config user.email "actions@users.noreply.github.com"
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update directory" && git push
