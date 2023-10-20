@@ -5,4 +5,7 @@
       ".plugin": "text/html; charset=utf-8"
       
     }
+    "navigationFallback": {
+        "rewrite": "/Flie-html/404.html"
+      }
   }
