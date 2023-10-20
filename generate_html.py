@@ -65,7 +65,6 @@ if __name__ == "__main__":
             display: inline-block;
             align-items: center;
             width: fit-content;
-            border-radius: 20px;
             padding: 0 20px;
             line-height: 38px;
             font-size: 14px;
