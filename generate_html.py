@@ -34,7 +34,6 @@ if __name__ == "__main__":
             margin: 0;
             padding: 0;
             --tw-bg-opacity: 1;
-            background-color: #fff;
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -49,13 +48,13 @@ if __name__ == "__main__":
             gap: 4px;
         }}
         a {{
-            color:hsla(0, 0%, 100%, .48);
+            
             text-decoration: none;
             width: fit-content;
         }}
         a:hover {{
             box-shadow: 0 0 4px rgba(211,211,211,0.5);
-            background: #9d9d9da0;
+            
         }}
         .item-label {{
             color: #00bb8a;
