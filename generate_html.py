@@ -35,6 +35,9 @@ if __name__ == "__main__":
             padding: 0;
             --tw-bg-opacity: 1;
             background-color: rgb(7 10 15/var(--tw-bg-opacity));
+            background-image: url(./Flie-html/100x100.png);
+            background-size: cover;
+            background-repeat: no-repeat;
             
         }}
         .container {{
@@ -67,10 +70,6 @@ if __name__ == "__main__":
     </style>
 </head>
 <body>
-<div style="transform: translateY(-300px) translateZ(0px);">
-    <img alt="left gradient" loading="lazy" width="1023" height="1052" decoding="async" data-nimg="1" class="transition duration-1000 opacity-1 absolute left-0 select-none pointer-events-none bg-transparent border-none" style="color:transparent" srcset="https://cursor.sh/_next/image?url=%2Flanding%2Fgradients%2Fleft-gradient%401x.png&amp;w=1080&amp;q=75 1x, /_next/image?url=%2Flanding%2Fgradients%2Fleft-gradient%401x.png&amp;w=2048&amp;q=75 2x" src="/_next/image?url=%2Flanding%2Fgradients%2Fleft-gradient%401x.png&amp;w=2048&amp;q=75">
-    <img alt="left gradient" loading="lazy" width="1023" height="1052" decoding="async" data-nimg="1" class="transition duration-1000 opacity-1 absolute right-0 select-none pointer-events-none bg-transparent border-none" style="color:transparent" srcset="https://cursor.sh/_next/image?url=%2Flanding%2Fgradients%2Fright-gradient%401x.png&amp;w=1080&amp;q=75 1x, /_next/image?url=%2Flanding%2Fgradients%2Fright-gradient%401x.png&amp;w=2048&amp;q=75 2x" src="/_next/image?url=%2Flanding%2Fgradients%2Fright-gradient%401x.png&amp;w=2048&amp;q=75">
-</div>
     <div class="container">
     {links}
     </div>
@@ -79,3 +78,6 @@ if __name__ == "__main__":
 """
     with open('index.html', 'w') as file:
         file.write(html_content)
+
+
+        background-image: url(https://cursor.sh/_next/image?url=%2Flanding%2Fgradients%2Fleft-gradient%401x.png&w=1080&q=75);
