@@ -23,26 +23,35 @@ if __name__ == "__main__":
 <head>
     <title>My Page</title>
     <style>
-        body {{
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
-        }}
-        .container {{
+        }
+        .container {
             width: 80%;
             margin: auto;
             background-color: #fff;
             padding: 20px;
             box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-        }}
-        a {{
+        }
+        a {
             color: #333;
             text-decoration: none;
-        }}
-        a:hover {{
+            display: block;
+            position: relative;
+            padding-left: 25px;
+        }
+        a:hover {
             color: #0056b3;
-        }}
+        }
+        a:hover::before {
+            content: "🔗 打开链接";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
     </style>
 </head>
 <body>
