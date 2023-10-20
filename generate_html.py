@@ -54,7 +54,7 @@ if __name__ == "__main__":
         a {{
             color:hsla(0, 0%, 100%, .48);
             text-decoration: none;
-            display: block;
+            display: inline-block;
             position: relative;
             padding-left: 25px;
         }}
