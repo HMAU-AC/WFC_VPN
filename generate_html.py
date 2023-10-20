@@ -21,10 +21,9 @@ if __name__ == "__main__":
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Page</title>
+    <title>文件目录</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
