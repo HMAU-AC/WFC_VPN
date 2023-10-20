@@ -15,14 +15,14 @@ def generate_links(root_dir, repo_url, branch_name, ignore_files=None):
             if any(ignore in file_path for ignore in ignore_files):
                 continue
             file_url = f"{repo_url}/WFC_VPN/{branch_name}/{file_path}"
-            links.append(f'<a href="{file_url}">{filename}</a>')     
+            links.append(f'<button><a href="{file_url}">{filename}</a></button>')     
     return '\n'.join(links)
 
 
 if __name__ == "__main__":
     repo_url = "https://raw.githubusercontent.com/HMAU-AC"  # 替换为你的仓库 URL
     branch_name = "main"  # 替换为你的分支名
-    links = generate_links('.', repo_url, branch_name, ignore_files=['.pyc', '.git', '.gitignore', '.github', 'html.css', 'index.html', 'generate_html.py', 'README.md'])
+    links = generate_links('.', repo_url, branch_name, ignore_files=['.pyc', '.git', '.gitignore', '.github', 'html.css', 'index.html', 'generate_html.py', 'README.md', 'Flie-html'])
     html_content = f"""
 <!DOCTYPE html lang="zh-CN">
 <html>
