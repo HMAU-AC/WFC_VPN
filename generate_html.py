@@ -54,7 +54,6 @@ if __name__ == "__main__":
         }}
         a:hover {{
             color: #008800;
-            
         }}
         .item-label {{
             font-weight:900;
