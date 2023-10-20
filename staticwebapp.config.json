@@ -1,11 +1,10 @@
 {
     "mimeTypes": {
-      ".sgmodule": "text/html; charset=utf-8",
-      ".list": "text/html; charset=utf-8",
-      ".plugin": "text/html; charset=utf-8"
-      
-    }
+        ".sgmodule": "text/plain; charset=utf-8",
+        ".list": "text/plain; charset=utf-8",
+        ".plugin": "text/plain; charset=utf-8"
+    },
     "navigationFallback": {
         "rewrite": "/Flie-html/404.html"
-      }
-  }
+    }
+}
