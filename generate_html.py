@@ -70,6 +70,12 @@ if __name__ == "__main__":
             left: 0;
             top: 0;
         }}
+        button {{
+            display: block;
+            --tw-bg-opacity: 1;
+            color: rgb(7 10 15/var(--tw-bg-opacity));
+
+        }}
     </style>
 </head>
 <body>
