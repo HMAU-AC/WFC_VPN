@@ -8,7 +8,7 @@ def generate_links(root_dir, repo_url, branch_name, ignore_files=None):
         folder_path = foldername.replace("\\", "/")
         if any(ignore in folder_path for ignore in ignore_files):
             continue
-        clean_foldername = foldername.replace(".", "").lstrip('/')
+        clean_foldername = foldername.replace(".", "# ").lstrip('/')
         links.append(f'<h2>{clean_foldername}</h2>')
         for filename in filenames:
             file_path = os.path.join(foldername, filename).replace("\\", "/")
@@ -35,7 +35,7 @@ if __name__ == "__main__":
             padding: 0;
             --tw-bg-opacity: 1;
             background-color: rgb(7 10 15/var(--tw-bg-opacity));
-            background-image: url(https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Flie-html/100x100.png);
+            background-image: url(https://www.gitt.top/Flie-html/100x100.png);
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
