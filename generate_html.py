@@ -34,7 +34,7 @@ if __name__ == "__main__":
             margin: 0;
             padding: 0;
             --tw-bg-opacity: 1;
-            background-color: rgb(7 10 15/var(--tw-bg-opacity));
+            background-color: #fff;
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -58,7 +58,7 @@ if __name__ == "__main__":
             background: #9d9d9da0;
         }}
         .item-label {{
-            background: #ffffff;
+            color: #f8f8f8;
             display: inline-block;
             align-items: center;
             width: fit-content;
