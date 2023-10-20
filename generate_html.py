@@ -38,6 +38,7 @@ if __name__ == "__main__":
             background-image: url(https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Flie-html/100x100.png);
             background-size: cover;
             background-repeat: no-repeat;
+            background-attachment: fixed;
             
         }}
         .container {{
@@ -58,6 +59,7 @@ if __name__ == "__main__":
             padding-left: 25px;
         }}
         a:hover {{
+            display: inline-block;
             --tw-text-opacity: 1;
             color:rgb(255 255 255/var(--tw-text-opacity));
         }}
