@@ -1,15 +1,17 @@
 import os
 
-def generate_links(root_dir):
+def generate_links(root_dir, repo_url):
     links = []
     for foldername, subfolders, filenames in os.walk(root_dir):
         for filename in filenames:
             path = os.path.join(foldername, filename)
-            links.append(f'<a href="{path}">{filename}</a>')
+            url = os.path.join(repo_url, path)
+            links.append(f'<a href="{url}">{filename}</a>')
     return '\n'.join(links)
 
 if __name__ == "__main__":
-    links = generate_links('.')
+    repo_url = "https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main"  # 替换为你的仓库 URL
+    links = generate_links('.', repo_url)
     html_content = f"""
     <!DOCTYPE html>
     <html>
