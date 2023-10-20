@@ -4,8 +4,6 @@ def generate_links(root_dir, repo_url, branch_name, ignore_files=None):
     if ignore_files is None:
         ignore_files = []
     links = []
-    filepng_url = None  # 初始化 filepng_url
-    background_image = None  # 初始化 background_image
     for foldername, subfolders, filenames in os.walk(root_dir):
         folder_path = foldername.replace("\\", "/")
         if any(ignore in folder_path for ignore in ignore_files):
@@ -17,9 +15,7 @@ def generate_links(root_dir, repo_url, branch_name, ignore_files=None):
             if any(ignore in file_path for ignore in ignore_files):
                 continue
             file_url = f"{repo_url}/WFC_VPN/{branch_name}/{file_path}"
-            links.append(f'<p><a href="{file_url}">{filename}</a></p>')
-            filepng_url = f"{repo_url}/WFC_VPN/{branch_name}/Flie-html/100x100.png" # 设置图片地址
-            background_image = file_url  # 设置背景图片链接        
+            links.append(f'<p><a href="{file_url}">{filename}</a></p>')     
     return '\n'.join(links)
 
 if __name__ == "__main__":
@@ -39,7 +35,7 @@ if __name__ == "__main__":
             padding: 0;
             --tw-bg-opacity: 1;
             background-color: rgb(7 10 15/var(--tw-bg-opacity));
-            background-image: url({background_image});
+            background-image: url(https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Flie-html/100x100.png);
             background-size: cover;
             background-repeat: no-repeat;
             
