@@ -1,6 +1,6 @@
 import os
 
-def generate_links(root_dir, repo_url, branch_name, ignore_files=None):
+def generate_links(root_dir, repo_url, ignore_files=None):
     if ignore_files is None:
         ignore_files = []
     links = []
@@ -14,15 +14,14 @@ def generate_links(root_dir, repo_url, branch_name, ignore_files=None):
             file_path = os.path.join(foldername, filename).replace("\\", "/")
             if any(ignore in file_path for ignore in ignore_files):
                 continue
-            file_url = f"{repo_url}/WFC_VPN/{branch_name}/{file_path}"
+            file_url = f"{repo_url}/{file_path}"  # 修改了这里
             links.append(f'<li><a href="{file_url}">{filename}</a></li>')     
     return '\n'.join(links)
 
 
 if __name__ == "__main__":
-    repo_url = "https://raw.githubusercontent.com/HMAU-AC"  # 替换为你的仓库 URL
-    branch_name = "main"  # 替换为你的分支名
-    links = generate_links('.', repo_url, branch_name, ignore_files=['.pyc', '.git', '.gitignore', '.github', 'html.css', 'index.html', 'generate_html.py', 'README.md', 'Flie-html'])
+    repo_url = "https://www.gitt.top"  # 替换为你的仓库 URL
+    links = generate_links('.', repo_url, ignore_files=['.pyc', '.git', '.gitignore', '.github', 'html.css', 'index.html', 'generate_html.py', 'README.md', 'Flie-html'])
     html_content = f"""
 <!DOCTYPE html lang="zh-CN">
 <html>
