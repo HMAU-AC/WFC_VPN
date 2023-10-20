@@ -53,9 +53,7 @@ if __name__ == "__main__":
         a {{
             color:hsla(0, 0%, 100%, .48);
             text-decoration: none;
-            display: inline-block;
-            position: relative;
-            transition: all 0.3s ease;
+            width: fit-content;
         }}
         a:hover {{
             box-shadow: 0 0 4px rgba(211,211,211,0.5);
@@ -65,7 +63,7 @@ if __name__ == "__main__":
             background: #ffffff;
             display: inline-block;
             align-items: center;
-            min-width: 3ch;
+            width: fit-content;
             }}
         li {{
             display: inline-block;
