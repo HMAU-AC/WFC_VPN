@@ -14,11 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         iframeElements[i].remove();
         console.log("删除了 " + i + " 个div元素。")
     }
-});
 
-
-// DOMContentLoaded会在DOM树构建完成后就触发，不需要等待其他资源加载完成
-document.addEventListener('DOMContentLoaded', function() {
     const ids = [
         '__stay_inject_parse_video_js',
         '__stay_inject_selecte_ad_tag_js_',
@@ -35,10 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log("删除了 " + element + " 个script-ad元素。")
         }
     });
-});
 
-// 根据scripts中的scr“”中的链接来定位删除scripts标签
-document.addEventListener('DOMContentLoaded', function() {
 var scripts = document.getElementsByTagName('script');
 var urlsToRemove = [
     "https://connect.facebook.net/vi_VN/sdk.js?hash=925333dad855fb0487f4308cfcb70762",
@@ -51,7 +44,7 @@ for (var i = 0; i < scripts.length; i++) {
         scripts[i].parentNode.removeChild(scripts[i]);
         console.log( "删除了 " + i + " 个script元素。" );
     }
-});
+
 
 // 要删除特定的<style>标签,你可以使用JavaScript的DOM操作。你可以通过type和data-fbcssmodules属性找到特定的<style>标签，然后删除它
 // 这段代码会在页面加载完成后，找到所有的<style>元素,检查它们的type和data-fbcssmodules属性是否与给定的值匹配,如果匹配,则从它们的父节点中删除它们。
@@ -80,9 +73,8 @@ for (var i = 0; i < allElements.length; i++) {
 }
 
 // 根据post-thumbnail类名（class）来允许点击的节点
-document.addEventListener("click", function(event) {
-    // 检查点击的元素是否具有 prevent-default 类名
-    if (event.target.classList.contains("post-thumbnail")) {
+// 检查点击的元素是否具有 post-thumbnail 类名
+if (event.target.classList.contains("post-thumbnail")) {
         // 阻止默认行为（跳转到新页面）
         event.preventDefault();
         
