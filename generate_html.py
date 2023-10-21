@@ -66,13 +66,13 @@ if __name__ == "__main__":
         }}
         .list:hover::before {{
             margin-right: 6px;
-            transition: all 0.3s ease; /* 添加过渡效果 */
+            transition: all 0.9s cubic-bezier(0.38, -0.27, 1, 0.37);
         }}
 
         .list:hover::after {{
             content: "🔗 打开链接";
             margin-left: 6px;
-            transition: all 0.3s ease; /* 添加过渡效果 */
+            transition: all 0.9s cubic-bezier(0.38, -0.27, 1, 0.37);
         }}
         .item-label {{
             border-radius: 5px;
@@ -91,6 +91,12 @@ if __name__ == "__main__":
             }}
         .fas.fa-sticky-note, .fas.fa-folder {{
             margin: 0 6px 0 0;
+            }}
+        @media screen and (max-width: 768px) {{
+            .container {{
+            width: 100%; /* 在小屏幕上设置宽度为100% */
+            padding: 10px; /* 在小屏幕上减少内边距 */
+            }}
             }}
     </style>
 </head>
