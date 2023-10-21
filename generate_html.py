@@ -42,8 +42,8 @@ if __name__ == "__main__":
             background: #b4b4b4;
         }}
         .container {{
-            width: 80%;
-            margin: auto;
+            max-width: 80%;
+            margin: 0 auto;
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -82,19 +82,22 @@ if __name__ == "__main__":
             display: inline-block;
             align-items: center;
             margin: 5px 0;
-            /* width: fit-content; */
             padding: 0 10px;
             line-height: 38px;
             font-size: 18px;
-            }}
+        }}
         .fas.fa-sticky-note, .fas.fa-folder {{
             margin: 0 6px 0 0;
-            }}
+        }}
         @media screen and (max-width: 768px) {{
             .container {{
-            width: 100%; /* 在小屏幕上设置宽度为100% */
-            padding: 10px; /* 在小屏幕上减少内边距 */
+                width: 100%;
+                padding: 10px;
             }}
+            .list, .item-label {{
+                font-size: 16px;
+                line-height: 28px;
+            }
         }}
     </style>
 </head>
