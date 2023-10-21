@@ -15,7 +15,7 @@ def generate_links(root_dir, repo_url, ignore_files=None):
             if any(ignore in file_path for ignore in ignore_files):
                 continue
             file_url = f"{repo_url}/{file_path}"  # 修改了这里
-            links.append(f'<a class="list" href="{file_url}">{filename}</a>')     
+            links.append(f'<a class="list" href="{file_url}"><i class="fas fa-sticky-note"></i>{filename}</a>')     
     return '\n'.join(links)
 
 
