@@ -77,7 +77,7 @@ if __name__ == "__main__":
             display: inline-block;
             align-items: center;
             /* width: fit-content; */
-            padding: 0 20px;
+            padding: 0 10px;
             line-height: 38px;
             font-size: 14px;
             }}
