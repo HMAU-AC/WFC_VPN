@@ -47,10 +47,19 @@ if __name__ == "__main__":
             flex-direction: column;
             gap: 4px;
         }}
-        a {{
-            color: #000000;
-            text-decoration: none;
+        .list {{
+            border-radius: 5px;
+            border-color: rgba(108, 152, 33, 0.79);
+            color: #ffffff;
+            background-color: rgba(108, 152, 33, 0.79);
+            flex-shrink: 0;
+            display: inline-block;
+            align-items: center;
             width: fit-content;
+            padding: 0px 10px;
+            line-height: 28px;
+            font-size: 14px;
+            text-decoration: none;
         }}
         a:hover {{
             color: #008800;
@@ -64,7 +73,7 @@ if __name__ == "__main__":
             font-weight:900;
             display: inline-block;
             align-items: center;
-            width: fit-content;
+            /* width: fit-content; */
             padding: 0 20px;
             line-height: 38px;
             font-size: 14px;
