@@ -60,7 +60,7 @@ if __name__ == "__main__":
             align-items: center;
             width: fit-content;
             padding: 0px 10px;
-            line-height: 28px;
+            line-height: 31px;
             font-size: 14px;
             text-decoration: none;
         }}
