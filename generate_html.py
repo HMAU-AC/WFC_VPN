@@ -9,13 +9,15 @@ def generate_links(root_dir, repo_url, ignore_files=None):
         if any(ignore in folder_path for ignore in ignore_files):
             continue
         clean_foldername = foldername.replace(".", "").lstrip('/')
-        links.append(f'<span class="item-label"><i class="fas fa-folder"></i>{clean_foldername}</span>')
+        if clean_foldername:  # 检查clean_foldername是否为空
+            links.append(f'<span class="item-label"><i class="fas fa-folder"></i>{clean_foldername}</span>')
         for filename in filenames:
             file_path = os.path.join(foldername, filename).replace("\\", "/")
             if any(ignore in file_path for ignore in ignore_files):
                 continue
-            file_url = f"{repo_url}/{file_path}"  # 修改了这里
-            links.append(f'<a class="list" href="{file_url}"><i class="fas fa-sticky-note"></i>{filename}</a>')     
+            if filename:  # 检查filename是否为空
+                file_url = f"{repo_url}/{file_path}"  # 修改了这里
+                links.append(f'<a class="list" href="{file_url}"><i class="fas fa-sticky-note"></i>{filename}</a>')     
     return '\n'.join(links)
 
 
