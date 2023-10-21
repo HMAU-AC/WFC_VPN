@@ -81,7 +81,7 @@ if __name__ == "__main__":
             line-height: 38px;
             font-size: 14px;
             }}
-        .fas.fa-sticky-note {{
+        .fas.fa-sticky-note, .fas.fa-folder {{
             margin: 0 6px 0 0;
             }}
     </style>
