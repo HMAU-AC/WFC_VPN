@@ -97,11 +97,33 @@ if __name__ == "__main__":
             .list, .item-label {{
                 font-size: 16px;
                 line-height: 28px;
-            }
+            }}
         }}
-    </style>
+            nav {{
+                left: 5px;
+                right: 5px;
+                flex-direction: column;
+            }}
+        </style>
 </head>
 <body>
+    <nav style="
+        position: fixed;
+        top: 20px;
+        left: 10px;
+        right: 10px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    ">
+        <a href="#">菜单1</a>
+        <a href="#">菜单2</a>
+        <a href="#">菜单3</a>
+    </nav>
     <div class="container">
     {links}
     </div>
