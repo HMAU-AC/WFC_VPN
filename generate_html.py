@@ -33,10 +33,9 @@ if __name__ == "__main__":
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {{
-            font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif, -apple--apple--apple-system-body;
             margin: 0;
             padding: 0;
-            --tw-bg-opacity: 1;
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -48,7 +47,6 @@ if __name__ == "__main__":
             box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
             display: flex;
             flex-direction: column;
-            gap: 4px;
         }}
         .list {{
             border-radius: 5px;
@@ -63,6 +61,7 @@ if __name__ == "__main__":
             line-height: 31px;
             font-size: 14px;
             text-decoration: none;
+            margin: 4px 0;
         }}
         a:hover {{
             color: #008800;
