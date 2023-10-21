@@ -64,7 +64,7 @@ if __name__ == "__main__":
             margin: 4px 0;
         }}
         a:hover {{
-            color: #008800;
+            color: #747bff;
         }}
         .item-label {{
             border-radius: 5px;
