@@ -56,7 +56,6 @@ if __name__ == "__main__":
             flex-shrink: 0;
             display: inline-block;
             align-items: center;
-            width: fit-content;
             padding: 0px 10px;
             line-height: 31px;
             font-size: 14px;
