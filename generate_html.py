@@ -50,9 +50,9 @@ if __name__ == "__main__":
         }}
         .list {{
             border-radius: 5px;
-            border-color: rgba(108, 152, 33, 0.79);
+            border-color: #f6f6f7;
             color: #ffffff;
-            background-color: rgba(108, 152, 33, 0.79);
+            background-color: #f6f6f7;
             flex-shrink: 0;
             display: inline-block;
             align-items: center;
@@ -78,6 +78,9 @@ if __name__ == "__main__":
             padding: 0 20px;
             line-height: 38px;
             font-size: 14px;
+            }}
+        .fas.fa-sticky-note {{
+            margin: 0 6px 0 0;
             }}
     </style>
 </head>
