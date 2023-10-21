@@ -104,6 +104,16 @@ if __name__ == "__main__":
                 right: 5px;
                 flex-direction: column;
             }}
+            nav {{
+                height: auto;
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                flex-direction: row;
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border-radius: 5px;
+            }}
         </style>
 </head>
 <body>
@@ -113,7 +123,6 @@ if __name__ == "__main__":
         left: 10px;
         right: 10px;
         height: auto;
-        width: 100%;  /* 添加这一行 */
         display: flex;
         justify-content: space-between;
         padding: 10px;
@@ -123,9 +132,9 @@ if __name__ == "__main__":
         -webkit-backdrop-filter: blur(10px);
         border-radius: 5px;  /* 添加这一行 */
     ">
-        <a href="#">菜单1</a>
-        <a href="#">菜单2</a>
-        <a href="#">菜单3</a>
+        <a class="cai" href="#">菜单1</a>
+        <a class="cai" href="#">菜单2</a>
+        <a class="cai" href="#">菜单3</a>
     </nav>
     <div class="container">
     {links}
