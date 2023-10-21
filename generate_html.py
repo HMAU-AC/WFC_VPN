@@ -39,12 +39,12 @@ if __name__ == "__main__":
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
+            background: #eeeeee;
         }}
         .container {{
             width: 80%;
             margin: auto;
             padding: 20px;
-            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
             display: flex;
             flex-direction: column;
         }}
