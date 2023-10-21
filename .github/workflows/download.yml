@@ -14,7 +14,7 @@ jobs:
 
     - name: Download file
       run: |
-        curl -L "https://raw.githubusercontent.com/Maasea/sgmodule/master/YoutubeAds.sgmodule" -o "Module/SurgeMd/YoutubeAds.sgmodule"
+        curl -L "https://raw.githubusercontent.com/Maasea/sgmodule/master/YoutubeAds.sgmodule" -o "Module/YoutubeAds.sgmodule"
 
     - name: Commit and push if it changed
       run: |
