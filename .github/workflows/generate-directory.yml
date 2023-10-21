@@ -44,6 +44,7 @@ jobs:
         curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Npmjs/Npmjs.list" | sed '/^#/d' >> List/Proxy.list
         curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TeraBox/TeraBox.list" | sed '/^#/d' >> List/Proxy.list
         curl -L "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Notion/Notion.list" | sed '/^#/d' >> List/Proxy.list
+        curl -L "https://www.gitt.top/List/cursor.list" | sed '/^#/d' >> List/Proxy.list
         # Add more curl commands for each URL
 
     - name: Commit and push changes
