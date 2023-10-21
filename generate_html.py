@@ -9,7 +9,7 @@ def generate_links(root_dir, repo_url, ignore_files=None):
         if any(ignore in folder_path for ignore in ignore_files):
             continue
         clean_foldername = foldername.replace(".", "").lstrip('/')
-        links.append(f'<span class="item-label">{clean_foldername}</span>')
+        links.append(f'<span class="item-label"><i class="fas fa-folder"></i>{clean_foldername}</span>')
         for filename in filenames:
             file_path = os.path.join(foldername, filename).replace("\\", "/")
             if any(ignore in file_path for ignore in ignore_files):
@@ -28,6 +28,7 @@ if __name__ == "__main__":
 <head>
     <meta charset="utf-8">
     <title>文件目录</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {{
             font-family: Arial, sans-serif;
