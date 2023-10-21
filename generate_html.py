@@ -65,8 +65,6 @@ if __name__ == "__main__":
             margin: 4px 0;
         }}
         .list:hover::before {{
-            content: "\f35d"; /* 添加Font Awesome图标的Unicode */
-            font-family: "Font Awesome 5 Free";
             margin-right: 6px;
         }}
 
