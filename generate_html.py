@@ -113,6 +113,7 @@ if __name__ == "__main__":
         left: 10px;
         right: 10px;
         height: auto;
+        width: 100%;  /* 添加这一行 */
         display: flex;
         justify-content: space-between;
         padding: 10px;
@@ -120,6 +121,7 @@ if __name__ == "__main__":
         background-color: rgba(255, 255, 255, 0.5);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
+        border-radius: 5px;  /* 添加这一行 */
     ">
         <a href="#">菜单1</a>
         <a href="#">菜单2</a>
