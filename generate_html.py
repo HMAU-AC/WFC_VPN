@@ -60,6 +60,7 @@ if __name__ == "__main__":
             padding: 0px 10px;
             line-height: 31px;
             font-size: 14px;
+            font-weight:500;
             text-decoration: none;
             margin: 4px 0;
         }}
