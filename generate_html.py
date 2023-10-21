@@ -39,7 +39,7 @@ if __name__ == "__main__":
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background: #eeeeee;
+            background: #b4b4b4;
         }}
         .container {{
             width: 80%;
@@ -50,9 +50,8 @@ if __name__ == "__main__":
         }}
         .list {{
             border-radius: 5px;
-            border-color: #f6f6f7;
             color: rgba(60, 60, 67, 0.75);
-            background-color: #f6f6f7;
+            background-color: #c2c2c2;
             flex-shrink: 0;
             display: inline-block;
             align-items: center;
