@@ -17,7 +17,7 @@ def generate_links(root_dir, repo_url, ignore_files=None):
                 continue
             if filename:  # 检查filename是否为空
                 file_url = f"{repo_url}/{file_path}"  # 修改了这里
-                links.append(f'<a class="list" href="{file_url}"><i class="fas fa-sticky-note"></i>{filename}</a>')     
+                links.append(f'<a class="list" href="{file_url}" ><i class="fas fa-sticky-note"></i>{filename}</a>')     
     return '\n'.join(links)
 
 
@@ -63,8 +63,15 @@ if __name__ == "__main__":
             text-decoration: none;
             margin: 4px 0;
         }}
-        a:hover {{
-            color: #747bff;
+        .list:hover::before {{
+            content: "\f35d"; /* 添加Font Awesome图标的Unicode */
+            font-family: "Font Awesome 5 Free";
+            margin-right: 6px;
+        }}
+
+        .list:hover::after {{
+            content: "打开链接"; /* 添加提示文本 */
+            margin-left: 6px;
         }}
         .item-label {{
             border-radius: 5px;
