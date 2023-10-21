@@ -53,7 +53,7 @@ if __name__ == "__main__":
         .list {{
             border-radius: 5px;
             border-color: #f6f6f7;
-            color: #ffffff;
+            color: rgba(60, 60, 67, 0.75);
             background-color: #f6f6f7;
             flex-shrink: 0;
             display: inline-block;
