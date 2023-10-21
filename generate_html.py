@@ -79,7 +79,7 @@ if __name__ == "__main__":
             /* width: fit-content; */
             padding: 0 10px;
             line-height: 38px;
-            font-size: 14px;
+            font-size: 18px;
             }}
         .fas.fa-sticky-note, .fas.fa-folder {{
             margin: 0 6px 0 0;
