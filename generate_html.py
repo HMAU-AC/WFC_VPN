@@ -112,10 +112,11 @@ if __name__ == "__main__":
         top: 20px;
         left: 10px;
         right: 10px;
-        height: 50px;
+        height: auto;
         display: flex;
         justify-content: space-between;
         padding: 10px;
+        flex-direction: row;
         background-color: rgba(255, 255, 255, 0.5);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
