@@ -69,7 +69,7 @@ if __name__ == "__main__":
         }}
 
         .list:hover::after {{
-            content: "打开链接"; /* 添加提示文本 */
+            content: "打开链接";
             margin-left: 6px;
         }}
         .item-label {{
