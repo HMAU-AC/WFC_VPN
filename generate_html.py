@@ -104,7 +104,7 @@ if __name__ == "__main__":
                 right: 5px;
                 flex-direction: column;
             }}
-            nav {{
+            .cai {{
                 height: auto;
                 display: flex;
                 justify-content: space-between;
