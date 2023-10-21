@@ -97,7 +97,7 @@ if __name__ == "__main__":
             width: 100%; /* 在小屏幕上设置宽度为100% */
             padding: 10px; /* 在小屏幕上减少内边距 */
             }}
-            }}
+        }}
     </style>
 </head>
 <body>
