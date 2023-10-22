@@ -126,6 +126,7 @@ if __name__ == "__main__":
         }});
     }}
     </script>
+    <script>
     window.onload = function() {{
         document.getElementById('favicon').href = './Icon/dd.png';
     }}
