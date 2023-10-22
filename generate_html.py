@@ -47,10 +47,10 @@ if __name__ == "__main__":
             border-bottom-right-radius: 0;
         }}
         .btn-copy {{
-            border-top-left-radius: .25rem;
-            border-bottom-left-radius: .25rem;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: .25rem;
+            border-bottom-right-radius: .25rem;
         }}
         @media (min-width: 576px) {{
             .folder-label {{
