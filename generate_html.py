@@ -31,8 +31,9 @@ if __name__ == "__main__":
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>文件目录</title>
+    <link rel="shortcut icon" href="./Icon/dd.png">
     <!-- 引入Bootstrap CSS -->
-    <!-- rel="preconnect"预解析DNS,还预建立TCP连接和TLS握手 -->
+    <!-- rel="preconnect"预解析DNS,还预建立TCP连接和TLS握手,但是不能在script使用-->
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- 引入Font Awesome -->
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
