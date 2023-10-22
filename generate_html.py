@@ -17,7 +17,7 @@ def generate_links(root_dir, repo_url, ignore_files=None):
                 continue
             if filename:  # 检查filename是否为空
                 file_url = f"{repo_url}/{file_path}"  # 修改了这里
-                links.append(f'<a class="list-group-item" href="{file_url}" >{filename}</a>')  # 修改了这里
+                links.append(f'<a class="list-group-item" href="{file_url}" >{filename}<button class="btn btn-secondary btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></a>')  # 修改了这里
     return '\n'.join(links)
 
 
@@ -105,6 +105,27 @@ if __name__ == "__main__":
     <!-- 引入Bootstrap JS -->
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
+    <!-- 引入Clipboard.js -->
+    <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+    <script>
+    window.onload = function() {{
+        document.getElementById('favicon').href = './Icon/dd.png';
+
+        // 初始化Clipboard.js
+        var clipboard = new Clipboard('.btn-copy');
+
+        // 添加复制成功的回调函数
+        clipboard.on('success', function(e) {{
+            // 在这里添加爆炸特效
+            console.log('复制成功!');
+        }});
+
+        // 添加复制失败的回调函数
+        clipboard.on('error', function(e) {{
+            console.log('复制失败');
+        }});
+    }}
+    </script>
     window.onload = function() {{
         document.getElementById('favicon').href = './Icon/dd.png';
     }}
