@@ -10,7 +10,7 @@ def generate_links(root_dir, repo_url, ignore_files=None):
             continue
         clean_foldername = foldername.replace(".", "").lstrip('/')
         if clean_foldername:  # 检查clean_foldername是否为空
-            links.append(f'<span class="badge badge-primary folder-label">{clean_foldername}</span>')  # 修改了这里
+            links.append(f'<span class="badge badge-primary folder-label mb-3">{clean_foldername}</span>')  # 修改了这里
         for filename in filenames:
             file_path = os.path.join(foldername, filename).replace("\\", "/")
             if any(ignore in file_path for ignore in ignore_files):
