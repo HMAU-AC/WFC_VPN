@@ -10,14 +10,14 @@ def generate_links(root_dir, repo_url, ignore_files=None):
             continue
         clean_foldername = foldername.replace(".", "").lstrip('/')
         if clean_foldername:  # 检查clean_foldername是否为空
-            links.append(f'<span class="item-label"><i class="fas fa-folder"></i>{clean_foldername}</span>')
+            links.append(f'<span class="badge badge-primary"><i class="fas fa-folder"></i>{clean_foldername}</span>')  # 修改了这里
         for filename in filenames:
             file_path = os.path.join(foldername, filename).replace("\\", "/")
             if any(ignore in file_path for ignore in ignore_files):
                 continue
             if filename:  # 检查filename是否为空
                 file_url = f"{repo_url}/{file_path}"  # 修改了这里
-                links.append(f'<a class="list" href="{file_url}" ><i class="fas fa-sticky-note"></i>{filename}</a>')     
+                links.append(f'<a class="list-group-item" href="{file_url}" ><i class="fas fa-sticky-note"></i>{filename}</a>')  # 修改了这里
     return '\n'.join(links)
 
 
@@ -25,87 +25,35 @@ if __name__ == "__main__":
     repo_url = "https://www.gitt.top"  # 替换为你的仓库 URL
     links = generate_links('.', repo_url, ignore_files=['.pyc', '.git', '.gitignore', '.github', 'html.css', 'index.html', 'generate_html.py', 'README.md', 'Flie-html', '.json', '.config.json', 'Loon', 'Icon'])
     html_content = f"""
-<!DOCTYPE html lang="zh-CN">
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>文件目录</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        body {{
-            font-family: Arial, sans-serif, -apple--apple--apple-system-body;
-            margin: 0;
-            padding: 0;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background: #b4b4b4;
-        }}
-        .container {{
-            max-width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-        }}
-        .list {{
-            border-radius: 5px;
-            color: rgba(60, 60, 67, 0.75);
-            background-color: #c2c2c2;
-            flex-shrink: 0;
-            display: inline-block;
-            align-items: center;
-            padding: 0px 10px;
-            line-height: 31px;
-            font-size: 14px;
-            font-weight:500;
-            text-decoration: none;
-            margin: 4px 0;
-        }}
-        .list:hover::before {{
-            margin-right: 6px;
-            transition: all 0.9s cubic-bezier(0.38, -0.27, 1, 0.37);
-        }}
-
-        .list:hover::after {{
-            content: "🔗 打开链接";
-            margin-left: 6px;
-            transition: all 0.9s cubic-bezier(0.38, -0.27, 1, 0.37);
-        }}
-        .item-label {{
-            border-radius: 5px;
-            border-color: #747bff;
-            color: #ffffff;
-            background-color: #747bff;
-            flex-shrink: 0;
-            font-weight:900;
-            display: inline-block;
-            align-items: center;
-            margin: 5px 0;
-            padding: 0 10px;
-            line-height: 38px;
-            font-size: 18px;
-        }}
-        .fas.fa-sticky-note, .fas.fa-folder {{
-            margin: 0 6px 0 0;
-        }}
-        @media screen and (max-width: 768px) {{
-            .container {{
-                width: 100%;
-                padding: 10px;
-            }}
-            .list, .item-label {{
-                font-size: 16px;
-                line-height: 28px;
-            }}
-        }}
-            
-        </style>
+    <!-- 引入Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-    {links}
+        <!-- 使用Bootstrap的row和col类来创建响应式布局 -->
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <!-- 使用Bootstrap的card类来创建一个卡片 -->
+                <div class="card">
+                    <div class="card-body">
+                        <!-- 使用Bootstrap的list-group类来创建一个列表 -->
+                        <div class="list-group">
+                            <!-- 在这里插入链接 -->
+                            {links}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- 引入Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
 """
