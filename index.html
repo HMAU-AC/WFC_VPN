@@ -1,106 +1,54 @@
 
-<!DOCTYPE html lang="zh-CN">
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>文件目录</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif, -apple--apple--apple-system-body;
-            margin: 0;
-            padding: 0;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background: #b4b4b4;
-        }
-        .container {
-            max-width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-        }
-        .list {
-            border-radius: 5px;
-            color: rgba(60, 60, 67, 0.75);
-            background-color: #c2c2c2;
-            flex-shrink: 0;
-            display: inline-block;
-            align-items: center;
-            padding: 0px 10px;
-            line-height: 31px;
-            font-size: 14px;
-            font-weight:500;
-            text-decoration: none;
-            margin: 4px 0;
-        }
-        .list:hover::before {
-            margin-right: 6px;
-            transition: all 0.9s cubic-bezier(0.38, -0.27, 1, 0.37);
-        }
-
-        .list:hover::after {
-            content: "🔗 打开链接";
-            margin-left: 6px;
-            transition: all 0.9s cubic-bezier(0.38, -0.27, 1, 0.37);
-        }
-        .item-label {
-            border-radius: 5px;
-            border-color: #747bff;
-            color: #ffffff;
-            background-color: #747bff;
-            flex-shrink: 0;
-            font-weight:900;
-            display: inline-block;
-            align-items: center;
-            margin: 5px 0;
-            padding: 0 10px;
-            line-height: 38px;
-            font-size: 18px;
-        }
-        .fas.fa-sticky-note, .fas.fa-folder {
-            margin: 0 6px 0 0;
-        }
-        @media screen and (max-width: 768px) {
-            .container {
-                width: 100%;
-                padding: 10px;
-            }
-            .list, .item-label {
-                font-size: 16px;
-                line-height: 28px;
-            }
-        }
-            
-        </style>
+    <!-- 引入Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-    <span class="item-label"><i class="fas fa-folder"></i>Module</span>
-<a class="list" href="https://www.gitt.top/./Module/YoutubeAds.sgmodule" ><i class="fas fa-sticky-note"></i>YoutubeAds.sgmodule</a>
-<a class="list" href="https://www.gitt.top/./Module/mitm-all.sgmodule" ><i class="fas fa-sticky-note"></i>mitm-all.sgmodule</a>
-<a class="list" href="https://www.gitt.top/./Module/macOS-Translate.sgmodule" ><i class="fas fa-sticky-note"></i>macOS-Translate.sgmodule</a>
-<a class="list" href="https://www.gitt.top/./Module/othermiti.sgmodule" ><i class="fas fa-sticky-note"></i>othermiti.sgmodule</a>
-<span class="item-label"><i class="fas fa-folder"></i>Module/shikotch-ads</span>
-<a class="list" href="https://www.gitt.top/./Module/shikotch-ads/shikotch.js" ><i class="fas fa-sticky-note"></i>shikotch.js</a>
-<a class="list" href="https://www.gitt.top/./Module/shikotch-ads/shikotch.css" ><i class="fas fa-sticky-note"></i>shikotch.css</a>
-<a class="list" href="https://www.gitt.top/./Module/shikotch-ads/shikotch-ads.js" ><i class="fas fa-sticky-note"></i>shikotch-ads.js</a>
-<a class="list" href="https://www.gitt.top/./Module/shikotch-ads/shikotch_ads.sgmodule" ><i class="fas fa-sticky-note"></i>shikotch_ads.sgmodule</a>
-<a class="list" href="https://www.gitt.top/./Module/shikotch-ads/shikotch_ads.plugin" ><i class="fas fa-sticky-note"></i>shikotch_ads.plugin</a>
-<span class="item-label"><i class="fas fa-folder"></i>Module/mrcong-ads</span>
-<a class="list" href="https://www.gitt.top/./Module/mrcong-ads/mrcong.js" ><i class="fas fa-sticky-note"></i>mrcong.js</a>
-<a class="list" href="https://www.gitt.top/./Module/mrcong-ads/mrong-ads.js" ><i class="fas fa-sticky-note"></i>mrong-ads.js</a>
-<a class="list" href="https://www.gitt.top/./Module/mrcong-ads/mrcong_ads.sgmodule" ><i class="fas fa-sticky-note"></i>mrcong_ads.sgmodule</a>
-<a class="list" href="https://www.gitt.top/./Module/mrcong-ads/mrcong.css" ><i class="fas fa-sticky-note"></i>mrcong.css</a>
-<span class="item-label"><i class="fas fa-folder"></i>Module/js</span>
-<a class="list" href="https://www.gitt.top/./Module/js/hanime.js" ><i class="fas fa-sticky-note"></i>hanime.js</a>
-<span class="item-label"><i class="fas fa-folder"></i>List</span>
-<a class="list" href="https://www.gitt.top/./List/Proxy.txt" ><i class="fas fa-sticky-note"></i>Proxy.txt</a>
-<a class="list" href="https://www.gitt.top/./List/cursor.list" ><i class="fas fa-sticky-note"></i>cursor.list</a>
-<a class="list" href="https://www.gitt.top/./List/Proxy.list" ><i class="fas fa-sticky-note"></i>Proxy.list</a>
-<a class="list" href="https://www.gitt.top/./List/ads.txt" ><i class="fas fa-sticky-note"></i>ads.txt</a>
+        <!-- 使用Bootstrap的row和col类来创建响应式布局 -->
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <!-- 使用Bootstrap的card类来创建一个卡片 -->
+                <div class="card">
+                    <div class="card-body">
+                        <!-- 使用Bootstrap的list-group类来创建一个列表 -->
+                        <div class="list-group">
+                            <!-- 在这里插入链接 -->
+                            <span class="badge badge-primary"><i class="fas fa-folder"></i>Module</span>
+<a class="list-group-item" href="https://www.gitt.top/./Module/YoutubeAds.sgmodule" ><i class="fas fa-sticky-note"></i>YoutubeAds.sgmodule</a>
+<a class="list-group-item" href="https://www.gitt.top/./Module/mitm-all.sgmodule" ><i class="fas fa-sticky-note"></i>mitm-all.sgmodule</a>
+<a class="list-group-item" href="https://www.gitt.top/./Module/macOS-Translate.sgmodule" ><i class="fas fa-sticky-note"></i>macOS-Translate.sgmodule</a>
+<a class="list-group-item" href="https://www.gitt.top/./Module/othermiti.sgmodule" ><i class="fas fa-sticky-note"></i>othermiti.sgmodule</a>
+<span class="badge badge-primary"><i class="fas fa-folder"></i>Module/shikotch-ads</span>
+<a class="list-group-item" href="https://www.gitt.top/./Module/shikotch-ads/shikotch.js" ><i class="fas fa-sticky-note"></i>shikotch.js</a>
+<a class="list-group-item" href="https://www.gitt.top/./Module/shikotch-ads/shikotch.css" ><i class="fas fa-sticky-note"></i>shikotch.css</a>
+<a class="list-group-item" href="https://www.gitt.top/./Module/shikotch-ads/shikotch-ads.js" ><i class="fas fa-sticky-note"></i>shikotch-ads.js</a>
+<a class="list-group-item" href="https://www.gitt.top/./Module/shikotch-ads/shikotch_ads.sgmodule" ><i class="fas fa-sticky-note"></i>shikotch_ads.sgmodule</a>
+<a class="list-group-item" href="https://www.gitt.top/./Module/shikotch-ads/shikotch_ads.plugin" ><i class="fas fa-sticky-note"></i>shikotch_ads.plugin</a>
+<span class="badge badge-primary"><i class="fas fa-folder"></i>Module/mrcong-ads</span>
+<a class="list-group-item" href="https://www.gitt.top/./Module/mrcong-ads/mrcong.js" ><i class="fas fa-sticky-note"></i>mrcong.js</a>
+<a class="list-group-item" href="https://www.gitt.top/./Module/mrcong-ads/mrong-ads.js" ><i class="fas fa-sticky-note"></i>mrong-ads.js</a>
+<a class="list-group-item" href="https://www.gitt.top/./Module/mrcong-ads/mrcong_ads.sgmodule" ><i class="fas fa-sticky-note"></i>mrcong_ads.sgmodule</a>
+<a class="list-group-item" href="https://www.gitt.top/./Module/mrcong-ads/mrcong.css" ><i class="fas fa-sticky-note"></i>mrcong.css</a>
+<span class="badge badge-primary"><i class="fas fa-folder"></i>Module/js</span>
+<a class="list-group-item" href="https://www.gitt.top/./Module/js/hanime.js" ><i class="fas fa-sticky-note"></i>hanime.js</a>
+<span class="badge badge-primary"><i class="fas fa-folder"></i>List</span>
+<a class="list-group-item" href="https://www.gitt.top/./List/Proxy.txt" ><i class="fas fa-sticky-note"></i>Proxy.txt</a>
+<a class="list-group-item" href="https://www.gitt.top/./List/cursor.list" ><i class="fas fa-sticky-note"></i>cursor.list</a>
+<a class="list-group-item" href="https://www.gitt.top/./List/Proxy.list" ><i class="fas fa-sticky-note"></i>Proxy.list</a>
+<a class="list-group-item" href="https://www.gitt.top/./List/ads.txt" ><i class="fas fa-sticky-note"></i>ads.txt</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- 引入Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
