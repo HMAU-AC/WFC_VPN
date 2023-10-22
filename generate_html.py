@@ -33,6 +33,8 @@ if __name__ == "__main__":
     <title>文件目录</title>
     <!-- 引入Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
         .folder-label .fas.fa-folder {{
             margin-right: 10px;
