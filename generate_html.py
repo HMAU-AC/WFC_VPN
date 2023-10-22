@@ -118,7 +118,8 @@ if __name__ == "__main__":
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
     <!-- 引入Clipboard.js -->
-    <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+
     <script>
         window.onload = function() {{
             // 初始化Clipboard.js
