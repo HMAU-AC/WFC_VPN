@@ -10,14 +10,14 @@ def generate_links(root_dir, repo_url, ignore_files=None):
             continue
         clean_foldername = foldername.replace(".", "").lstrip('/')
         if clean_foldername:  # 检查clean_foldername是否为空
-            links.append(f'<span class="badge badge-primary folder-label"><i class="fas fa-folder"></i>{clean_foldername}</span>')  # 修改了这里
+            links.append(f'<span class="badge badge-primary folder-label"></i>{clean_foldername}</span>')  # 修改了这里
         for filename in filenames:
             file_path = os.path.join(foldername, filename).replace("\\", "/")
             if any(ignore in file_path for ignore in ignore_files):
                 continue
             if filename:  # 检查filename是否为空
                 file_url = f"{repo_url}/{file_path}"  # 修改了这里
-                links.append(f'<a class="list-group-item" href="{file_url}" ><i class="fas fa-sticky-note"></i>{filename}</a>')  # 修改了这里
+                links.append(f'<a class="list-group-item" href="{file_url}" ></i>{filename}</a>')  # 修改了这里
     return '\n'.join(links)
 
 
@@ -35,16 +35,6 @@ if __name__ == "__main__":
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- 引入Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <style>
-        .folder-label .fas.fa-folder {{
-            margin-right: 10px;
-        }}
-        .folder-label {{
-            line-height: 2.5;
-            padding: 5px 0;
-            height: 30px;
-        }}
-    </style>
 </head>
 <body>
     <div class="container">
