@@ -10,7 +10,7 @@ def generate_links(root_dir, repo_url, ignore_files=None):
             continue
         clean_foldername = foldername.replace(".", "").lstrip('/')
         if clean_foldername:  # 检查clean_foldername是否为空
-            links.append(f'<span class="badge badge-primary"><i class="fas fa-folder"></i>{clean_foldername}</span>')  # 修改了这里
+            links.append(f'<span class="badge badge-primary folder-label"><i class="fas fa-folder"></i>{clean_foldername}</span>')  # 修改了这里
         for filename in filenames:
             file_path = os.path.join(foldername, filename).replace("\\", "/")
             if any(ignore in file_path for ignore in ignore_files):
@@ -33,6 +33,11 @@ if __name__ == "__main__":
     <title>文件目录</title>
     <!-- 引入Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .folder-label .fas.fa-folder {{
+            margin-right: 10px;
+        }}
+    </style>
 </head>
 <body>
     <div class="container">
