@@ -40,6 +40,18 @@ if __name__ == "__main__":
         .folder-label {{
             font-size: 1rem;
         }}
+        .list-group-item:first-child {{
+            border-top-left-radius: .25rem;
+            border-bottom-left-radius: .25rem;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }}
+        .btn-copy {{
+            border-top-left-radius: .25rem;
+            border-bottom-left-radius: .25rem;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }}
         @media (min-width: 576px) {{
             .folder-label {{
                 font-size: 1.2rem;
