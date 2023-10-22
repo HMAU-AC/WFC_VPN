@@ -60,6 +60,19 @@ if __name__ == "__main__":
                 font-size: 1.8rem;
             }}
         }}
+        @media (prefers-color-scheme: dark) {{
+            /* 在这里添加暗黑模式的样式 */
+            body {{
+                background-color: #333;
+                color: #fff;
+            }}
+            .card {{
+                background-color: #444;
+            }}
+            .list-group-item {{
+                background-color: #555;
+            }}
+        }}
     </style>
 </head>
 <body>
