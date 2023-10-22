@@ -85,9 +85,9 @@ if __name__ == "__main__":
     <!-- 引入Bootstrap JS -->
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
-    window.onload = function() {
+    window.onload = function() {{
         document.getElementById('favicon').href = './Icon/dd.png';
-    }
+    }}
     </script>
 </body>
 </html>
