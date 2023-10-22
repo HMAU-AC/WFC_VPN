@@ -40,9 +40,9 @@ if __name__ == "__main__":
             margin-right: 10px;
         }}
         .folder-label {{
-            line-height: 2.5;  /* 修改这一行 */
-            padding: 5px 0;  /* 添加这一行 */
-            height: 30px;  /* 添加这一行 */
+            line-height: 2.5;
+            padding: 5px 0;
+            height: 30px;
         }}
     </style>
 </head>
