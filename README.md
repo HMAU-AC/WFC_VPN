@@ -9,3 +9,7 @@
 
 ### 后期添加
 - 慢慢把本地脚本改成远程仓库
+
+
+# GitHub Actions文件说明
+先执行htmlrun.yml自动化在执行azure-static-web-apps-proud-coast-042044210.yml，无论htmlrun.yml工作流程是否成功，azure-static-web-apps-proud-coast-042044210.yml工作流程都会被触发。
