@@ -108,20 +108,18 @@ if __name__ == "__main__":
     <!-- 引入Clipboard.js -->
     <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
     <script>
-    window.onload = function() {
+    window.onload = function() {{
     // 初始化Clipboard.js
     var clipboard = new Clipboard('.btn-copy');
-
-    // 添加复制成功的回调函数
-    clipboard.on('success', function(e) {
-        console.log('复制成功!');
-    });
-
-    // 添加复制失败的回调函数
-    clipboard.on('error', function(e) {
-        console.log('复制失败');
-    });
-}
+        // 添加复制成功的回调函数
+        clipboard.on('success', function(e) {{
+            console.log('复制成功!');
+        }});
+        // 添加复制失败的回调函数
+        clipboard.on('error', function(e) {{
+            console.log('复制失败');
+        }});
+    }}
     </script>
     <script>
     window.onload = function() {{
