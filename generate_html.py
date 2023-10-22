@@ -33,7 +33,6 @@ if __name__ == "__main__":
     <title>文件目录</title>
     <link rel="shortcut icon" id="favicon" href="./Icon/dd_blur.png">
     <!-- 引入Bootstrap CSS -->
-    <!-- rel="preconnect"预解析DNS,还预建立TCP连接和TLS握手,但是不能在script使用-->
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- 引入Font Awesome -->
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
