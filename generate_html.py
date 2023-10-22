@@ -17,7 +17,7 @@ def generate_links(root_dir, repo_url, ignore_files=None):
                 continue
             if filename:  # 检查filename是否为空
                 file_url = f"{repo_url}/{file_path}"  # 修改了这里
-                links.append(f'<a class="list-group-item" href="{file_url}" >{filename}<button class="btn btn-secondary btn-copy float-right" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></a>')  # 修改了这里
+                links.append(f'<a class="list-group-item d-inline-block" href="{file_url}" >{filename}</a><button class="btn btn-secondary btn-copy float-right" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button>')  # 修改了这里
     return '\n'.join(links)
 
 
