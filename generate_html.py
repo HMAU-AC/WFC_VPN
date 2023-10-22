@@ -62,6 +62,10 @@ if __name__ == "__main__":
             .container {{
                 max-width: 1200px;
             }}
+            .col-lg-4 {{
+                flex: 0 0 1200px;
+                max-width: 1200px;
+            }}
         }}
         @media (prefers-color-scheme: dark) {{
             /* 在这里添加暗黑模式的样式 */
