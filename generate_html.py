@@ -31,7 +31,7 @@ if __name__ == "__main__":
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>文件目录</title>
-    <link rel="shortcut icon" href="./Icon/dd.png">
+    <link rel="shortcut icon" id="favicon" href="./Icon/dd_blur.png">
     <!-- 引入Bootstrap CSS -->
     <!-- rel="preconnect"预解析DNS,还预建立TCP连接和TLS握手,但是不能在script使用-->
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
@@ -85,6 +85,11 @@ if __name__ == "__main__":
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- 引入Bootstrap JS -->
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+    window.onload = function() {
+        document.getElementById('favicon').href = './Icon/dd.png';
+    }
+    </script>
 </body>
 </html>
 """
