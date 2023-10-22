@@ -39,6 +39,11 @@ if __name__ == "__main__":
         .folder-label .fas.fa-folder {{
             margin-right: 10px;
         }}
+        .folder-label {{
+            line-height: 2.5;  /* 修改这一行 */
+            padding: 5px 0;  /* 添加这一行 */
+            height: 30px;  /* 添加这一行 */
+        }}
     </style>
 </head>
 <body>
