@@ -99,43 +99,10 @@ if __name__ == "__main__":
                 line-height: 28px;
             }}
         }}
-            nav {{
-                left: 5px;
-                right: 5px;
-                flex-direction: column;
-            }}
-            .cai {{
-                height: auto;
-                display: flex;
-                justify-content: space-between;
-                padding: 10px;
-                flex-direction: row;
-                backdrop-filter: blur(10px);
-                -webkit-backdrop-filter: blur(10px);
-                border-radius: 5px;
-            }}
+            
         </style>
 </head>
 <body>
-    <nav style="
-        position: fixed;
-        top: 20px;
-        left: 10px;
-        right: 10px;
-        height: auto;
-        display: flex;
-        justify-content: space-between;
-        padding: 10px;
-        flex-direction: row;
-        background-color: rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border-radius: 5px;  /* 添加这一行 */
-    ">
-        <a class="cai" href="#">菜单1</a>
-        <a class="cai" href="#">菜单2</a>
-        <a class="cai" href="#">菜单3</a>
-    </nav>
     <div class="container">
     {links}
     </div>
