@@ -94,6 +94,19 @@ if __name__ == "__main__":
                 font-size: 1.5rem;
             }}
         }}
+        @media (min-width: 991px) and (max-width: 1023px) {{
+            .folder-label {{
+                font-size: 1.6rem;
+                line-height: 1.1;
+            }}
+            .container {{
+                max-width: 991px;
+            }}
+            .col-lg-4 {{
+                flex: 0 0 991px;
+                max-width: 991px;
+            }}
+        }}
         @media (min-width: 1024px) and (max-width: 1200px) {{
             .folder-label {{
                 font-size: 1.8rem;
