@@ -111,32 +111,33 @@ if __name__ == "__main__":
                 </div>
             </div>
         </div>
-    </div>
+    </div>    
+    <!-- 其他的HTML代码... -->
     <!-- 引入jQuery -->
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 引入Bootstrap JavaScript -->
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script>
     <!-- 引入Clipboard.js -->
     <script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
-
     <script>
-        window.onload = function() {{
+        document.addEventListener('DOMContentLoaded', (event) => {{
             // 初始化Clipboard.js
-            var clipboard = new Clipboard('.btn-copy');
+            var clipboard = new ClipboardJS('.btn-copy');
             // 添加复制成功的回调函数
             clipboard.on('success', function(e) {{
                 console.log('复制成功!');
-        }});
+                e.clearSelection();
+            }});
             // 添加复制失败的回调函数
             clipboard.on('error', function(e) {{
                 console.log('复制失败');
-        }});
+            }});
 
             document.getElementById('favicon').href = './Icon/dd.png';
-        }}
+        }});
     </script>
 </body>
 </html>
 """
-    with open('index.html', 'w') as file:
-        file.write(html_content)
+with open('index.html', 'w') as file:
+    file.write(html_content)
