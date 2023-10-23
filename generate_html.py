@@ -55,6 +55,9 @@ if __name__ == "__main__":
             border-top-right-radius: .25rem;
             border-bottom-right-radius: .25rem;
             align-self: stretch;
+            align-self: stretch;
+            padding-top: 0;
+            padding-bottom: 0;
         }}
         @media (min-width: 576px) {{
             .folder-label {{
