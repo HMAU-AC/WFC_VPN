@@ -132,6 +132,14 @@ if __name__ == "__main__":
             .list-group-item {{
                 background-color: #555;
             }}
+            .btn-open {{
+                background-color: #666;
+                color: #fff;
+            }}
+            .btn-copy {{
+                background-color: #666;
+                color: #fff;
+            }}
         }}
     </style>
 </head>
