@@ -51,6 +51,9 @@ if __name__ == "__main__":
         }}
         .btn-open {{
             border-radius: 0;
+            align-self: stretch;
+            padding-top: 0;
+            padding-bottom: 0;
         }}
         .btn-copy {{
             border-top-left-radius: 0;
