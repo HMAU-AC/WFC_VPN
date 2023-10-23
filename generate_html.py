@@ -175,6 +175,9 @@ if __name__ == "__main__":
 </head>
 <body>
     <div class="container">
+         <div class="alert alert-warning" role="alert">
+            青山不改，绿水长流，有缘江湖再见。
+        </div>
         <!-- 使用Bootstrap的row和col类来创建响应式布局 -->
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4">
