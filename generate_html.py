@@ -46,11 +46,15 @@ if __name__ == "__main__":
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
         }}
+        .d-flex {{
+            height: auto;
+        }}
         .btn-copy {{
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
             border-top-right-radius: .25rem;
             border-bottom-right-radius: .25rem;
+            align-self: stretch;
         }}
         @media (min-width: 576px) {{
             .folder-label {{
