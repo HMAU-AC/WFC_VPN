@@ -42,6 +42,13 @@ if __name__ == "__main__":
             text-align: center;
             line-height: 2.2;
         }}
+        .list-group-item {{
+            margin: 0;
+            padding: 0.5rem;
+            border-width: 1px 0 1px 1px;
+            border-style: solid;
+            border-color: #ddd;
+        }}
         .list-group-item:first-child {{
             border-top-left-radius: .25rem;
             border-bottom-left-radius: .25rem;
@@ -56,6 +63,11 @@ if __name__ == "__main__":
             align-self: stretch;
             padding-top: 0;
             padding-bottom: 0;
+            margin: 0;
+            padding: 0.5rem;
+            border-width: 1px 0 1px 0;
+            border-style: solid;
+            border-color: #ddd;
         }}
         .btn-copy {{
             border-top-left-radius: 0;
@@ -65,6 +77,11 @@ if __name__ == "__main__":
             align-self: stretch;
             padding-top: 0;
             padding-bottom: 0;
+            margin: 0;
+            padding: 0.5rem;
+            border-width: 1px 1px 1px 0;
+            border-style: solid;
+            border-color: #ddd;
         }}
         @media (min-width: 576px) {{
             .folder-label {{
