@@ -49,6 +49,9 @@ if __name__ == "__main__":
         .d-flex {{
             height: auto;
         }}
+        .btn-open {{
+            border-radius: 0;
+        }}
         .btn-copy {{
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
