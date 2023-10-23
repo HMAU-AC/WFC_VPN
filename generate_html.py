@@ -183,7 +183,6 @@ if __name__ == "__main__":
                     <div class="card-body">
                         <!-- 使用Bootstrap的list-group类来创建一个列表 -->
                         <div class="list-group">
-                            <!-- 在这里插入链接 -->
                             {links}
                         </div>
                     </div>
