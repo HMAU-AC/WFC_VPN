@@ -12,12 +12,12 @@ def generate_links(root_dir, repo_url, ignore_files=None):
         if clean_foldername:  # 检查clean_foldername是否为空
             links.append(f'<span class="badge badge-primary folder-label mb-3">{clean_foldername}</span>')  # 修改了这里
         for filename in filenames:
-            file_path = os.path.join(foldername, filename).replace("\\", "/")
-            if any(ignore in file_path for ignore in ignore_files):
-                continue
-            if filename:  # 检查filename是否为空
-                file_url = f"{repo_url}/{file_path}"  # 修改了这里
-                links.append(f'<div class="d-flex justify-content-between align-items-center mb-3"><a class="list-group-item flex-grow-1" href="{file_url}" >{filename}</a><button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></div>')  # 修改了这里
+    file_path = os.path.join(foldername, filename).replace("\\", "/")
+    if any(ignore in file_path for ignore in ignore_files):
+        continue
+    if filename:  # 检查filename是否为空 检查
+        file_url = f"{repo_url}/{file_path}"  # 修改了这里
+        links.append(f'<div class="d-flex justify-content-between align-items-center mb-3"><a class="list-group-item flex-grow-1" href="javascript:void(0)" >{filename}</a><button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button><button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></div>')  # 修改了这里
     return '\n'.join(links)
 
 
@@ -54,7 +54,6 @@ if __name__ == "__main__":
             border-bottom-left-radius: 0;
             border-top-right-radius: .25rem;
             border-bottom-right-radius: .25rem;
-            align-self: stretch;
             align-self: stretch;
             padding-top: 0;
             padding-bottom: 0;
