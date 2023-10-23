@@ -79,6 +79,7 @@ if __name__ == "__main__":
         @media (min-width: 767px) and (max-width: 991px) {{
             .folder-label {{
                 font-size: 1.6rem;
+                line-height: 2.0;
             }}
             .container {{
                 max-width: 767px;
@@ -96,6 +97,7 @@ if __name__ == "__main__":
         @media (min-width: 1024px) and (max-width: 1200px) {{
             .folder-label {{
                 font-size: 1.8rem;
+                line-height: 1.8;
             }}
             .container {{
                 max-width: 1024px;
@@ -108,6 +110,7 @@ if __name__ == "__main__":
         @media (min-width: 1200px) {{
             .folder-label {{
                 font-size: 1.8rem;
+                line-height: 1.8;
             }}
             .container {{
                 max-width: 1200px;
