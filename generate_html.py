@@ -114,7 +114,6 @@ if __name__ == "__main__":
     </div>
     <!-- 引入jQuery -->
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
- 
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
     <!-- 引入Clipboard.js -->
@@ -127,15 +126,15 @@ if __name__ == "__main__":
             // 添加复制成功的回调函数
             clipboard.on('success', function(e) {{
                 console.log('复制成功!');
-            }});
+        }});
             // 添加复制失败的回调函数
             clipboard.on('error', function(e) {{
                 console.log('复制失败');
-            }});
+        }});
 
             document.getElementById('favicon').href = './Icon/dd.png';
         }}
-</script>
+    </script>
 </body>
 </html>
 """
