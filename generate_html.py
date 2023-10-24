@@ -1,5 +1,7 @@
 import os
 import htmlmin
+import csscompressor
+import jsmin
 
 def generate_links(root_dir, repo_url, ignore_files=None):
     if ignore_files is None:
@@ -25,18 +27,9 @@ def generate_links(root_dir, repo_url, ignore_files=None):
 if __name__ == "__main__":
     repo_url = "https://www.gitt.top"  # 替换为你的仓库 URL
     links = generate_links('.', repo_url, ignore_files=['.pyc', '.git', '.gitignore', '.github', 'html.css', 'index.html', 'generate_html.py', 'README.md', 'Flie-html', '.json', '.config.json', 'Loon', 'Icon'])
-    html_content = f"""
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>文件目录</title>
-    <link rel="shortcut icon" id="favicon" href="./Flie-html/img/dd_blur.png">
-    <!-- 引入Bootstrap CSS -->
-    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- 引入Font Awesome -->
-    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    # CSS和JavaScript内容
+    css_content = """
+    /* 这里是你的CSS内容 */
     <style>
         .folder-label {{
             font-size: 1.1rem;
@@ -179,6 +172,40 @@ if __name__ == "__main__":
             border-radius: 10px;
         }}
     </style>
+    """
+    js_content = """
+    // 这里是你的JavaScript内容
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {{
+            // 初始化Clipboard.js
+            var clipboard = new ClipboardJS('.btn-copy');
+            // 添加复制成功的回调函数
+            clipboard.on('success', function(e) {{
+                console.log('复制成功!');
+                e.clearSelection();
+            }});
+            // 添加复制失败的回调函数
+            clipboard.on('error', function(e) {{
+                console.log('复制失败');
+            }});
+        }});
+    </script>
+    """
+    html_content = f"""
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>文件目录</title>
+    <link rel="shortcut icon" id="favicon" href="./Flie-html/img/dd_blur.png">
+    <!-- 引入Bootstrap CSS -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入Font Awesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        {minified_css}
+    </style>
 </head>
 <body>
     <div class="container">
@@ -208,20 +235,9 @@ if __name__ == "__main__":
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- 引入Clipboard.js -->
     <script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {{
-            // 初始化Clipboard.js
-            var clipboard = new ClipboardJS('.btn-copy');
-            // 添加复制成功的回调函数
-            clipboard.on('success', function(e) {{
-                console.log('复制成功!');
-                e.clearSelection();
-            }});
-            // 添加复制失败的回调函数
-            clipboard.on('error', function(e) {{
-                console.log('复制失败');
-            }});
-        }});
+        {minified_js}
     </script>
 </body>
 </html>
