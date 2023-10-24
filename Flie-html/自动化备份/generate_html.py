@@ -1,5 +1,6 @@
+# 此脚本需要跟htmlrun.yml一起使用
+# 未使用htmlmin库压缩HTML前的py脚本，使用时删除此行
 import os
-import htmlmin
 
 def generate_links(root_dir, repo_url, ignore_files=None):
     if ignore_files is None:
@@ -226,8 +227,5 @@ if __name__ == "__main__":
 </body>
 </html>
 """
-    # 使用htmlmin压缩HTML内容
-    minified_html = htmlmin.minify(html_content, remove_empty_space=True)
-    
-    with open('index.html', 'w') as file:
-        file.write(minified_html)
+with open('index.html', 'w') as file:
+    file.write(html_content)
