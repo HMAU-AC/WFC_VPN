@@ -244,8 +244,8 @@ if __name__ == "__main__":
 </html>
 """
 
-    # 使用htmlmin压缩HTML内容
-    minified_html = htmlmin.minify(html_content, remove_empty_space=True)
+    # 使用htmlmin压缩HTML内容并删除注释
+    minified_html = htmlmin.minify(html_content, remove_empty_space=True, remove_comments=True)
     
     with open('index.html', 'w') as file:
         file.write(minified_html)
