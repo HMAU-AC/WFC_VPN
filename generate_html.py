@@ -31,7 +31,7 @@ if __name__ == "__main__":
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>文件目录</title>
-    <link rel="shortcut icon" id="favicon" href="./Icon/dd_blur.png">
+    <link rel="shortcut icon" id="favicon" href="./Flie-html/img/dd_blur.png">
     <!-- 引入Bootstrap CSS -->
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- 引入Font Awesome -->
