@@ -7,7 +7,8 @@
         ".js": "text/plain; charset=utf-8",
         ".css": "text/plain; charset=utf-8",
         ".dconf": "text/plain; charset=utf-8",
-        ".py": "text/plain; charset=utf-8"
+        ".py": "text/plain; charset=utf-8",
+        ".txt": "text/plain; charset=utf-8"
     },
     "navigationFallback": {
         "rewrite": "/Flie-html/404.html"
