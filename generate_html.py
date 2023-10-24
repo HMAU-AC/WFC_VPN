@@ -30,7 +30,6 @@ if __name__ == "__main__":
     # CSS和JavaScript内容
     css_content = """
     /* 这里是你的CSS内容 */
-    <style>
         .folder-label {{
             font-size: 1.1rem;
             text-align: center;
@@ -171,11 +170,9 @@ if __name__ == "__main__":
                 .carousel-item img {{
             border-radius: 10px;
         }}
-    </style>
     """
     js_content = """
     // 这里是你的JavaScript内容
-    <script>
         document.addEventListener('DOMContentLoaded', (event) => {{
             // 初始化Clipboard.js
             var clipboard = new ClipboardJS('.btn-copy');
@@ -189,7 +186,6 @@ if __name__ == "__main__":
                 console.log('复制失败');
             }});
         }});
-    </script>
     """
     html_content = f"""
 <!DOCTYPE html>
