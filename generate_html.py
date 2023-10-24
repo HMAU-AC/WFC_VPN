@@ -177,6 +177,7 @@ if __name__ == "__main__":
                 .carousel-item img {{
             border-radius: 10px;
         }}
+        /* 占位符css样式 */
         .placeholder {{
             width: 800px;
             height: 400px;
