@@ -4,9 +4,9 @@
         ".list": "text/plain; charset=utf-8",
         ".plugin": "text/plain; charset=utf-8",
         ".conf": "text/plain; charset=utf-8",
-        ".js": "text/plain; charset=utf-8",
-        ".css": "text/plain; charset=utf-8",
         ".dconf": "text/plain; charset=utf-8",
+        ".js": "application/javascript",
+        ".css": "text/css",
         ".py": "text/plain; charset=utf-8",
         ".txt": "text/plain; charset=utf-8"
     },
