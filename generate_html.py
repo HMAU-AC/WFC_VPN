@@ -171,10 +171,44 @@ if __name__ == "__main__":
                 color: #fff;
             }}
         }}
+        .carousel.slide.rounded {{
+            margin-bottom: 1rem;
+        }}
+                .carousel-item img {{
+            border-radius: 10px;
+        }}
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- 添加轮播大图 -->
+    <div id="carouselExampleIndicators" class="carousel slide rounded" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./Flie-html/img/gf_WH_800x400px.jpg" class="d-block w-100" alt="800x400">
+            </div>
+            <div class="carousel-item">
+                <img src="./Flie-html/img/kh_WH_800x400px.jpg" class="d-block w-100" alt="800x400">
+            </div>
+            <div class="carousel-item">
+                <img src="./Flie-html/img/mv_WH_800x400px.jpg" class="d-block w-100" alt="800x400">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+         <!-- 添加提示文字 -->
          <div class="alert alert-warning" role="alert">
             青山不改，绿水长流，有缘江湖再见。
         </div>
@@ -213,8 +247,6 @@ if __name__ == "__main__":
             clipboard.on('error', function(e) {{
                 console.log('复制失败');
             }});
-
-            document.getElementById('favicon').href = './Icon/dd.png';
         }});
     </script>
 </body>
