@@ -29,7 +29,6 @@ if __name__ == "__main__":
     links = generate_links('.', repo_url, ignore_files=['.pyc', '.git', '.gitignore', '.github', 'html.css', 'index.html', 'generate_html.py', 'README.md', 'Flie-html', '.json', '.config.json', 'Loon', 'Icon'])
     # CSS和JavaScript内容
     css_content = """
-    /* 这里是你的CSS内容 */
         .folder-label {{
             font-size: 1.1rem;
             text-align: center;
@@ -172,7 +171,6 @@ if __name__ == "__main__":
         }}
     """
     js_content = """
-    // 这里是你的JavaScript内容
         document.addEventListener('DOMContentLoaded', (event) => {{
             // 初始化Clipboard.js
             var clipboard = new ClipboardJS('.btn-copy');
@@ -187,10 +185,7 @@ if __name__ == "__main__":
             }});
         }});
     """
-    # 使用csscompressor和jsmin压缩CSS和JavaScript内容
-    # minified_css/minified_js要放在html_content = f"""之前才行
-    minified_css = csscompressor.compress(css_content)
-    minified_js = jsmin.jsmin(js_content)
+
 
     html_content = f"""
 <!DOCTYPE html>
@@ -243,7 +238,10 @@ if __name__ == "__main__":
 </body>
 </html>
 """
-
+    # 使用csscompressor和jsmin压缩CSS和JavaScript内容
+    # minified_css/minified_js要放在html_content = f"""之前才行
+    minified_css = csscompressor.compress(css_content)
+    minified_js = jsmin.jsmin(js_content)
     # 使用htmlmin压缩HTML内容并删除注释
     minified_html = htmlmin.minify(html_content, remove_empty_space=True, remove_comments=True)
     
