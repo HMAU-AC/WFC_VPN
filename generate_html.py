@@ -177,6 +177,16 @@ if __name__ == "__main__":
                 .carousel-item img {{
             border-radius: 10px;
         }}
+        .placeholder {{
+            width: 800px;
+            height: 400px;
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            font-size: 20px;
+        }}
     </style>
 </head>
 <body>
@@ -188,15 +198,14 @@ if __name__ == "__main__":
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="./Flie-html/img/gf_WH_800x400px.jpg" class="d-block w-100" alt="800x400">
+        <div class="carousel-item active">
+                <img src="./Flie-html/img/gf_WH_800x400px.jpg" class="d-block w-100" alt="800x400" onerror="this.onerror=null; this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; this.className='placeholder'; this.alt='800x400'">
             </div>
             <div class="carousel-item">
-                <img src="./Flie-html/img/kh_WH_800x400px.jpg" class="d-block w-100" alt="800x400">
+                <img src="./Flie-html/img/kh_WH_800x400px.jpg" class="d-block w-100" alt="800x400" onerror="this.onerror=null; this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; this.className='placeholder'; this.alt='800x400'">
             </div>
             <div class="carousel-item">
-                <img src="./Flie-html/img/mv_WH_800x400px.jpg" class="d-block w-100" alt="800x400">
+                <img src="./Flie-html/img/mv_WH_800x400px.jpg" class="d-block w-100" alt="800x400" onerror="this.onerror=null; this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; this.className='placeholder'; this.alt='800x400'">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
