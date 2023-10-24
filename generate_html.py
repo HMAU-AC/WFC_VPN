@@ -1,4 +1,5 @@
 import os
+import time
 import htmlmin
 import csscompressor
 import jsmin
@@ -12,15 +13,17 @@ def generate_links(root_dir, repo_url, ignore_files=None):
         if any(ignore in folder_path for ignore in ignore_files):
             continue
         clean_foldername = foldername.replace(".", "").lstrip('/')
-        if clean_foldername:  # 检查clean_foldername是否为空
-            links.append(f'<span class="badge badge-primary folder-label mb-3">{clean_foldername}</span>')  # 修改了这里
+        if clean_foldername:
+            links.append(f'<span class="badge badge-primary folder-label mb-3">{clean_foldername}</span>')
         for filename in filenames:
             file_path = os.path.join(foldername, filename).replace("\\", "/")
             if any(ignore in file_path for ignore in ignore_files):
                 continue
-            if filename:  # 检查filename是否为空 检查
-                file_url = f"{repo_url}/{file_path}"  # 修改了这里
-                links.append(f'<div class="d-flex justify-content-between align-items-center mb-3"><a class="list-group-item flex-grow-1" href="javascript:void(0)" >{filename}</a><button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button><button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></div>')  # 修改了这里
+            if filename:
+                file_url = f"{repo_url}/{file_path}"
+                file_size = os.path.getsize(file_path)  # 获取文件大小
+                last_modified = time.ctime(os.path.getmtime(file_path))  # 获取最后修改时间
+                links.append(f'<div class="d-flex justify-content-between align-items-center mb-3"><a class="list-group-item flex-grow-1" href="javascript:void(0)" >{filename}</a><span class="file-info">{file_size} bytes, last modified: {last_modified}</span><button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button><button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></div>')
     return '\n'.join(links)
 
 
