@@ -188,9 +188,10 @@ if __name__ == "__main__":
         }});
     """
     # 使用csscompressor和jsmin压缩CSS和JavaScript内容
+    # minified_css/minified_js要放在html_content = f"""之前才行
     minified_css = csscompressor.compress(css_content)
     minified_js = jsmin.jsmin(js_content)
-    
+
     html_content = f"""
 <!DOCTYPE html>
 <html lang="zh-CN">
