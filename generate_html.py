@@ -170,6 +170,10 @@ if __name__ == "__main__":
             border-radius: 10px;
         }}
     """
+   # 使用csscompressor和jsmin压缩CSS和JavaScript内容
+    # minified_css/minified_js要放在html_content = f"""之前才行
+    minified_css = csscompressor.compress(css_content)
+
     js_content = """
         document.addEventListener('DOMContentLoaded', (event) => {{
             // 初始化Clipboard.js
@@ -185,7 +189,10 @@ if __name__ == "__main__":
             }});
         }});
     """
+    # 使用csscompressor和jsmin压缩CSS和JavaScript内容
+    # minified_css/minified_js要放在html_content = f"""之前才行
 
+    minified_js = jsmin.jsmin(js_content)
 
     html_content = f"""
 <!DOCTYPE html>
@@ -238,10 +245,7 @@ if __name__ == "__main__":
 </body>
 </html>
 """
-    # 使用csscompressor和jsmin压缩CSS和JavaScript内容
-    # minified_css/minified_js要放在html_content = f"""之前才行
-    minified_css = csscompressor.compress(css_content)
-    minified_js = jsmin.jsmin(js_content)
+
     # 使用htmlmin压缩HTML内容并删除注释
     minified_html = htmlmin.minify(html_content, remove_empty_space=True, remove_comments=True)
     
