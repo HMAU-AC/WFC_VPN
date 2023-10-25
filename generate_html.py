@@ -179,6 +179,8 @@ if __name__ == "__main__":
             text-align: center;
         }
         .image-container img {
+            width: 50%;
+            height: auto;
             filter: blur(10px);
             transition: filter 3s;
         }
@@ -198,7 +200,7 @@ if __name__ == "__main__":
             clipboard.on('error', function(e) {
                 console.log('复制失败');
             });
-        
+
             // 设置定时器，使图片在1秒后变为清晰
             setTimeout(function() {
                 document.querySelector('.image-container img').style.filter = 'blur(0)';
