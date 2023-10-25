@@ -169,6 +169,9 @@ if __name__ == "__main__":
                 .carousel-item img {
             border-radius: 10px;
         }
+        footer {
+            margin-top: 20px;
+        }
     """
 
 
@@ -240,6 +243,10 @@ if __name__ == "__main__":
     <script>
         {minified_js}
     </script>
+    <footer class="text-center">
+        <p>版权所有 &copy; 2022</p>
+        <p>爱吃素的胖子</p>
+    </footer>
 </body>
 </html>
 """
