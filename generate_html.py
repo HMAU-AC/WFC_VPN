@@ -171,6 +171,8 @@ if __name__ == "__main__":
         }
         .footer-container {
             text-align: center;
+        }
+        .footer {
             margin-top: 20px;
         }
     """
