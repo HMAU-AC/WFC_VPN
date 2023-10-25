@@ -179,7 +179,6 @@ if __name__ == "__main__":
             text-align: center;
         }
         .image-container img {
-            width: 50px;
             height: auto;
             filter: blur(10px);
             transition: filter 4s;
@@ -265,7 +264,7 @@ if __name__ == "__main__":
     <footer class="footer mt-auto py-3 bg-light">
         <div class="footer-container">
             <div class="image-container">
-                <img src="./Flie-html/img/github.png" alt="Github">
+                <img src="./Flie-html/img/github.webp" alt="Github">
             </div>
             <span class="text-muted">© 2023 爱吃素的胖子. All rights reserved.</span>
         </div>
