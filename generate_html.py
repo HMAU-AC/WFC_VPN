@@ -166,14 +166,14 @@ if __name__ == "__main__":
         .carousel.slide.rounded {
             margin-bottom: 1rem;
         }
-                .carousel-item img {
+        .carousel-item img {
             border-radius: 10px;
         }
         .footer-container {
             text-align: center;
         }
-        .footer {
-            margin-top: 20px;
+        .footertop {
+            margin-bottom: 20px;
         }
     """
 
@@ -246,6 +246,7 @@ if __name__ == "__main__":
     <script>
         {minified_js}
     </script>
+     <div class="footertop"></div>
     <footer class="footer mt-auto py-3 bg-light">
         <div class="footer-container">
             <span class="text-muted">© 2023 爱吃素的胖子. All rights reserved.</span>
