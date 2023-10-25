@@ -48,8 +48,8 @@ if __name__ == "__main__":
         .file-info {
             font-size: 0.8rem;
             color: #888;
-            text-align: right;
-            display: block;
+            
+            margin-left: auto;
         }
         .folder-label {
             font-size: 1.1rem;
@@ -71,6 +71,7 @@ if __name__ == "__main__":
         }
         .d-flex {
             height: auto;
+            justify-content: start;
         }
         .btn-open {
             border-radius: 0;
