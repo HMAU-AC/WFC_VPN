@@ -36,7 +36,7 @@ def generate_links(root_dir, repo_url, ignore_files=None):
                     last_modified = f"昨天 {last_modified_datetime.strftime('%H:%M:%S')}"  # 修改时间大于一天小于两天，显示为“昨天 HH:MM:SS”
                 else:
                     last_modified = last_modified_datetime.strftime('%Y-%m-%d %H:%M:%S')  # 修改时间大于两天，显示为“年-月-日 HH:MM:SS”
-                links.append(f'<div class="d-flex justify-content-between align-items-center mb-3"><a class="list-group-item flex-grow-1" href="javascript:void(0)" >{filename}<span class="file-info">{file_size}, {last_modified}</span></a><button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button><button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></div>')
+                links.append(f'<div class="d-flex justify-content-between align-items-center mb-3"><a class="list-group-item flex-grow-1" href="javascript:void(0)" >{filename}</a><div class="file-info ml-auto">{file_size}, {last_modified}</div><button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button><button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></div>')
     return '\n'.join(links)
 
 
@@ -48,8 +48,6 @@ if __name__ == "__main__":
         .file-info {
             font-size: 0.8rem;
             color: #888;
-            
-            margin-left: auto;
         }
         .folder-label {
             font-size: 1.1rem;
@@ -71,7 +69,6 @@ if __name__ == "__main__":
         }
         .d-flex {
             height: auto;
-            justify-content: start;
         }
         .btn-open {
             border-radius: 0;
