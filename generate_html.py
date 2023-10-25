@@ -240,6 +240,11 @@ if __name__ == "__main__":
     <script>
         {minified_js}
     </script>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="footer-container">
+            <span class="text-muted">© 2023 爱吃素的胖子. All rights reserved.</span>
+        </div>
+    </footer>
 </body>
 </html>
 """
