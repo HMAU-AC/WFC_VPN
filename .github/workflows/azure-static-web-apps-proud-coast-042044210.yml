@@ -12,6 +12,7 @@ on:
     workflows: ["Generate HTML"]
     types:
       - completed
+  workflow_dispatch:  # 添加手动执行
 
 jobs:
   build_and_deploy_job:
