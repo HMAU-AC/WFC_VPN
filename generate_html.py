@@ -36,7 +36,7 @@ def generate_links(root_dir, repo_url, ignore_files=None):
                     last_modified = f"昨天{last_modified_datetime.strftime('%H:%M:%S')}"  # 修改时间大于一天小于两天，显示为“昨天 HH:MM:SS”
                 else:
                     last_modified = last_modified_datetime.strftime('%Y-%m-%d %H:%M:%S')  # 修改时间大于两天，显示为“年-月-日 HH:MM:SS”
-                links.append(f'<div class="d-flex justify-content-between align-items-center mb-3"><a class="list-group-item flex-grow-1" href="javascript:void(0)" >{filename}</a><div class="file-info ml-auto d-flex align-items-center">{file_size}</div><div class="file-info ml-auto d-flex align-items-center">{last_modified}</div><button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button><button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></div>')
+                links.append(f'<div class="d-flex justify-content-between align-items-center mb-3"><a class="list-group-item flex-grow-1" href="javascript:void(0)" >{filename}</a><div class="file-info ml-auto d-flex align-items-center">{file_size}</div><div class="file-info ml-auto d-flex align-items-center stretch">{last_modified}</div><button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button><button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></div>')
     return '\n'.join(links)
 
 
@@ -45,6 +45,9 @@ if __name__ == "__main__":
     links = generate_links('.', repo_url, ignore_files=['.pyc', '.git', '.gitignore', '.github', 'html.css', 'index.html', 'generate_html.py', 'README.md', 'Flie-html', '.json', '.config.json', 'Loon', 'Icon'])
     # CSS和JavaScript内容
     css_content = """
+        .stretch {
+            align-items: stretch !important;
+        }
         .file-info {
             font-size: 0.8rem;
             color: #888;
