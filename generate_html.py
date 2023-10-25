@@ -179,10 +179,11 @@ if __name__ == "__main__":
             text-align: center;
         }
         .image-container img {
-            width: 50%;
+            width: 50px;
             height: auto;
             filter: blur(10px);
-            transition: filter 3s;
+            transition: filter 4s;
+            margin-bottom: .5rem;
         }
     """
 
