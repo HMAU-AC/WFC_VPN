@@ -12,15 +12,15 @@ def generate_links(root_dir, repo_url, ignore_files=None):
         if any(ignore in folder_path for ignore in ignore_files):
             continue
         clean_foldername = foldername.replace(".", "").lstrip('/')
-        if clean_foldername:
-            links.append(f'<span class="badge badge-primary folder-label mb-3">{clean_foldername}</span>')
+        if clean_foldername:  # 检查clean_foldername是否为空
+            links.append(f'<span class="badge badge-primary folder-label mb-3">{clean_foldername}</span>')  # 修改了这里
         for filename in filenames:
             file_path = os.path.join(foldername, filename).replace("\\", "/")
             if any(ignore in file_path for ignore in ignore_files):
                 continue
-            if filename:
-                file_url = f"{repo_url}/{file_path}"
-                links.append(f'<div class="btn-open d-flex justify-content-between align-items-center mb-3"><a class="list-group-item flex-grow-1" href="javascript:void(0)" >{filename}</a><button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button><button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></div>')
+            if filename:  # 检查filename是否为空 检查
+                file_url = f"{repo_url}/{file_path}"  # 修改了这里
+                links.append(f'<div class="d-flex justify-content-between align-items-center mb-3"><a class="list-group-item flex-grow-1" href="javascript:void(0)" >{filename}</a><button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button><button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></div>')  # 修改了这里
     return '\n'.join(links)
 
 
@@ -168,7 +168,44 @@ if __name__ == "__main__":
         }
                 .carousel-item img {
             border-radius: 10px;
-        }}
+        }
+    """
+
+
+    js_content = """
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // 初始化Clipboard.js
+            var clipboard = new ClipboardJS('.btn-copy');
+            // 添加复制成功的回调函数
+            clipboard.on('success', function(e) {
+                console.log('复制成功!');
+                e.clearSelection();
+            });
+            // 添加复制失败的回调函数
+            clipboard.on('error', function(e) {
+                console.log('复制失败');
+            });
+        });
+    """
+   # 使用csscompressor和jsmin压缩CSS和JavaScript内容
+    # minified_css/minified_js要放在html_content = f"""之前才行
+    minified_css = csscompressor.compress(css_content)
+    minified_js = jsmin.jsmin(js_content)
+
+    html_content = f"""
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>文件目录</title>
+    <link rel="shortcut icon" id="favicon" href="./Flie-html/img/dd_blur.png">
+    <!-- 引入Bootstrap CSS -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入Font Awesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        {minified_css}
     </style>
 </head>
 <body>
@@ -203,10 +240,6 @@ if __name__ == "__main__":
     <script>
         {minified_js}
     </script>
-    <footer class="text-center">
-        <p>版权所有 &copy; 2022</p>
-        <p>爱吃素的胖子</p>
-    </footer>
 </body>
 </html>
 """
