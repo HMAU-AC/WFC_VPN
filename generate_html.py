@@ -1,5 +1,6 @@
 import os
 import time
+from datetime import datetime, timedelta
 import htmlmin
 import csscompressor
 import jsmin
@@ -21,9 +22,21 @@ def generate_links(root_dir, repo_url, ignore_files=None):
                 continue
             if filename:
                 file_url = f"{repo_url}/{file_path}"
-                file_size = os.path.getsize(file_path) / (1024 * 1024)  # 获取文件大小并转换为MB
-                last_modified = time.strftime('%Y-%m-%d', time.gmtime(os.path.getmtime(file_path)))  # 获取最后修改时间并转换为年-月-日格式
-                links.append(f'<div class="d-flex justify-content-between align-items-center mb-3"><a class="list-group-item flex-grow-1" href="javascript:void(0)" >{filename}</a><span class="file-info">{file_size:.2f} MB, last modified: {last_modified}</span><button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button><button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></div>')
+                file_size_bytes = os.path.getsize(file_path)
+                if file_size_bytes / (1024 * 1024) > 1:
+                    file_size = f"{file_size_bytes / (1024 * 1024):.2f} MB"  # 文件大小大于1MB，转换为MB
+                else:
+                    file_size = f"{file_size_bytes / 1024:.2f} KB"  # 文件大小小于1MB，转换为KB
+                last_modified_timestamp = os.path.getmtime(file_path)
+                last_modified_datetime = datetime.fromtimestamp(last_modified_timestamp)
+                now = datetime.now()
+                if now - last_modified_datetime < timedelta(days=1):
+                    last_modified = f"修改于 {int((now - last_modified_datetime).total_seconds() / 3600)} 小时前"  # 修改时间小于一天，显示为“几小时前”
+                elif now - last_modified_datetime < timedelta(days=2):
+                    last_modified = f"昨天 {last_modified_datetime.strftime('%H:%M')}"  # 修改时间大于一天小于两天，显示为“昨天 HH:MM”
+                else:
+                    last_modified = last_modified_datetime.strftime('%Y-%m-%d')  # 修改时间大于两天，显示为“年-月-日”
+                links.append(f'<div class="d-flex justify-content-between align-items-center mb-3"><a class="list-group-item flex-grow-1" href="javascript:void(0)" >{filename}</a><span class="file-info">{file_size}, {last_modified}</span><button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button><button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></div>')
     return '\n'.join(links)
 
 
