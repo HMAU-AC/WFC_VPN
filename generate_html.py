@@ -169,6 +169,10 @@ if __name__ == "__main__":
                 .carousel-item img {
             border-radius: 10px;
         }
+        .footer-container {
+            text-align: center;
+            margin-top: 20px;
+        }
     """
 
 
