@@ -31,9 +31,9 @@ def generate_links(root_dir, repo_url, ignore_files=None):
                 last_modified_datetime = datetime.fromtimestamp(last_modified_timestamp)
                 now = datetime.now()
                 if now - last_modified_datetime < timedelta(days=1):
-                    last_modified = f"修改于 {int((now - last_modified_datetime).total_seconds() / 3600)} 小时 {int((now - last_modified_datetime).total_seconds() % 3600 / 60)} 分钟 {int((now - last_modified_datetime).total_seconds() % 60)} 秒前"  # 修改时间小于一天，显示为“几小时前”
+                    last_modified = f"最后修改:{int((now - last_modified_datetime).total_seconds() / 3600)}:{int((now - last_modified_datetime).total_seconds() % 3600 / 60)}:{int((now - last_modified_datetime).total_seconds() % 60)}秒前"  # 修改时间小于一天，显示为“几小时前”
                 elif now - last_modified_datetime < timedelta(days=2):
-                    last_modified = f"昨天 {last_modified_datetime.strftime('%H:%M:%S')}"  # 修改时间大于一天小于两天，显示为“昨天 HH:MM:SS”
+                    last_modified = f"昨天{last_modified_datetime.strftime('%H:%M:%S')}"  # 修改时间大于一天小于两天，显示为“昨天 HH:MM:SS”
                 else:
                     last_modified = last_modified_datetime.strftime('%Y-%m-%d %H:%M:%S')  # 修改时间大于两天，显示为“年-月-日 HH:MM:SS”
                 links.append(f'<div class="d-flex justify-content-between align-items-center mb-3"><a class="list-group-item flex-grow-1" href="javascript:void(0)" >{filename}</a><div class="file-info ml-auto">{file_size}, {last_modified}</div><button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button><button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></div>')
@@ -48,6 +48,19 @@ if __name__ == "__main__":
         .file-info {
             font-size: 0.8rem;
             color: #888;
+            background-color: #666;
+            padding: 0.5rem;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            align-self: stretch;
+            padding-top: 0;
+            padding-bottom: 0;
+            margin: 0;
+            border-width: 1px 1px 1px 0;
+            border-style: solid;
+            border-color: #ddd;
         }
         .folder-label {
             font-size: 1.1rem;
