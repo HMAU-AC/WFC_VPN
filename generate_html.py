@@ -48,6 +48,7 @@ if __name__ == "__main__":
         .file-info {
             font-size: 0.8rem;
             color: #888;
+            text-align: right;
         }
         .folder-label {
             font-size: 1.1rem;
