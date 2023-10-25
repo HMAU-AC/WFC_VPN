@@ -175,6 +175,13 @@ if __name__ == "__main__":
         .footertop {
             margin-bottom: 20px;
         }
+        .image-container {
+            text-align: center;
+        }
+        .image-container img {
+            filter: blur(10px);
+            transition: filter 3s;
+        }
     """
 
 
@@ -191,6 +198,11 @@ if __name__ == "__main__":
             clipboard.on('error', function(e) {
                 console.log('复制失败');
             });
+        
+            // 设置定时器，使图片在1秒后变为清晰
+            setTimeout(function() {
+                document.querySelector('.image-container img').style.filter = 'blur(0)';
+            }, 1000);
         });
     """
    # 使用csscompressor和jsmin压缩CSS和JavaScript内容
@@ -249,6 +261,9 @@ if __name__ == "__main__":
      <div class="footertop"></div>
     <footer class="footer mt-auto py-3 bg-light">
         <div class="footer-container">
+            <div class="image-container">
+                <img src="./Flie-html/img/github.png" alt="Github">
+            </div>
             <span class="text-muted">© 2023 爱吃素的胖子. All rights reserved.</span>
         </div>
     </footer>
