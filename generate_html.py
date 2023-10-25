@@ -1,4 +1,7 @@
 import os
+import htmlmin
+import csscompressor
+import jsmin
 
 def generate_links(root_dir, repo_url, ignore_files=None):
     if ignore_files is None:
@@ -24,6 +27,171 @@ def generate_links(root_dir, repo_url, ignore_files=None):
 if __name__ == "__main__":
     repo_url = "https://www.gitt.top"  # 替换为你的仓库 URL
     links = generate_links('.', repo_url, ignore_files=['.pyc', '.git', '.gitignore', '.github', 'html.css', 'index.html', 'generate_html.py', 'README.md', 'Flie-html', '.json', '.config.json', 'Loon', 'Icon'])
+    # CSS和JavaScript内容
+    css_content = """
+        .folder-label {
+            font-size: 1.1rem;
+            text-align: center;
+            line-height: 2.2;
+        }
+        .list-group-item {
+            margin: 0;
+            padding: 0.5rem;
+            border-width: 1px 0 1px 1px;
+            border-style: solid;
+            border-color: #ddd;
+        }
+        .list-group-item:first-child {
+            border-top-left-radius: .25rem;
+            border-bottom-left-radius: .25rem;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        .d-flex {
+            height: auto;
+        }
+        .btn-open {
+            border-radius: 0;
+            align-self: stretch;
+            padding-top: 0;
+            padding-bottom: 0;
+            margin: 0;
+            padding: 0.5rem;
+            border-width: 1px 0 1px 0;
+            border-style: solid;
+            border-color: #ddd;
+        }
+        .btn-copy {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: .25rem;
+            border-bottom-right-radius: .25rem;
+            align-self: stretch;
+            padding-top: 0;
+            padding-bottom: 0;
+            margin: 0;
+            padding: 0.5rem;
+            border-width: 1px 1px 1px 0;
+            border-style: solid;
+            border-color: #ddd;
+        }
+        @media (min-width: 576px) {
+            .folder-label {
+                font-size: 1.2rem;
+            }
+        }
+        @media (min-width: 768px) {
+            .folder-label {
+                font-size: 1.4rem;
+            }
+        }
+        @media (min-width: 767px) and (max-width: 991px) {
+            .folder-label {
+                font-size: 1.6rem;
+                line-height: 2.0;
+            }
+            .container {
+                max-width: 767px;
+            }
+            .col-lg-4 {
+                flex: 0 0 767px;
+                max-width: 767px;
+            }
+        }
+        @media (min-width: 992px) {
+            .folder-label {
+                font-size: 1.5rem;
+            }
+        }
+        @media (min-width: 991px) and (max-width: 1023px) {
+            .folder-label {
+                font-size: 1.6rem;
+                line-height: 1.1;
+            }
+            .container {
+                max-width: 991px;
+            }
+            .col-lg-4 {
+                flex: 0 0 991px;
+                max-width: 991px;
+            }
+        }
+        @media (min-width: 1024px) and (max-width: 1200px) {
+            .folder-label {
+                font-size: 1.8rem;
+                line-height: 1.3;
+            }
+            .container {
+                max-width: 1024px;
+            }
+            .col-lg-4 {
+                flex: 0 0 1024px;
+                max-width: 1024px;
+            }
+        }
+        @media (min-width: 1200px) {
+            .folder-label {
+                font-size: 1.8rem;
+                line-height: 1.3;
+            }
+            .container {
+                max-width: 1200px;
+            }
+            .col-lg-4 {
+                flex: 0 0 1200px;
+                max-width: 1200px;
+            }
+        }
+        @media (prefers-color-scheme: dark) {
+            /* 在这里添加暗黑模式的样式 */
+            body {
+                background-color: #333;
+                color: #fff;
+            }
+            .card {
+                background-color: #444;
+            }
+            .list-group-item {
+                background-color: #555;
+            }
+            .btn-open {
+                background-color: #666;
+                color: #fff;
+            }
+            .btn-copy {
+                background-color: #666;
+                color: #fff;
+            }
+        }
+        .carousel.slide.rounded {
+            margin-bottom: 1rem;
+        }
+                .carousel-item img {
+            border-radius: 10px;
+        }
+    """
+
+
+    js_content = """
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // 初始化Clipboard.js
+            var clipboard = new ClipboardJS('.btn-copy');
+            // 添加复制成功的回调函数
+            clipboard.on('success', function(e) {
+                console.log('复制成功!');
+                e.clearSelection();
+            });
+            // 添加复制失败的回调函数
+            clipboard.on('error', function(e) {
+                console.log('复制失败');
+            });
+        });
+    """
+   # 使用csscompressor和jsmin压缩CSS和JavaScript内容
+    # minified_css/minified_js要放在html_content = f"""之前才行
+    minified_css = csscompressor.compress(css_content)
+    minified_js = jsmin.jsmin(js_content)
+
     html_content = f"""
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -37,146 +205,7 @@ if __name__ == "__main__":
     <!-- 引入Font Awesome -->
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
-        .folder-label {{
-            font-size: 1.1rem;
-            text-align: center;
-            line-height: 2.2;
-        }}
-        .list-group-item {{
-            margin: 0;
-            padding: 0.5rem;
-            border-width: 1px 0 1px 1px;
-            border-style: solid;
-            border-color: #ddd;
-        }}
-        .list-group-item:first-child {{
-            border-top-left-radius: .25rem;
-            border-bottom-left-radius: .25rem;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-        }}
-        .d-flex {{
-            height: auto;
-        }}
-        .btn-open {{
-            border-radius: 0;
-            align-self: stretch;
-            padding-top: 0;
-            padding-bottom: 0;
-            margin: 0;
-            padding: 0.5rem;
-            border-width: 1px 0 1px 0;
-            border-style: solid;
-            border-color: #ddd;
-        }}
-        .btn-copy {{
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-            border-top-right-radius: .25rem;
-            border-bottom-right-radius: .25rem;
-            align-self: stretch;
-            padding-top: 0;
-            padding-bottom: 0;
-            margin: 0;
-            padding: 0.5rem;
-            border-width: 1px 1px 1px 0;
-            border-style: solid;
-            border-color: #ddd;
-        }}
-        @media (min-width: 576px) {{
-            .folder-label {{
-                font-size: 1.2rem;
-            }}
-        }}
-        @media (min-width: 768px) {{
-            .folder-label {{
-                font-size: 1.4rem;
-            }}
-        }}
-        @media (min-width: 767px) and (max-width: 991px) {{
-            .folder-label {{
-                font-size: 1.6rem;
-                line-height: 2.0;
-            }}
-            .container {{
-                max-width: 767px;
-            }}
-            .col-lg-4 {{
-                flex: 0 0 767px;
-                max-width: 767px;
-            }}
-        }}
-        @media (min-width: 992px) {{
-            .folder-label {{
-                font-size: 1.5rem;
-            }}
-        }}
-        @media (min-width: 991px) and (max-width: 1023px) {{
-            .folder-label {{
-                font-size: 1.6rem;
-                line-height: 1.1;
-            }}
-            .container {{
-                max-width: 991px;
-            }}
-            .col-lg-4 {{
-                flex: 0 0 991px;
-                max-width: 991px;
-            }}
-        }}
-        @media (min-width: 1024px) and (max-width: 1200px) {{
-            .folder-label {{
-                font-size: 1.8rem;
-                line-height: 1.3;
-            }}
-            .container {{
-                max-width: 1024px;
-            }}
-            .col-lg-4 {{
-                flex: 0 0 1024px;
-                max-width: 1024px;
-            }}
-        }}
-        @media (min-width: 1200px) {{
-            .folder-label {{
-                font-size: 1.8rem;
-                line-height: 1.3;
-            }}
-            .container {{
-                max-width: 1200px;
-            }}
-            .col-lg-4 {{
-                flex: 0 0 1200px;
-                max-width: 1200px;
-            }}
-        }}
-        @media (prefers-color-scheme: dark) {{
-            /* 在这里添加暗黑模式的样式 */
-            body {{
-                background-color: #333;
-                color: #fff;
-            }}
-            .card {{
-                background-color: #444;
-            }}
-            .list-group-item {{
-                background-color: #555;
-            }}
-            .btn-open {{
-                background-color: #666;
-                color: #fff;
-            }}
-            .btn-copy {{
-                background-color: #666;
-                color: #fff;
-            }}
-        }}
-        .carousel.slide.rounded {{
-            margin-bottom: 1rem;
-        }}
-                .carousel-item img {{
-            border-radius: 10px;
-        }}
+        {minified_css}
     </style>
 </head>
 <body>
@@ -207,23 +236,16 @@ if __name__ == "__main__":
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- 引入Clipboard.js -->
     <script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {{
-            // 初始化Clipboard.js
-            var clipboard = new ClipboardJS('.btn-copy');
-            // 添加复制成功的回调函数
-            clipboard.on('success', function(e) {{
-                console.log('复制成功!');
-                e.clearSelection();
-            }});
-            // 添加复制失败的回调函数
-            clipboard.on('error', function(e) {{
-                console.log('复制失败');
-            }});
-        }});
+        {minified_js}
     </script>
 </body>
 </html>
 """
-with open('index.html', 'w') as file:
-    file.write(html_content)
+
+    # 使用htmlmin压缩HTML内容并删除注释
+    minified_html = htmlmin.minify(html_content, remove_empty_space=True, remove_comments=True)
+    
+    with open('index.html', 'w') as file:
+        file.write(minified_html)
