@@ -5,6 +5,28 @@ for (var i = 0; i < iframes.length; i++) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    // 选择所有的img元素
+    var images = document.querySelectorAll('img');
+
+    // 遍历所有选定的元素并删除无用的属性
+    for (var i = 0; i < images.length; i++) {
+        images[i].removeAttribute('decoding');
+        images[i].removeAttribute('loading');
+        images[i].removeAttribute('data-attachment-id');
+        images[i].removeAttribute('data-permalink');
+        images[i].removeAttribute('data-orig-file');
+        images[i].removeAttribute('data-orig-size');
+        images[i].removeAttribute('data-comments-opened');
+        images[i].removeAttribute('data-image-meta');
+        images[i].removeAttribute('data-image-title');
+        images[i].removeAttribute('data-image-description');
+        images[i].removeAttribute('data-image-caption');
+        images[i].removeAttribute('data-medium-file');
+        images[i].removeAttribute('data-large-file');
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
     // 选择所有iframe元素
     var iframeElements = document.querySelectorAll('iframe');
 
