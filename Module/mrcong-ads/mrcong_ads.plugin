@@ -22,9 +22,10 @@ URL-REGEX,^https:\/\/disqus\.com\/embed\/comments\/.*,REJECT
 
 
 [Script]
-http-response,pattern=^https?:\/\/mrcong\.com($|\/$) script-path=https://www.gitt.top/Module/mrcong-ads/mrong-ads.js, requires-body=true, timeout=1500, tag=mrconghome
-http-response,pattern=^https?:\/\/mrcong\.com\/.*\/$ script-path=https://www.gitt.top/Module/mrcong-ads/mrong-ads.js, requires-body=true, timeout=1500, tag=mrcong-ads-post
-http-response,pattern=^https?:\/\/mrcong\.com\/.*\/#gsc.tab=.*$ script-path=https://www.gitt.top/Module/mrcong-ads/mrong-ads.js, requires-body=true, timeout=1500, tag=mrcong-ads-sc
+
+http-response ^https?:\/\/mrcong\.com($|\/$) script-path=https://www.gitt.top/Module/mrcong-ads/mrong-ads.js, requires-body=true, timeout=1500, tag=mrconghome
+http-response ^https?:\/\/mrcong\.com\/.*\/$ script-path=https://www.gitt.top/Module/mrcong-ads/mrong-ads.js, requires-body=true, timeout=1500, tag=mrcong-ads-post
+http-response ^https?:\/\/mrcong\.com\/.*\/#gsc.tab=.*$ script-path=https://www.gitt.top/Module/mrcong-ads/mrong-ads.js, requires-body=true, timeout=1500, tag=mrcong-ads-sc
 
 [Mitm]
 hostname = disqus.com, *.disqus.com, mrcong.com, *.mrcong.com, assets.pinterest.com
