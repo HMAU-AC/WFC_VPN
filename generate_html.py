@@ -21,9 +21,9 @@ def generate_links(root_dir, repo_url, ignore_files=None):
                 continue
             if filename:
                 file_url = f"{repo_url}/{file_path}"
-                file_size = os.path.getsize(file_path)  # 获取文件大小
-                last_modified = time.ctime(os.path.getmtime(file_path))  # 获取最后修改时间
-                links.append(f'<div class="d-flex justify-content-between align-items-center mb-3"><a class="list-group-item flex-grow-1" href="javascript:void(0)" >{filename}</a><span class="file-info">{file_size} bytes, last modified: {last_modified}</span><button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button><button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></div>')
+                file_size = os.path.getsize(file_path) / (1024 * 1024)  # 获取文件大小并转换为MB
+                last_modified = time.strftime('%Y-%m-%d', time.gmtime(os.path.getmtime(file_path)))  # 获取最后修改时间并转换为年-月-日格式
+                links.append(f'<div class="d-flex justify-content-between align-items-center mb-3"><a class="list-group-item flex-grow-1" href="javascript:void(0)" >{filename}</a><span class="file-info">{file_size:.2f} MB, last modified: {last_modified}</span><button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button><button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></div>')
     return '\n'.join(links)
 
 
