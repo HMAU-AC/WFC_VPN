@@ -1,0 +1,32 @@
+#!name = mrong广告
+#!desc = 对于一些烦人的广告删除它，看不惯就是盘它
+#!open = mrong.com
+#!author = 爱吃素的胖子
+#!homepage = https://www.gitt.top/Module/mrcong-ads/mrcong_ads.plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/Other_icon/120px/RemoveAds.png
+#!date = 2023-10-05 23:51:54
+
+[Rule]
+
+URL-REGEX,^https:\/\/mrcong\.com\/wp-content\/cache\/min\/1\/wp-content\/plugins\/disqus-comment-system\/public\/js\/comment_count\.js\?.*,REJECT
+URL-REGEX,^https:\/\/mr-cong\.disqus\.com\/embed\.js$,REJECT 
+URL-REGEX,^https:\/\/mrcong\.com\/wp-content\/cache\/min\/1\/wp-content\/themes\/mrcong\/js\/tie-scripts\.js\?.*,REJECT  
+URL-REGEX,^https?:\/\/assets\.pinterest\.com\/js\/.*?.js.*,REJECT // mrcong跳转屏蔽
+# URL-REGEX,^https?:\/\/connect\.facebook\.net\/vi_VN\/.*?.js.*,REJECT
+URL-REGEX,^https:\/\/disqus\.com\/recommendations\/.*,REJECT
+URL-REGEX,^https:\/\/mr-cong\.disqus\.com\/count-data\.*$,REJECT
+URL-REGEX,^https:\/\/mrcong\.com\/.*\/?relatedposts=1$,REJECT
+URL-REGEX,^https:\/\/mr-cong\.disqus\.com\/(ecommendations|count|embed)\.*,REJECT
+URL-REGEX,^https:\/\/disqus\.com\/api\/3\.0\/.*,REJECT
+URL-REGEX,^https:\/\/disqus\.com\/embed\/comments\/.*,REJECT
+
+
+
+
+[Script]
+http-response,pattern=^https?:\/\/mrcong\.com($|\/$) script-path=https://www.gitt.top/Module/mrcong-ads/mrong-ads.js, requires-body=true, timeout=1500, tag=mrconghome
+http-response,pattern=^https?:\/\/mrcong\.com\/.*\/$ script-path=https://www.gitt.top/Module/mrcong-ads/mrong-ads.js, requires-body=true, timeout=1500, tag=mrcong-ads-post
+http-response,pattern=^https?:\/\/mrcong\.com\/.*\/#gsc.tab=.*$ script-path=https://www.gitt.top/Module/mrcong-ads/mrong-ads.js, requires-body=true, timeout=1500, tag=mrcong-ads-sc
+
+[Mitm]
+hostname = disqus.com, *.disqus.com, mrcong.com, *.mrcong.com, assets.pinterest.com
