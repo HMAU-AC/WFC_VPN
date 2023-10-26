@@ -34,14 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
         button.removeAttribute('jsselect');
         console.log("已删除button的onclick和jsselect属性。");
     }
-    // 删除所有iframe元素
-    var iframeElements = document.querySelectorAll('iframe');
-
-    // 遍历所有选定的元素并删除它们
-    for (var i = 0; i < iframeElements.length; i++) {
-        iframeElements[i].remove();
-        console.log("删除了 " + (i+1) + " 个iframe元素。")
-    }
     // 选择所有的img元素
     var images = document.querySelectorAll('img');
 
