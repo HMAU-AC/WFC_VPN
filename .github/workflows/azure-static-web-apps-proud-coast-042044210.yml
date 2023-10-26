@@ -25,6 +25,15 @@ jobs:
         with:
           submodules: true
           lfs: false
+
+      - name: Remove unnecessary files
+        run: |
+          rm -rf .github
+          rm -rf .vscode
+          rm generate_html.py
+          rm .gitignore
+          rm README.md
+          
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
