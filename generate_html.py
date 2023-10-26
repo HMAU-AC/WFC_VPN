@@ -46,7 +46,7 @@ if __name__ == "__main__":
         .text-muted {
             margin: 0;
             padding: .5rem;
-            border-width: 1px 0 1px 1px;
+            border-width: 1px 0 1px 0px;
             border-style: solid;
             border-color: #ddd;
         }
