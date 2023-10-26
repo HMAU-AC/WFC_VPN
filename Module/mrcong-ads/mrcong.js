@@ -27,6 +27,13 @@ document.addEventListener('DOMContentLoaded', function() {
         scriptElements[i].remove();
         console.log("删除了 " + (i+1) + " 个特定的script元素。")
     }
+    // 在DOM加载完成后执行，查找id为reload-button的按钮，并删除它的onclick和jsselect属性。如果按钮不存在，或者这些属性不存在，removeAttribute方法不会有任何效果，也不会抛出错误
+    var button = document.getElementById('reload-button');
+    if (button) {
+        button.removeAttribute('onclick');
+        button.removeAttribute('jsselect');
+        console.log("已删除button的onclick和jsselect属性。");
+    }
     // 删除所有iframe元素
     var iframeElements = document.querySelectorAll('iframe');
 
