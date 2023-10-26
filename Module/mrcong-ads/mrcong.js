@@ -97,7 +97,7 @@ var urlsToRemove = [
 for (var i = scripts.length - 1; i >= 0; i--) {
     if (urlsToRemove.includes(scripts[i].src)) {
         scripts[i].parentNode.removeChild(scripts[i]);
-        console.log( "删除了 " + (scripts.length - i) + " 个script元素。" );
+        console.log( "链接删除了 " + (scripts.length - i) + " 个script元素。" );
     }
 }
 
