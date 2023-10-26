@@ -20,6 +20,21 @@ EventTarget.prototype.addEventListener = function(eventName, eventHandler) {
 
 // 当DOM加载完成后执行的代码
 document.addEventListener('DOMContentLoaded', function() {
+    // 在DOM树构建完成后查找并删除所有包含ad.a-ads.com的元素
+    var adsElements = document.querySelectorAll('[src*="ad.a-ads.com"]');
+
+    for (var i = 0; i < adsElements.length; i++) {
+        adsElements[i].remove();
+        console.log("删除了 " + (i+1) + " 个含有 'ad.a-ads.com' 的元素。")
+    }
+    // 删除所有iframe元素
+    var iframeElements = document.querySelectorAll('iframe');
+
+    // 遍历所有选定的元素并删除它们
+    for (var i = 0; i < iframeElements.length; i++) {
+        iframeElements[i].remove();
+        console.log("删除了 " + (i+1) + " 个iframe元素。")
+    }
     // 选择所有的img元素
     var images = document.querySelectorAll('img');
 
