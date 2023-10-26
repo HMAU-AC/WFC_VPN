@@ -295,7 +295,7 @@ if __name__ == "__main__":
             <div class="image-container">
                 <img src="./Flie-html/img/github.webp" alt="Github">
             </div>
-            <span class="text-muted">© 2023 爱吃素的胖子. All rights reserved.</span>
+            <span class="text-muteds">© 2023 爱吃素的胖子. All rights reserved.</span>
         </div>
     </footer>
 </body>
