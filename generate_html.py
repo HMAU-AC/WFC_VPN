@@ -48,10 +48,11 @@ if __name__ == "__main__":
     # CSS和JavaScript内容
     css_content = """
         .text-muted {
-            font-size: 0.8rem;
-            color: #6c757d;
-            text-align: right;
-            margin-right: 10px;
+            margin: 0;
+            padding: .5rem;
+            border-width: 1px 0 1px 1px;
+            border-style: solid;
+            border-color: #ddd;
         }
         .folder-label {
             font-size: 1.1rem;
