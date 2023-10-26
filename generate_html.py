@@ -43,12 +43,20 @@ if __name__ == "__main__":
     links = generate_links('.', repo_url, ignore_files=['.pyc', '.git', '.gitignore', '.github', 'html.css', 'index.html', 'generate_html.py', 'README.md', 'Flie-html', '.json', '.config.json', 'Loon', 'Icon'])
     # CSS和JavaScript内容
     css_content = """
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --text-color: #333333;
+            --border-color: #ddd;
+            --background-color: #333;
+            --card-color: #444;
+        }
         .text-muted {
             margin: 0;
             padding: .5rem;
             border-width: 1px 0 1px 0px;
             border-style: solid;
-            border-color: #ddd;
+            border-color: var(--border-color);
         }
         .folder-label {
             font-size: 1.1rem;
@@ -60,7 +68,7 @@ if __name__ == "__main__":
             padding: 0.5rem;
             border-width: 1px 0 1px 1px;
             border-style: solid;
-            border-color: #ddd;
+            border-color: var(--border-color);
         }
         .list-group-item:first-child {
             border-top-left-radius: .25rem;
@@ -80,7 +88,7 @@ if __name__ == "__main__":
             padding: 0.5rem;
             border-width: 1px 0 1px 0;
             border-style: solid;
-            border-color: #ddd;
+            border-color: var(--border-color);
         }
         .btn-copy {
             border-top-left-radius: 0;
@@ -94,7 +102,7 @@ if __name__ == "__main__":
             padding: 0.5rem;
             border-width: 1px 1px 1px 0;
             border-style: solid;
-            border-color: #ddd;
+            border-color: var(--border-color);
         }
         @media (min-width: 576px) {
             .folder-label {
