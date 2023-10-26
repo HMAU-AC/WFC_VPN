@@ -87,19 +87,6 @@ ids.forEach(id => {
     }
 });
 
-var scripts = Array.from(document.getElementsByTagName('script'));
-var urlsToRemove = [
-    "https://connect.facebook.net/vi_VN/sdk.js?hash=925333dad855fb0487f4308cfcb70762",
-    "https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v2.7&amp;appId=449528141898952",
-    "https://dujbkoxapnf.com/lcimp?id=1989833"
-];
-for (var i = scripts.length - 1; i >= 0; i--) {
-    if (urlsToRemove.includes(scripts[i].src)) {
-        scripts[i].parentNode.removeChild(scripts[i]);
-        console.log( "链接删除了 " + (scripts.length - i) + " 个script元素。" );
-    }
-}
-
 // 删除特定的<style>标签
 var styles = document.getElementsByTagName('style');
 for (var i = 0; i < styles.length; i++) {
