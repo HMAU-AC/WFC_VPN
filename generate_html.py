@@ -1,6 +1,5 @@
+# 未添加最后修改时间的版本
 import os
-import datetime
-import humanize
 import htmlmin
 import csscompressor
 import jsmin
@@ -9,32 +8,20 @@ def generate_links(root_dir, repo_url, ignore_files=None):
     if ignore_files is None:
         ignore_files = []
     links = []
-    humanize.i18n.activate('zh_CN')
     for foldername, subfolders, filenames in os.walk(root_dir):
         folder_path = foldername.replace("\\", "/")
         if any(ignore in folder_path for ignore in ignore_files):
             continue
         clean_foldername = foldername.replace(".", "").lstrip('/')
-        if clean_foldername:
-            links.append(f'<span class="badge badge-primary folder-label mb-3">{clean_foldername}</span>')
+        if clean_foldername:  # 检查clean_foldername是否为空
+            links.append(f'<span class="badge badge-primary folder-label mb-3">{clean_foldername}</span>')  # 修改了这里
         for filename in filenames:
             file_path = os.path.join(foldername, filename).replace("\\", "/")
             if any(ignore in file_path for ignore in ignore_files):
                 continue
-            if filename:
-                file_url = f"{repo_url}/{file_path}"
-                mod_time = os.path.getmtime(file_path)
-                dt = datetime.datetime.fromtimestamp(mod_time)
-                github_time = humanize.naturaltime(datetime.datetime.now() - dt)
-                link_html = (
-                    '<div class="d-flex justify-content-between align-items-center mb-3">'
-                    f'<a class="list-group-item flex-grow-1" href="javascript:void(0)" >{filename}</a>'
-                    f'<span class="text-muted time-modified">{github_time}</span>'  # 添加新的 CSS 类
-                    f'<button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button>'
-                    f'<button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button>'
-                    '</div>'
-                )
-                links.append(link_html)
+            if filename:  # 检查filename是否为空 检查
+                file_url = f"{repo_url}/{file_path}"  # 修改了这里
+                links.append(f'<div class="d-flex justify-content-between align-items-center mb-3"><a class="list-group-item flex-grow-1" href="javascript:void(0)" >{filename}</a><button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button><button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></div>')  # 修改了这里
     return '\n'.join(links)
 
 
@@ -43,21 +30,6 @@ if __name__ == "__main__":
     links = generate_links('.', repo_url, ignore_files=['.pyc', '.git', '.gitignore', '.github', 'html.css', 'index.html', 'generate_html.py', 'README.md', 'Flie-html', '.json', '.config.json', 'Loon', 'Icon'])
     # CSS和JavaScript内容
     css_content = """
-        :root {
-            --primary-color: #007bff;
-            --secondary-color: #6c757d;
-            --text-color: #333333;
-            --border-color: #ddd;
-            --background-color: #333;
-            --card-color: #444;
-        }
-        .text-muted {
-            margin: 0;
-            padding: .5rem;
-            border-width: 1px 0 1px 0px;
-            border-style: solid;
-            border-color: var(--border-color);
-        }
         .folder-label {
             font-size: 1.1rem;
             text-align: center;
@@ -68,7 +40,7 @@ if __name__ == "__main__":
             padding: 0.5rem;
             border-width: 1px 0 1px 1px;
             border-style: solid;
-            border-color: var(--border-color);
+            border-color: #ddd;
         }
         .list-group-item:first-child {
             border-top-left-radius: .25rem;
@@ -88,7 +60,7 @@ if __name__ == "__main__":
             padding: 0.5rem;
             border-width: 1px 0 1px 0;
             border-style: solid;
-            border-color: var(--border-color);
+            border-color: #ddd;
         }
         .btn-copy {
             border-top-left-radius: 0;
@@ -102,7 +74,7 @@ if __name__ == "__main__":
             padding: 0.5rem;
             border-width: 1px 1px 1px 0;
             border-style: solid;
-            border-color: var(--border-color);
+            border-color: #ddd;
         }
         @media (min-width: 576px) {
             .folder-label {
@@ -295,7 +267,7 @@ if __name__ == "__main__":
             <div class="image-container">
                 <img src="./Flie-html/img/github.webp" alt="Github">
             </div>
-            <span class="text-muteds">© 2023 爱吃素的胖子. All rights reserved.</span>
+            <span class="text-muted">© 2023 爱吃素的胖子. All rights reserved.</span>
         </div>
     </footer>
 </body>
