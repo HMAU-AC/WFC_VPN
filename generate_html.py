@@ -9,31 +9,27 @@ def generate_links(root_dir, repo_url, ignore_files=None):
     if ignore_files is None:
         ignore_files = []
     links = []
-    # 设置 humanize 的本地化语言为中文
     humanize.i18n.activate('zh_CN')
     for foldername, subfolders, filenames in os.walk(root_dir):
         folder_path = foldername.replace("\\", "/")
         if any(ignore in folder_path for ignore in ignore_files):
             continue
         clean_foldername = foldername.replace(".", "").lstrip('/')
-        if clean_foldername:  # 检查clean_foldername是否为空
-            links.append(f'<span class="badge badge-primary folder-label mb-3">{clean_foldername}</span>')  # 修改了这里
+        if clean_foldername:
+            links.append(f'<span class="badge badge-primary folder-label mb-3">{clean_foldername}</span>')
         for filename in filenames:
             file_path = os.path.join(foldername, filename).replace("\\", "/")
             if any(ignore in file_path for ignore in ignore_files):
                 continue
-            if filename:  # 检查filename是否为空 检查
-                file_url = f"{repo_url}/{file_path}"  # 修改了这里
-                # 获取文件的修改时间
+            if filename:
+                file_url = f"{repo_url}/{file_path}"
                 mod_time = os.path.getmtime(file_path)
-                # 将时间戳转换为 datetime 对象
                 dt = datetime.datetime.fromtimestamp(mod_time)
-                # 使用 humanize 库显示相对时间
                 github_time = humanize.naturaltime(datetime.datetime.now() - dt)
                 link_html = (
                     '<div class="d-flex justify-content-between align-items-center mb-3">'
                     f'<a class="list-group-item flex-grow-1" href="javascript:void(0)" >{filename}</a>'
-                    f'<span class="text-muted">{github_time}</span>'
+                    f'<span class="text-muted time-modified">{github_time}</span>'  # 添加新的 CSS 类
                     f'<button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button>'
                     f'<button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button>'
                     '</div>'
