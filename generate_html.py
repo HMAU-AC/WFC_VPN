@@ -1,4 +1,5 @@
 import os
+import datetime
 import htmlmin
 import csscompressor
 import jsmin
@@ -20,7 +21,13 @@ def generate_links(root_dir, repo_url, ignore_files=None):
                 continue
             if filename:  # 检查filename是否为空 检查
                 file_url = f"{repo_url}/{file_path}"  # 修改了这里
-                links.append(f'<div class="d-flex justify-content-between align-items-center mb-3"><a class="list-group-item flex-grow-1" href="javascript:void(0)" >{filename}</a><button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button><button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></div>')  # 修改了这里
+                # 获取文件的修改时间
+                mod_time = os.path.getmtime(file_path)
+                # 将时间戳转换为 datetime 对象
+                dt = datetime.datetime.fromtimestamp(mod_time)
+                # 将 datetime 对象格式化为 GitHub 的时间格式
+                github_time = dt.strftime("%b %d, %Y")
+                links.append(f'<div class="d-flex justify-content-between align-items-center mb-3"><a class="list-group-item flex-grow-1" href="javascript:void(0)" >{filename}</a><span class="text-muted">{github_time}</span><button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button><button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></div>')  # 修改了这里
     return '\n'.join(links)
 
 
