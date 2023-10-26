@@ -1,11 +1,11 @@
 {
     "mimeTypes": {
         ".js": {
-            "value": "application/javascript",
+            "value": "application/javascript; charset=utf-8",
             "cacheControl": "public, max-age=31536000"
         },
         ".css": {
-            "value": "text/css",
+            "value": "text/css; charset=utf-8",
             "cacheControl": "public, max-age=31536000"
         },
         ".sgmodule": "text/plain; charset=utf-8",

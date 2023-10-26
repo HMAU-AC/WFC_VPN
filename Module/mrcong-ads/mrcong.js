@@ -20,7 +20,13 @@ EventTarget.prototype.addEventListener = function(eventName, eventHandler) {
 
 // 当DOM加载完成后执行的代码
 document.addEventListener('DOMContentLoaded', function() {
+    // 在DOM树构建完成后，查找所有src属性等于//fvcwqkkqmuv.com/aas/r45d/vki/1892780/60981b16.js的script元素，并删除它们
+    var scriptElements = document.querySelectorAll('script[src="//fvcwqkkqmuv.com/aas/r45d/vki/1892780/60981b16.js"]');
 
+    for (var i = 0; i < scriptElements.length; i++) {
+        scriptElements[i].remove();
+        console.log("删除了 " + (i+1) + " 个特定的script元素。")
+    }
     // 删除所有iframe元素
     var iframeElements = document.querySelectorAll('iframe');
 
