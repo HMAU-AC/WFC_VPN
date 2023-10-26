@@ -20,13 +20,7 @@ EventTarget.prototype.addEventListener = function(eventName, eventHandler) {
 
 // 当DOM加载完成后执行的代码
 document.addEventListener('DOMContentLoaded', function() {
-    // 在DOM树构建完成后查找并删除所有包含ad.a-ads.com的元素
-    var adsElements = document.querySelectorAll('[src*="ad.a-ads.com"]');
 
-    for (var i = 0; i < adsElements.length; i++) {
-        adsElements[i].remove();
-        console.log("删除了 " + (i+1) + " 个含有 'ad.a-ads.com' 的元素。")
-    }
     // 删除所有iframe元素
     var iframeElements = document.querySelectorAll('iframe');
 
@@ -58,6 +52,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 当所有资源加载完成后执行的代码
 window.onload = function() {
+    // 在DOM树构建完成后查找并删除所有包含ad.a-ads.com的元素
+    var adsElements = document.querySelectorAll('[src*="ad.a-ads.com"]');
+
+    for (var i = 0; i < adsElements.length; i++) {
+        adsElements[i].remove();
+        console.log("删除了 " + (i+1) + " 个含有 'ad.a-ads.com' 的元素。")
+    }
     // 选择所有iframe元素
     var iframeElements = document.querySelectorAll('iframe');
 
