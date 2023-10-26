@@ -22,7 +22,7 @@ jobs:
       with:
         python-version: 3.8
 
-    - name: Install dependencies  # 添加pip install htmlmin，pip install csscompressor jsmin 不使用可删除主要用于压缩html和css/js
+    - name: Install dependencies  # 添加pip install htmlmin，pip install csscompressor jsmin humanize不使用可删除主要用于压缩html和css/js
       run: |
         python -m pip install --upgrade pip
         pip install humanize

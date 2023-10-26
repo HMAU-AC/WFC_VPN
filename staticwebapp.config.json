@@ -1,13 +1,7 @@
 {
     "mimeTypes": {
-        ".js": {
-            "value": "application/javascript; charset=utf-8",
-            "cacheControl": "public, max-age=10"
-        },
-        ".css": {
-            "value": "text/css; charset=utf-8",
-            "cacheControl": "public, max-age=10"
-        },
+        ".css": "text/css; charset=utf-8",
+        ".js": "application/javascript; charset=utf-8",
         ".sgmodule": "text/plain; charset=utf-8",
         ".list": "text/plain; charset=utf-8",
         ".plugin": "text/plain; charset=utf-8",
