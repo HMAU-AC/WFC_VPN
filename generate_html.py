@@ -9,6 +9,8 @@ def generate_links(root_dir, repo_url, ignore_files=None):
     if ignore_files is None:
         ignore_files = []
     links = []
+    # 设置 humanize 的本地化语言为中文
+    humanize.i18n.activate('zh_CN')
     for foldername, subfolders, filenames in os.walk(root_dir):
         folder_path = foldername.replace("\\", "/")
         if any(ignore in folder_path for ignore in ignore_files):
@@ -45,6 +47,12 @@ if __name__ == "__main__":
     links = generate_links('.', repo_url, ignore_files=['.pyc', '.git', '.gitignore', '.github', 'html.css', 'index.html', 'generate_html.py', 'README.md', 'Flie-html', '.json', '.config.json', 'Loon', 'Icon'])
     # CSS和JavaScript内容
     css_content = """
+        .text-muted {
+            font-size: 0.8rem;
+            color: #6c757d;
+            text-align: right;
+            margin-right: 10px;
+        }
         .folder-label {
             font-size: 1.1rem;
             text-align: center;
