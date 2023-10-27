@@ -20,39 +20,30 @@ EventTarget.prototype.addEventListener = function(eventName, eventHandler) {
 
 // 当DOM加载完成后执行的代码
 document.addEventListener('DOMContentLoaded', function() {
-    // 在DOM树构建完成后，查找所有src属性等于//fvcwqkkqmuv.com/aas/r45d/vki/1892780/60981b16.js的script元素，并删除它们
-    var scriptElements = document.querySelectorAll('script[src="//fvcwqkkqmuv.com/aas/r45d/vki/1892780/60981b16.js"]');
+    // 存储要删除的元素
+    var elementsToRemove = [];
 
-    for (var i = 0; i < scriptElements.length; i++) {
-        scriptElements[i].remove();
-        console.log("删除了 " + (i+1) + " 个特定的script元素。")
-    }
-    // 在DOM加载完成后执行，查找id为reload-button的按钮，并删除它的onclick和jsselect属性。如果按钮不存在，或者这些属性不存在，removeAttribute方法不会有任何效果，也不会抛出错误
+    // 查找所有src属性等于//fvcwqkkqmuv.com/aas/r45d/vki/1892780/60981b16.js的script元素
+    var scriptElements = document.querySelectorAll('script[src="//fvcwqkkqmuv.com/aas/r45d/vki/1892780/60981b16.js"]');
+    elementsToRemove.push(...scriptElements);
+
+    // 查找id为reload-button的按钮
     var button = document.getElementById('reload-button');
     if (button) {
         button.removeAttribute('onclick');
         button.removeAttribute('jsselect');
         console.log("已删除button的onclick和jsselect属性。");
     }
+
     // 选择所有的img元素
     var images = document.querySelectorAll('img');
+    elementsToRemove.push(...images);
 
-    // 遍历所有选定的元素并删除无用的属性
-    for (var i = 0; i < images.length; i++) {
-        images[i].removeAttribute('decoding');
-        images[i].removeAttribute('loading');
-        images[i].removeAttribute('data-attachment-id');
-        images[i].removeAttribute('data-permalink');
-        images[i].removeAttribute('data-orig-file');
-        images[i].removeAttribute('data-orig-size');
-        images[i].removeAttribute('data-comments-opened');
-        images[i].removeAttribute('data-image-meta');
-        images[i].removeAttribute('data-image-title');
-        images[i].removeAttribute('data-image-description');
-        images[i].removeAttribute('data-image-caption');
-        images[i].removeAttribute('data-medium-file');
-        images[i].removeAttribute('data-large-file');
+    // 一次性删除所有元素
+    for (var i = 0; i < elementsToRemove.length; i++) {
+        elementsToRemove[i].remove();
     }
+    console.log("删除了 " + elementsToRemove.length + " 个元素。");
 });
 
 // 当所有资源加载完成后执行的代码
@@ -83,6 +74,25 @@ ids.forEach(id => {
     if (element) {
         element.remove();
         console.log("删除了 id为 " + id + " 的script-ad元素。")
+    }
+
+    var images = document.querySelectorAll('img');
+
+    // 遍历所有选定的元素并删除无用的属性
+    for (var i = 0; i < images.length; i++) {
+        images[i].removeAttribute('decoding');
+        images[i].removeAttribute('loading');
+        images[i].removeAttribute('data-attachment-id');
+        images[i].removeAttribute('data-permalink');
+        images[i].removeAttribute('data-orig-file');
+        images[i].removeAttribute('data-orig-size');
+        images[i].removeAttribute('data-comments-opened');
+        images[i].removeAttribute('data-image-meta');
+        images[i].removeAttribute('data-image-title');
+        images[i].removeAttribute('data-image-description');
+        images[i].removeAttribute('data-image-caption');
+        images[i].removeAttribute('data-medium-file');
+        images[i].removeAttribute('data-large-file');
     }
 });
 
