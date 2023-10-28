@@ -10,6 +10,7 @@
         margin: 0;
         padding: 0;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh;
@@ -33,6 +34,19 @@
       @media (max-width: 600px) {
         body {
           font-size: 0.9em;
+          margin: 2;
+        }
+        h1 {
+          font-size: 2em;
+        }
+      }
+      @media (max-width: 900px) {
+        body {
+          font-size: 1.1em;
+          margin: 1;
+        }
+        h1 {
+          font-size: 2em;
         }
       }
       /* 暗黑模式 */
@@ -44,24 +58,11 @@
         a {
           color: #2d6ca4;
         }
-        .logo {
-          filter: brightness(0.5); /* 让图标变暗 */
-        }
-      }
-      /* Logo 图标 */
-      .logo {
-        width: 30vw; /* 控制图标的宽度 */
-        max-width: 600px; /* 设置图标的最大宽度 */
-        margin-bottom: 2em; /* 添加一些空间在图标和标题之间 */
-        display: block; /* 让图标成为块级元素 */
-        margin-left: auto; /* 左边距自动 */
-        margin-right: auto; /* 右边距自动 */
       }
     </style>
   </head>
   <body>
     <div>
-      <img src="./Flie-html/img/logo.svg" alt="Logo" class="logo"> <!-- 添加 logo 图标 -->
       <h1>Oops! Page not found.</h1>
       <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
       <p><a href="/">Go to Homepage</a></p>
