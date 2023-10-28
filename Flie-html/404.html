@@ -20,9 +20,11 @@
       h1 {
         font-size: 4em;
         margin-bottom: 0.5em;
+        text-align: center;
       }
       p {
         margin-bottom: 1em;
+        text-align: center;
       }
       a {
         color: #2d6ca4;
@@ -31,19 +33,19 @@
       a:hover {
         text-decoration: underline;
       }
-      @media (max-width: 600px) {
+      /* For tablets */
+      @media (max-width: 768px) {
         body {
-          font-size: 0.9em;
-          margin: 2;
+          font-size: 1.2em;
         }
         h1 {
-          font-size: 2em;
+          font-size: 3em;
         }
       }
-      @media (max-width: 900px) {
+      /* For mobile phones */
+      @media (max-width: 480px) {
         body {
-          font-size: 1.1em;
-          margin: 1;
+          font-size: 1em;
         }
         h1 {
           font-size: 2em;
