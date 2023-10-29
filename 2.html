@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div id="drop_zone" style="width: 100%; height: 200px; border: 1px solid black; padding: 10px; position: relative;">
+            <span id="drop_text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">在此处放置文件或点击上传</span>
+            <input type="file" id="imageFile" accept="image/*" onchange="clearResult()" style="display: none;">
+        </div>
+        <select id="imageFormat">
+          <option value="image/jpeg">JPEG</option>
+          <option value="image/png">PNG</option>
+          <option value="image/webp">WebP</option>
+        </select>
+        <label for="imageQuality">图片质量：</label>
+        <input type="number" id="imageQuality" min="0" max="1" step="0.1" value="0.8">
+        <label for="imageWidth">图片宽度：</label>
+        <input type="number" id="imageWidth" min="1" step="1" value="500" oninput="updateWidth()">
+        <input type="checkbox" id="autoWidth" name="autoWidth" value="auto" onchange="updateWidth()">
+        <label for="autoWidth">宽度自动</label>
+        <label for="imageHeight">图片高度：</label>
+        <input type="number" id="imageHeight" min="1" step="1" value="500" oninput="updateHeight()">
+        <input type="checkbox" id="autoHeight" name="autoHeight" value="auto" onchange="updateHeight()">
+        <label for="autoHeight">高度自动</label>
+        <div class="col text-center">
+            <button onclick="compressImage()" class="mt-3">生成</button>
+        </div>
+        <div class="col text-center">
+            <button id="viewButton" onclick="viewImage()" style="display: none;" class="mt-3">查看结果</button>
+            <button id="downloadButton" onclick="downloadImage()" style="display: none;" class="mt-3">下载图片</button>
+        </div>
+        <img id="output" style="display: none;">
+      </div>
+    </div>
+  </div>
+  <script>
+    let dataUrl = '';
+    document.getElementById('imageFile').addEventListener('change', function(evt) {
+      const files = evt.target.files; // FileList object.
+      clearResult();
+        
+      // Read the file and display it in the drop zone
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        document.getElementById('drop_text').style.display = 'none';
+        document.getElementById('drop_zone').style.backgroundImage = 'url(' + event.target.result + ')';
+        document.getElementById('drop_zone').style.backgroundSize = 'contain';
+        document.getElementById('drop_zone').style.backgroundRepeat = 'no-repeat';
+        document.getElementById('drop_zone').style.backgroundPosition = 'center';
+      };
+      reader.readAsDataURL(files[0]);
+    });
+    function clearResult() {
+      dataUrl = '';
+      document.getElementById('viewButton').style.display = 'none';
+      document.getElementById('downloadButton').style.display = 'none';
+      document.getElementById('output').style.display = 'none';
+      document.getElementById('drop_text').style.display = 'block'; // Show the text
+    }
+    function handleFileSelect(evt) {
+      evt.stopPropagation();
+      evt.preventDefault();
+        
+      const files = evt.dataTransfer.files; // FileList object.
+      clearResult();
+        
+      // Read the file and display it in the drop zone
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        document.getElementById('drop_text').style.display = 'none';
+        document.getElementById('drop_zone').style.backgroundImage = 'url(' + event.target.result + ')';
+        document.getElementById('drop_zone').style.backgroundSize = 'contain';
+        document.getElementById('drop_zone').style.backgroundRepeat = 'no-repeat';
+        document.getElementById('drop_zone').style.backgroundPosition = 'center';
+      };
+      reader.readAsDataURL(files[0]);
+    }
+
+    function handleDragOver(evt) {
+      evt.stopPropagation();
+      evt.preventDefault();
+      evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
+    }
+
+    // Setup the drag and drop listeners.
+    const dropZone = document.getElementById('drop_zone');
+    dropZone.addEventListener('dragover', handleDragOver, false);
+    dropZone.addEventListener('drop', handleFileSelect, false);
+    dropZone.addEventListener('click', function() {
+      document.getElementById('imageFile').click();
+    }, false);
+
+    function compressImage() {
+      const fileInput = document.getElementById('imageFile');
+      const file = fileInput.files[0];
+      if (!file) {
+        alert('请选择一个图片文件。');
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const img = new Image();
+        img.onload = function() {
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+          // Set the canvas dimensions to the user-specified dimensions
+          const userWidth = document.getElementById('imageWidth').value || img.width;
+          const userHeight = document.getElementById('imageHeight').value || img.height;
+          const autoWidth = document.getElementById('autoWidth').checked;
+          const autoHeight = document.getElementById('autoHeight').checked;
+          const aspectRatio = img.width / img.height;
+          if (autoWidth) {
+            canvas.width = userHeight * aspectRatio;
+            canvas.height = userHeight;
+          } else if (autoHeight) {
+            canvas.height = userWidth / aspectRatio;
+            canvas.width = userWidth;
+          } else {
+            canvas.width = userWidth;
+            canvas.height = userHeight;
+          }
+          // Draw the image onto the canvas
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          // Compress the image
+          const format = document.getElementById('imageFormat').value;
+          const quality = document.getElementById('imageQuality').value;
+          try {
+            dataUrl = canvas.toDataURL(format, quality);
+            // Show the view and download buttons
+            document.getElementById('viewButton').style.display = 'inline';
+            document.getElementById('downloadButton').style.display = 'inline';
+          } catch (error) {
+            alert('无法压缩图片：' + error.message);
+          }
+        }
+        img.src = event.target.result;
+      }
+      reader.readAsDataURL(file);
+    }
+
+    function viewImage() {
+      // Open the compressed image in a new tab
+      const win = window.open("", "_blank");
+      const img = new Image();
+      img.src = dataUrl;
+      win.document.write(img.outerHTML);
+      alert('已在新标签打开');
+    }
+
+    function downloadImage() {
+      const url = dataUrl;
+      const filename = 'compressed_image.' + document.getElementById('imageFormat').value.split('/')[1];
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+    function updateWidth() {
+      const autoWidth = document.getElementById('autoWidth').checked;
+      document.getElementById('imageWidth').disabled = autoWidth;
+    }
+
+    function updateHeight() {
+      const autoHeight = document.getElementById('autoHeight').checked;
+      document.getElementById('imageHeight').disabled = autoHeight;
+    }
+  </script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
