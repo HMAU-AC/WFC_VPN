@@ -33,7 +33,7 @@ if __name__ == "__main__":
         --primary-color: rgba(0, 123, 255, 0.6);
         --success-color: rgba(40, 167, 69, 0.6);
         --light-color: rgba(248, 249, 250, 0.6);
-        --dark-color: rgba(52, 58, 64, 0.6);
+        --dark-color: rgba(52, 58, 64);
     }
     body {
         background-image: url('./Flie-html/img/backgroud.jpg');
@@ -58,8 +58,7 @@ if __name__ == "__main__":
         margin: 0;
         padding: 0.5rem;
         border: 1px solid var(--dark-color);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        background-color: rgb(255 255 255 / 0%);
     }
     .list-group-item:first-child {
         border-radius: .25rem 0 0 .25rem;
@@ -70,8 +69,6 @@ if __name__ == "__main__":
         padding: 0.5rem;
         margin: 0;
         border: 1px solid var(--dark-color);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
     }
     .btn-open {
         border-width: 1px 0;
