@@ -75,40 +75,14 @@ if __name__ == "__main__":
             border-style: solid;
             border-color: #ddd;
         }
-
-        @media (prefers-color-scheme: dark) {
-            /* 在这里添加暗黑模式的样式 */
-            body {
-                background-color: #333;
-                color: #fff;
-            }
-            .card {
-                background-color: #444;
-            }
-            .list-group-item {
-                background-color: #555;
-            }
-            .btn-open {
-                background-color: #666;
-                color: #fff;
-            }
-            .btn-copy {
-                background-color: #666;
-                color: #fff;
-            }
-        }
         .carousel.slide.rounded {
             margin-bottom: 1rem;
         }
         .carousel-item img {
             border-radius: 10px;
         }
-        .footer-container {
-            text-align: center;
-        }
-        .footertop {
-            margin-bottom: 20px;
-        }
+        
+        
         .image-container {
             text-align: center;
         }
@@ -192,13 +166,19 @@ if __name__ == "__main__":
     </script>
      <div class="footertop"></div>
     <footer class="footer mt-auto py-3 bg-light">
-        <div class="footer-container">
-            <div class="image-container">
-                <img src="./Flie-html/img/github.webp" alt="Github">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 footer-container">
+                <div class="image-container">
+                    <img src="./Flie-html/img/github.webp" alt="Github">
+                </div>
             </div>
-            <span class="text-muted">© 2023 爱吃素的胖子. All rights reserved.</span>
+            <div class="col-12 col-sm-6 col-md-8 col-lg-9 col-xl-10">
+                <span class="text-muted">© 2023 爱吃素的胖子. All rights reserved.</span>
+            </div>
         </div>
-    </footer>
+    </div>
+</footer>
 </body>
 </html>
 """
