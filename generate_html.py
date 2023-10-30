@@ -53,8 +53,7 @@ if __name__ == "__main__":
             transform: translate3d(-50%, -50%, 600px) scale(0);
             opacity: 0;
         }
-        10% {
-            transform: scale(1);
+        50% {
             opacity: 1;
         }
         100% {
@@ -129,14 +128,15 @@ if __name__ == "__main__":
 
     js_content = """
         var starCount = 100;  // 设置星星的数量
-            for (var i = 0; i < starCount; i++) {
-                var star = document.createElement('div');
-                star.className = 'star';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.left = Math.random() * 100 + '%';
-                star.style.animationDelay = Math.random() * 5 + 's';
-                document.body.appendChild(star);
-            }
+        for (var i = 0; i < starCount; i++) {
+            var star = document.createElement('div');
+            star.className = 'star';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.animationDuration = Math.random() * 5 + 3 + 's';  // 设置动画持续时间为3-8秒
+            star.style.animationDelay = Math.random() * 2 + 's';  // 设置动画延迟时间为0-2秒
+            document.body.appendChild(star);
+        }
         document.addEventListener('DOMContentLoaded', (event) => {
             // 初始化Clipboard.js
             var clipboard = new ClipboardJS('.btn-copy');
