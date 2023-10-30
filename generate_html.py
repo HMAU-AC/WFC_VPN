@@ -36,7 +36,7 @@ if __name__ == "__main__":
         --dark-color: rgb(62 71 79 / 16%);
     }
     body {
-        background-image: url('./Flie-html/img/backgroud.jpg');
+        background-image: url('./Flie-html/img/gf_WH_800x400px.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
