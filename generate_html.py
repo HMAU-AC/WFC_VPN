@@ -40,6 +40,12 @@ if __name__ == "__main__":
         background-repeat: no-repeat;
         background-size: cover;
     }
+    .card {
+        background-color: rgb(255 255 255 / 60%);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        ;
+    }
     .folder-label {
         font-size: 1.1rem;
         text-align: center;
