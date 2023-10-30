@@ -81,9 +81,7 @@ if __name__ == "__main__":
         .carousel-item img {
             border-radius: 10px;
         }
-        
-
-        .image-container {
+        footer.footer.mt-auto.py-3.bg-light {
             text-align: center;
         }
         .image-container img {
