@@ -1,3 +1,4 @@
+# 未添加最后修改时间的版本
 import os
 import htmlmin
 import csscompressor
@@ -75,7 +76,73 @@ if __name__ == "__main__":
             border-style: solid;
             border-color: #ddd;
         }
-
+        @media (min-width: 576px) {
+            .folder-label {
+                font-size: 1.2rem;
+            }
+        }
+        @media (min-width: 768px) {
+            .folder-label {
+                font-size: 1.4rem;
+            }
+        }
+        @media (min-width: 767px) and (max-width: 991px) {
+            .folder-label {
+                font-size: 1.6rem;
+                line-height: 2.0;
+            }
+            .container {
+                max-width: 767px;
+            }
+            .col-lg-4 {
+                flex: 0 0 767px;
+                max-width: 767px;
+            }
+        }
+        @media (min-width: 992px) {
+            .folder-label {
+                font-size: 1.5rem;
+            }
+        }
+        @media (min-width: 991px) and (max-width: 1023px) {
+            .folder-label {
+                font-size: 1.6rem;
+                line-height: 1.1;
+            }
+            .container {
+                max-width: 991px;
+            }
+            .col-lg-4 {
+                flex: 0 0 991px;
+                max-width: 991px;
+            }
+        }
+        @media (min-width: 1024px) and (max-width: 1200px) {
+            .folder-label {
+                font-size: 1.8rem;
+                line-height: 1.3;
+            }
+            .container {
+                max-width: 1024px;
+            }
+            .col-lg-4 {
+                flex: 0 0 1024px;
+                max-width: 1024px;
+            }
+        }
+        @media (min-width: 1200px) {
+            .folder-label {
+                font-size: 1.8rem;
+                line-height: 1.3;
+            }
+            .container {
+                max-width: 1200px;
+            }
+            .col-lg-4 {
+                flex: 0 0 1200px;
+                max-width: 1200px;
+            }
+        }
         @media (prefers-color-scheme: dark) {
             /* 在这里添加暗黑模式的样式 */
             body {
@@ -164,9 +231,13 @@ if __name__ == "__main__":
 </head>
 <body>
     <div class="container">
+         <!-- 添加提示文字 -->
+         <div class="alert alert-warning" role="alert">
+            青山不改，绿水长流，有缘江湖再见。
+        </div>
         <!-- 使用Bootstrap的row和col类来创建响应式布局 -->
         <div class="row">
-            <div class="col-12 col-sm-6 col-md-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <!-- 使用Bootstrap的card类来创建一个卡片 -->
                 <div class="card">
                     <div class="card-body">
@@ -178,7 +249,7 @@ if __name__ == "__main__":
                 </div>
             </div>
         </div>
-    </div>   
+    </div>    
     <!-- 其他的HTML代码... -->
     <!-- 引入jQuery -->
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
