@@ -36,7 +36,7 @@ if __name__ == "__main__":
         --border-color: rgb(62 71 79 / 16%);
     }
     body {
-        background-color: rgba(7, 10, 15, 1);
+        background-color: rgb(89 93 98);
         overflow: hidden;
         perspective: 1000px;
     }
@@ -50,15 +50,16 @@ if __name__ == "__main__":
     }
     @keyframes moveStar {
         0% {
-            transform: translate3d(-50%, -50%, 600px);
+            transform: translate3d(-50%, -50%, 600px) scale(0);
             opacity: 0;
         }
         10% {
+            transform: scale(1);
             opacity: 1;
         }
-    100% {
-        transform: translate3d(100%, 100%, -600px);
-        opacity: 0;
+        100% {
+            transform: translate3d(100%, 100%, -600px) scale(0);
+            opacity: 0;
         }
     }
 
