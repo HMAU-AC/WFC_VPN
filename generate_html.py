@@ -33,7 +33,7 @@ if __name__ == "__main__":
         --primary-color: rgba(0, 123, 255, 0.6);
         --success-color: rgba(40, 167, 69, 0.6);
         --light-color: rgba(248, 249, 250, 0.6);
-        --dark-color: rgba(52, 58, 64);
+        --dark-color: rgb(62 71 79 / 16%);
     }
     body {
         background-image: url('./Flie-html/img/backgroud.jpg');
