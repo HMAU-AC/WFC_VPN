@@ -30,7 +30,7 @@ if __name__ == "__main__":
     # CSS和JavaScript内容
     css_content = """
     :root {
-        --primary-color: rgba(0, 123, 255, 0.6);
+        --primary-color: rgb(0 31 63 / 60%);
         --success-color: rgba(40, 167, 69, 0.6);
         --light-color: rgba(248, 249, 250, 0.6);
         --dark-color: rgb(62 71 79 / 16%);
