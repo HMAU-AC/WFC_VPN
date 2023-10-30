@@ -35,6 +35,11 @@ if __name__ == "__main__":
         --light-color: rgba(248, 249, 250, 0.6);
         --dark-color: rgba(52, 58, 64, 0.6);
     }
+    body {
+        background-image: url('./Flie-html/img/backgroud.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     .folder-label {
         font-size: 1.1rem;
         text-align: center;
