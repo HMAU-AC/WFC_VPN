@@ -36,7 +36,7 @@ if __name__ == "__main__":
         --border-color: rgb(62 71 79 / 16%);
     }
     body {
-        background-color: rgb(89 93 98);
+        background-color: rgb(89, 93, 98);
         overflow: hidden;
         perspective: 1000px;
     }
