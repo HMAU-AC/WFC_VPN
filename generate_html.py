@@ -33,13 +33,35 @@ if __name__ == "__main__":
         --primary-color: rgb(0 31 63 / 60%);
         --success-color: rgba(40, 167, 69, 0.6);
         --light-color: rgba(248, 249, 250, 0.6);
-        --dark-color: rgb(62 71 79 / 16%);
+        --border-color: rgb(62 71 79 / 16%);
     }
     body {
-        background-image: url('./Flie-html/img/gf_WH_800x400px.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-color: rgba(7, 10, 15, 1);
+        overflow: hidden;
+        perspective: 1000px;
     }
+    .star {
+        position: absolute;
+        background-color: #fff;
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        animation: moveStar 5s linear infinite;
+    }
+    @keyframes moveStar {
+        0% {
+            transform: translate3d(-50%, -50%, 600px);
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+    100% {
+        transform: translate3d(100%, 100%, -600px);
+        opacity: 0;
+        }
+    }
+
     .card {
         background-color: rgb(255 255 255 / 60%);
         backdrop-filter: blur(10px);
@@ -57,7 +79,7 @@ if __name__ == "__main__":
     .list-group-item {
         margin: 0;
         padding: 0.5rem;
-        border: 1px solid var(--dark-color);
+        border: 1px solid var(--border-color);
         background-color: rgb(255 255 255 / 0%);
     }
     .list-group-item:first-child {
@@ -68,7 +90,7 @@ if __name__ == "__main__":
         align-self: stretch;
         padding: 0.5rem;
         margin: 0;
-        border: 1px solid var(--dark-color);
+        border: 1px solid var(--border-color);
     }
     .btn-open {
         border-width: 1px 0;
@@ -105,6 +127,15 @@ if __name__ == "__main__":
 
 
     js_content = """
+        var starCount = 100;  // 设置星星的数量
+            for (var i = 0; i < starCount; i++) {
+                var star = document.createElement('div');
+                star.className = 'star';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 5 + 's';
+                document.body.appendChild(star);
+            }
         document.addEventListener('DOMContentLoaded', (event) => {
             // 初始化Clipboard.js
             var clipboard = new ClipboardJS('.btn-copy');
