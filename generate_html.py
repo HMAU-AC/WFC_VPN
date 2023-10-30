@@ -82,7 +82,7 @@ if __name__ == "__main__":
             border-radius: 10px;
         }
         
-        
+
         .image-container {
             text-align: center;
         }
@@ -173,7 +173,7 @@ if __name__ == "__main__":
                     <img src="./Flie-html/img/github.webp" alt="Github">
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-8 col-lg-9 col-xl-10">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <span class="text-muted">© 2023 爱吃素的胖子. All rights reserved.</span>
             </div>
         </div>
