@@ -29,68 +29,71 @@ if __name__ == "__main__":
     links = generate_links('.', repo_url, ignore_files=['.pyc', '.git', '.gitignore', '.github', 'html.css', 'index.html', '.py', 'README.md', 'Flie-html', '.json', '.config.json', 'Loon', 'Icon'])
     # CSS和JavaScript内容
     css_content = """
-        .folder-label {
-            font-size: 1.1rem;
-            text-align: center;
-            line-height: 2.2;
-        }
-        .list-group-item {
-            margin: 0;
-            padding: 0.5rem;
-            border-width: 1px 0 1px 1px;
-            border-style: solid;
-            border-color: #ddd;
-        }
-        .list-group-item:first-child {
-            border-top-left-radius: .25rem;
-            border-bottom-left-radius: .25rem;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-        .d-flex {
-            height: auto;
-        }
-        .btn-open {
-            border-radius: 0;
-            align-self: stretch;
-            padding-top: 0;
-            padding-bottom: 0;
-            margin: 0;
-            padding: 0.5rem;
-            border-width: 1px 0 1px 0;
-            border-style: solid;
-            border-color: #ddd;
-        }
-        .btn-copy {
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-            border-top-right-radius: .25rem;
-            border-bottom-right-radius: .25rem;
-            align-self: stretch;
-            padding-top: 0;
-            padding-bottom: 0;
-            margin: 0;
-            padding: 0.5rem;
-            border-width: 1px 1px 1px 0;
-            border-style: solid;
-            border-color: #ddd;
-        }
-        .carousel.slide.rounded {
-            margin-bottom: 1rem;
-        }
-        .carousel-item img {
-            border-radius: 10px;
-        }
-        footer.footer.mt-auto.py-3.bg-light {
-            text-align: center;
-        }
-        .image-container img {
-            height: auto;
-            filter: blur(10px);
-            transition: filter 4s;
-            margin-bottom: .5rem;
-        }
-    """
+    :root {
+        --primary-color: rgba(0, 123, 255, 0.6);
+        --success-color: rgba(40, 167, 69, 0.6);
+        --light-color: rgba(248, 249, 250, 0.6);
+        --dark-color: rgba(52, 58, 64, 0.6);
+    }
+    .folder-label {
+        font-size: 1.1rem;
+        text-align: center;
+        line-height: 2.2;
+        background-color: var(--primary-color);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    .list-group-item {
+        margin: 0;
+        padding: 0.5rem;
+        border: 1px solid var(--dark-color);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    .list-group-item:first-child {
+        border-radius: .25rem 0 0 .25rem;
+    }
+    .btn-open, .btn-copy {
+        border-radius: 0;
+        align-self: stretch;
+        padding: 0.5rem;
+        margin: 0;
+        border: 1px solid var(--dark-color);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    .btn-open {
+        border-width: 1px 0;
+        background-color: var(--primary-color);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    .btn-copy {
+        border-width: 1px 1px 1px 0;
+        border-radius: 0 .25rem .25rem 0;
+        background-color: var(--success-color);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    .carousel.slide.rounded {
+        margin-bottom: 1rem;
+    }
+    .carousel-item img, .image-container img {
+        border-radius: 10px;
+        height: auto;
+    }
+    .image-container img {
+        filter: blur(10px);
+        transition: filter 4s;
+        margin-bottom: .5rem;
+    }
+    footer.footer.mt-auto.py-3.bg-light {
+        text-align: center;
+        background-color: var(--light-color);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+"""
 
 
     js_content = """
