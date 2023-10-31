@@ -58,7 +58,7 @@ if __name__ == "__main__":
         opacity: 0;
         z-index: -998;
     }
-    .top-img.text-center {
+    .top-img {
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
         padding: .4rem;
@@ -68,14 +68,12 @@ if __name__ == "__main__":
         border-radius: .25rem;
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        z-index: -996;
     }
     .card {
         background-color: rgb(255 255 255 / 60%);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        z-index: -996;
-        ;
+  
     }
     .folder-label {
         font-size: 1.1rem;
@@ -147,16 +145,16 @@ if __name__ == "__main__":
                 document.getElementById('background-large').style.opacity = '1';
             };
         });
-
+        
         document.addEventListener('DOMContentLoaded', () => {
             // 初始化Clipboard.js
             var clipboard = new ClipboardJS('.btn-copy');
-
+        
             // 添加复制成功的回调函数
             clipboard.on('success', e => {
                 e.clearSelection();
             });
-
+        
             // 添加复制失败的回调函数
             clipboard.on('error', () => {});
         });
@@ -190,7 +188,7 @@ if __name__ == "__main__":
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <!-- 添加一张首页大图 -->
-                    <div class="top-img text-center">
+                    <div class="top-img">
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                 <img src="./Flie-html/img/tg1.jpg" class="img-fluid" alt="Top Image" draggable="false">
