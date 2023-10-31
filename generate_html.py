@@ -45,8 +45,8 @@ if __name__ == "__main__":
 
     .card {
         background-color: rgb(255 255 255 / 60%);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
         ;
     }
     .folder-label {
@@ -54,8 +54,8 @@ if __name__ == "__main__":
         text-align: center;
         line-height: 2.2;
         background-color: var(--primary-color);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
     }
     .list-group-item {
         margin: 0;
@@ -76,15 +76,15 @@ if __name__ == "__main__":
     .btn-open {
         border-width: 1px 0;
         background-color: var(--primary-color);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
     }
     .btn-copy {
         border-width: 1px 1px 1px 0;
         border-radius: 0 .25rem .25rem 0;
         background-color: var(--success-color);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
     }
     .carousel.slide.rounded {
         margin-bottom: 1rem;
@@ -94,15 +94,17 @@ if __name__ == "__main__":
         height: auto;
     }
     .image-container img {
-        filter: blur(10px);
+        filter: blur(40px);
         transition: filter 4s;
         margin-bottom: .5rem;
     }
-    .footer {
-        text-align: center;
-        background-color: var(--light-color);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+    footer {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        padding: 1.25rem;
+        background: rgb(255 255 255 / 60%);
+        margin-top: .5rem;
+        border-radius: .25rem;
     }
 """
 
