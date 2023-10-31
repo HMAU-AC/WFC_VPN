@@ -35,8 +35,8 @@ if __name__ == "__main__":
         --light-color: rgba(248, 249, 250, 0.6);
         --border-color: rgb(62 71 79 / 16%);
     }
-    .contion {
-        background-image: url('./Flie-html/img/Tunlita.jpg');
+    #background-small {
+        background-image: url('./Flie-html/img/Tunlita-blur.webp');
         background-position: center center;
         overflow-x: hidden;
         background-size: cover;
@@ -46,7 +46,18 @@ if __name__ == "__main__":
         background-attachment: fixed;
         user-select: none;
     }
-    .contion {
+    #background-large {
+        background-image: none;
+        background-position: center center;
+        overflow-x: hidden;
+        background-size: cover;
+        background-clip: border-box;
+        background-origin: border-box;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        user-select: none;
+    }
+    .container {
         opacity: 0;
         transition: opacity 2s ease-in-out;
     }
@@ -131,17 +142,25 @@ if __name__ == "__main__":
 
     js_content = """
         window.addEventListener('load', function() {
-            document.querySelector('.contion').style.opacity = "1";
+            var img = new Image();
+            img.src = './Flie-html/img/Tunlita.jpg';
+            img.onload = function() {
+                document.getElementById('background-large').style.backgroundImage = 'url(' + img.src + ')';
+                document.getElementById('background-small').style.display = 'none';
+            };
+        });
+        window.addEventListener('load', function() {
+            document.querySelector('.container').style.opacity = "1";
         });
         document.addEventListener('DOMContentLoaded', () => {
             // 初始化Clipboard.js
             var clipboard = new ClipboardJS('.btn-copy');
-        
+
             // 添加复制成功的回调函数
             clipboard.on('success', e => {
                 e.clearSelection();
             });
-        
+
             // 添加复制失败的回调函数
             clipboard.on('error', () => {});
         });
@@ -200,6 +219,8 @@ if __name__ == "__main__":
             </div>
         </div>
     </div>
+    <div id="background-small"></div>
+    <div id="background-large"></div>
     <!-- 其他的HTML代码... -->
     <!-- 引入jQuery -->
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
