@@ -126,11 +126,13 @@ if __name__ == "__main__":
 
     js_content = """
         window.addEventListener('load', function() {
-            var img = new Image();
-            img.src = './Flie-html/img/Tunlita.webp';
-            img.onload = function() {
-                document.body.style.backgroundImage = 'url(' + img.src + ')';
-            };
+            setTimeout(function() {
+                var img = new Image();
+                img.src = './Flie-html/img/Tunlita.webp';
+                img.onload = function() {
+                    document.body.style.backgroundImage = 'url(' + img.src + ')';
+                };
+            }, 2000); // 2秒的延迟
         });
         document.addEventListener('DOMContentLoaded', (event) => {
             // 初始化Clipboard.js
