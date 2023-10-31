@@ -36,7 +36,7 @@ if __name__ == "__main__":
         --border-color: rgb(62 71 79 / 16%);
     }
     body {
-        animation: fade-in 2s ease-out;
+        animation: fade-in 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         background-image: url('./Flie-html/img/Tunlita.webp');
         background-position: center center;
         background-size: cover;
