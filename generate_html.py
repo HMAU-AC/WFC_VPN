@@ -35,6 +35,15 @@ if __name__ == "__main__":
         --light-color: rgba(248, 249, 250, 0.6);
         --border-color: rgb(62 71 79 / 16%);
     }
+    /* 深色主题 */
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --primary-color: rgb(0 31 63 / 60%);
+            --success-color: rgba(40, 167, 69, 0.6);
+            --light-color: rgba(101, 101, 101, 0.6);
+            --border-color: rgb(62 71 79 / 16%);
+        }
+    }
     body {
         user-select: none;
     }
@@ -70,7 +79,7 @@ if __name__ == "__main__":
         -webkit-backdrop-filter: blur(20px);
     }
     .card {
-        background-color: rgb(255 255 255 / 60%);
+        background: var(--light-color);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
   
