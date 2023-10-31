@@ -44,7 +44,7 @@ if __name__ == "__main__":
     .top-img.text-center {
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
-        padding: 1.25rem;
+        padding: .4rem;
         background: var(--light-color);
         margin-top: .5rem;
         margin-bottom: .5rem;
@@ -164,7 +164,7 @@ if __name__ == "__main__":
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <!-- 添加一张首页大图 -->
                     <div class="top-img text-center">
-                        <img src="./Flie-html/img/Tunlita.jpg" class="img-fluid" alt="Top Image">
+                        <img src="./Flie-html/img/tg1.jpg" class="img-fluid" alt="Top Image">
                     </div>
                 <!-- 使用Bootstrap的card类来创建一个卡片 -->
                 <div class="card">
