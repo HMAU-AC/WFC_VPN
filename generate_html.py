@@ -105,6 +105,8 @@ if __name__ == "__main__":
         background: rgb(255 255 255 / 60%);
         margin-top: .5rem;
         border-radius: .25rem;
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
     }
 """
 
@@ -122,11 +124,6 @@ if __name__ == "__main__":
             clipboard.on('error', function(e) {
                 console.log('复制失败');
             });
-
-            // 设置定时器，使图片在1秒后变为清晰
-            setTimeout(function() {
-                document.querySelector('.image-container img').style.filter = 'blur(0)';
-            }, 1000);
         });
     """
    # 使用csscompressor和jsmin压缩CSS和JavaScript内容
