@@ -152,6 +152,9 @@ if __name__ == "__main__":
         <!-- 使用Bootstrap的row和col类来创建响应式布局 -->
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="top-img text-center">
+                        <img src="https://imgtool.net/cdn/image/2023/20230401_1.jpg" class="img-fluid" alt="Top Image">
+                    </div>
                 <!-- 使用Bootstrap的card类来创建一个卡片 -->
                 <div class="card">
                     <div class="card-body">
