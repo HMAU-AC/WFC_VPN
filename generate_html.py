@@ -43,6 +43,9 @@ if __name__ == "__main__":
             --light-color: rgba(101, 101, 101, 0.6);
             --border-color: rgb(62 71 79 / 16%);
         }
+        #background-small, #background-large, .top-img {
+            opacity: .75;
+        }
     }
     body {
         user-select: none;
