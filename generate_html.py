@@ -119,6 +119,14 @@ if __name__ == "__main__":
 
 
     js_content = """
+        var rain = document.getElementById('rain');
+            for (var i = 0; i < 100; i++) {
+                var drop = document.createElement('div');
+                drop.style.left = Math.random() * 100 + 'vw';
+                drop.style.animationDuration = Math.random() * 2 + 1 + 's';
+                drop.style.animationDelay = Math.random() * 2 + 's';
+                rain.appendChild(drop);
+            }
         document.addEventListener('DOMContentLoaded', (event) => {
             // 初始化Clipboard.js
             var clipboard = new ClipboardJS('.btn-copy');
@@ -155,6 +163,7 @@ if __name__ == "__main__":
     </style>
 </head>
 <body>
+<div id="rain">
     <div class="container">
         <!-- 使用Bootstrap的row和col类来创建响应式布局 -->
         <div class="row">
@@ -187,6 +196,7 @@ if __name__ == "__main__":
             </div>
         </div>
     </div>
+</div>
     <!-- 其他的HTML代码... -->
     <!-- 引入jQuery -->
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
