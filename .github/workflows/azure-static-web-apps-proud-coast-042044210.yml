@@ -30,6 +30,7 @@ jobs:
 
       - name: Remove unnecessary files
         run: |
+          rm -rf .git
           rm -rf .github
           rm -rf .vscode
           rm generate_html.py
