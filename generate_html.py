@@ -44,9 +44,19 @@ if __name__ == "__main__":
             --border-color: rgb(62 71 79 / 16%);
         }
         #background-small, #background-large, .top-img {
-            opacity: .75;
+            filter: brightness(65%);
+        }
+        .text-muted {
+            color: #9fa3a7!important;
+        }
+        .badge-primary {
+            color: #d5d5d5!important;
+        }
+        a.list-group-item.flex-grow-1 {
+            color: #c7c7c7;
         }
     }
+
     body {
         user-select: none;
     }
