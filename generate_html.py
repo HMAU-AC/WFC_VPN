@@ -115,35 +115,10 @@ if __name__ == "__main__":
         backdrop-filter: blur(40px);
         -webkit-backdrop-filter: blur(40px);
     }
-    /* 雨滴特效start */
-    #rain {
-        position: absolute;
-        top: 100%;
-        width: 2px;
-        height: 180px;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
-        animation: fall linear infinite;
-        z-index: -1;
-    }
-    
-    @keyframes fall {
-        to {
-            transform: translateY(100vh);
-        }
-    }
-    /* 雨滴特效end */
 """
 
 
     js_content = """
-        var rain = document.getElementById('rain');
-            for (var i = 0; i < 100; i++) {
-                var drop = document.createElement('div');
-                drop.style.left = Math.random() * 100 + 'vw';
-                drop.style.animationDuration = Math.random() * 2 + 1 + 's';
-                drop.style.animationDelay = Math.random() * 2 + 's';
-                rain.appendChild(drop);
-            }
         document.addEventListener('DOMContentLoaded', (event) => {
             // 初始化Clipboard.js
             var clipboard = new ClipboardJS('.btn-copy');
@@ -180,7 +155,6 @@ if __name__ == "__main__":
     </style>
 </head>
 <body>
-
     <div class="container">
         <!-- 使用Bootstrap的row和col类来创建响应式布局 -->
         <div class="row">
@@ -213,8 +187,6 @@ if __name__ == "__main__":
             </div>
         </div>
     </div>
-    <!-- rain下雨特效div -->
-    <div id="rain"></div>
     <!-- 其他的HTML代码... -->
     <!-- 引入jQuery -->
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
