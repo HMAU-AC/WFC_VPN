@@ -44,6 +44,9 @@ if __name__ == "__main__":
         user-select: none;
         transition: background-image 2s ease-in-out;
     }
+    .loaded {
+        opacity: 1 !important;
+    }
     .top-img.text-center {
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
@@ -125,6 +128,9 @@ if __name__ == "__main__":
 
 
     js_content = """
+        window.onload = function() {
+            document.querySelector('.container').classList.add('loaded');
+        };
         window.addEventListener('load', function() {
             setTimeout(function() {
                 var img = new Image();
@@ -170,7 +176,7 @@ if __name__ == "__main__":
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" style="opacity: 0;">
         <!-- 使用Bootstrap的row和col类来创建响应式布局 -->
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
