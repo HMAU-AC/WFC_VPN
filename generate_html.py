@@ -163,12 +163,12 @@ if __name__ == "__main__":
     <title>文件目录</title>
     <link rel="shortcut icon" id="favicon" href="./Flie-html/img/dd_blur.png">
     <!-- 引入Bootstrap CSS -->
-    <style>
-        {minified_css}
-    </style>
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- 引入Font Awesome -->
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        {minified_css}
+    </style>
 </head>
 <body>
     <div class="container">
