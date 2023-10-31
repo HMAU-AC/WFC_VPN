@@ -179,8 +179,10 @@ if __name__ == "__main__":
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <!-- 添加一张首页大图 -->
                     <div class="top-img text-center">
-                        <div class="img-wrapper" data-caption="图片来源:彼岸花图库">
-                            <img src="./Flie-html/img/tg1.jpg" class="img-fluid" alt="Top Image">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 img-wrapper" data-caption="图片来源:彼岸花图库">
+                                <img src="./Flie-html/img/tg1.jpg" class="img-fluid" alt="Top Image">
+                            </div>
                         </div>
                     </div>
                 <!-- 使用Bootstrap的card类来创建一个卡片 -->
