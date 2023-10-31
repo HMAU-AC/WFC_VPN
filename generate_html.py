@@ -133,18 +133,17 @@ if __name__ == "__main__":
         window.addEventListener('load', function() {
             document.querySelector('.contion').style.opacity = "1";
         });
-        document.addEventListener('DOMContentLoaded', (event) => {
+        document.addEventListener('DOMContentLoaded', () => {
             // 初始化Clipboard.js
             var clipboard = new ClipboardJS('.btn-copy');
+        
             // 添加复制成功的回调函数
-            clipboard.on('success', function(e) {
-                console.log('复制成功!');
+            clipboard.on('success', e => {
                 e.clearSelection();
             });
+        
             // 添加复制失败的回调函数
-            clipboard.on('error', function(e) {
-                console.log('复制失败');
-            });
+            clipboard.on('error', () => {});
         });
     """
    # 使用csscompressor和jsmin压缩CSS和JavaScript内容
