@@ -36,12 +36,13 @@ if __name__ == "__main__":
         --border-color: rgb(62 71 79 / 16%);
     }
     body {
-        background-image: url('./Flie-html/img/Tunlita.webp');
+        background-image: url('./Flie-html/img/Tunlita-blur.webp');
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         user-select: none;
+        transition: background-image 2s ease-in-out;
     }
     .top-img.text-center {
         -ms-flex: 1 1 auto;
@@ -124,6 +125,13 @@ if __name__ == "__main__":
 
 
     js_content = """
+        window.addEventListener('load', function() {
+            var img = new Image();
+            img.src = './Flie-html/img/Tunlita.webp';
+            img.onload = function() {
+                document.body.style.backgroundImage = 'url(' + img.src + ')';
+            };
+        });
         document.addEventListener('DOMContentLoaded', (event) => {
             // 初始化Clipboard.js
             var clipboard = new ClipboardJS('.btn-copy');
