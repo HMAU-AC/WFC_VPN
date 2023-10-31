@@ -36,7 +36,7 @@ if __name__ == "__main__":
         --border-color: rgb(62 71 79 / 16%);
     }
     body {
-        background-image: url('./Flie-html/img/Tunlita-blur.webp');
+        background-image: url('./Flie-html/img/Tunlita.jpg');
         background-position: center center;
         overflow-x: hidden;
         background-size: cover;
@@ -45,7 +45,8 @@ if __name__ == "__main__":
         background-repeat: no-repeat;
         background-attachment: fixed;
         user-select: none;
-        transition: background-image 2s ease-in-out;
+        filter: blur(10px);
+        transition: filter 2s ease-in-out;
     }
     .container {
         opacity: 0;
@@ -138,8 +139,7 @@ if __name__ == "__main__":
             var img = new Image();
             img.src = './Flie-html/img/Tunlita.jpg';
             img.onload = function() {
-                document.body.style.backgroundImage = 'url(' + img.src + ')';
-                document.body.style.transform = 'scale(1.1)';
+                document.body.style.filter = 'none';
             };
         });
         document.addEventListener('DOMContentLoaded', (event) => {
