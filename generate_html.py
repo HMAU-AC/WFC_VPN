@@ -36,13 +36,9 @@ if __name__ == "__main__":
         --border-color: rgb(62 71 79 / 16%);
     }
     body {
-        background-image: url('./Flie-html/img/Tunlita-blur.webp');
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+
         user-select: none;
-        transition: background-image 2s ease-in-out;
+
     }
     body::before, body::after {
         content: "";
