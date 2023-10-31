@@ -134,6 +134,20 @@ if __name__ == "__main__":
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
     }
+    /* 设置滚动条的背景 */
+    ::-webkit-scrollbar {
+      background-color: transparent;
+    }
+    
+    /* 设置滚动条的轨道背景 */
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    
+    /* 设置滚动条的滑块背景 */
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
 """
 
 
