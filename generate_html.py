@@ -35,8 +35,16 @@ if __name__ == "__main__":
         --light-color: rgba(248, 249, 250, 0.6);
         --border-color: rgb(62 71 79 / 16%);
     }
+    body {
+        user-select: none;
+    }
     #background-small {
         background-image: url('./Flie-html/img/Tunlita-blur.webp');
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         background-position: center center;
         overflow-x: hidden;
         background-size: cover;
@@ -48,6 +56,11 @@ if __name__ == "__main__":
     }
     #background-large {
         background-image: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         background-position: center center;
         overflow-x: hidden;
         background-size: cover;
@@ -186,7 +199,7 @@ if __name__ == "__main__":
         {minified_css}
     </style>
 </head>
-<body class="contion">
+<body>
 <div id="background-small"></div>
 <div id="background-large"></div>
     <div class="container">
