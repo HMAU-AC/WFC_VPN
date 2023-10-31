@@ -51,14 +51,13 @@ if __name__ == "__main__":
     }
     #background-small {
         background-image: url('./Flie-html/img/Tunlita-blur.webp');
-        z-index: 2;
+        z-index: -999;
     }
     #background-large {
         background-image: url('./Flie-html/img/Tunlita.jpg');
         opacity: 0;
-        z-index: 1;
+        z-index: -998;
     }
-
     .top-img.text-center {
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
@@ -139,6 +138,14 @@ if __name__ == "__main__":
 
 
     js_content = """
+        window.addEventListener('load', function() {
+            var img = new Image();
+            img.src = './Flie-html/img/Tunlita.jpg';
+            img.onload = function() {
+                document.getElementById('background-large').style.opacity = '1';
+            };
+        });
+        
         document.addEventListener('DOMContentLoaded', () => {
             // 初始化Clipboard.js
             var clipboard = new ClipboardJS('.btn-copy');
@@ -150,13 +157,6 @@ if __name__ == "__main__":
         
             // 添加复制失败的回调函数
             clipboard.on('error', () => {});
-        
-            // 加载大图
-            var img = new Image();
-            img.src = './Flie-html/img/Tunlita.jpg';
-            img.onload = function() {
-                document.getElementById('background-large').style.opacity = '1';
-            };
         });
     """
    # 使用csscompressor和jsmin压缩CSS和JavaScript内容
