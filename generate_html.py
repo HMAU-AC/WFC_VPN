@@ -36,34 +36,12 @@ if __name__ == "__main__":
         --border-color: rgb(62 71 79 / 16%);
     }
     body {
-        animation: fade-in 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        -webkit-animation: fade-in 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         background-image: url('./Flie-html/img/Tunlita.jpg');
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         user-select: none;
-    }
-    @keyframes fade-in {
-        0% {
-            filter: blur(10px);
-            opacity: 0;
-        }
-        100% {
-            filter: blur(0);
-            opacity: 1;
-        }
-    }
-    @-webkit-keyframes fade-in {
-        0% {
-            -webkit-filter: blur(10px);
-            opacity: 0;
-        }
-        100% {
-            -webkit-filter: blur(0);
-            opacity: 1;
-        }
     }
     .top-img.text-center {
         -ms-flex: 1 1 auto;
