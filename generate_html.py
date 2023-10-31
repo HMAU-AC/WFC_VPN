@@ -180,8 +180,7 @@ if __name__ == "__main__":
     </style>
 </head>
 <body>
-<!-- rain下雨特效div -->
-<div id="rain"></div>
+
     <div class="container">
         <!-- 使用Bootstrap的row和col类来创建响应式布局 -->
         <div class="row">
@@ -225,6 +224,7 @@ if __name__ == "__main__":
     <script>
         {minified_js}
     </script>
+    <!-- rain下雨特效div -->
     <div id="rain"></div>
 </body>
 </html>
