@@ -38,38 +38,23 @@ if __name__ == "__main__":
     body {
         user-select: none;
     }
+     #background-small, #background-large {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        transition: opacity 2s ease-in-out;
+    }
     #background-small {
         background-image: url('./Flie-html/img/Tunlita-blur.webp');
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-position: center center;
-        overflow-x: hidden;
-        background-size: cover;
-        background-clip: border-box;
-        background-origin: border-box;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        user-select: none;
+        z-index: 2;
     }
     #background-large {
-        background-image: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-position: center center;
-        overflow-x: hidden;
-        background-size: cover;
-        background-clip: border-box;
-        background-origin: border-box;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        user-select: none;
-        transition: background-image 3s ease-in-out;
+        opacity: 0;
+        z-index: 1;
     }
     .container {
         opacity: 0;
@@ -159,8 +144,7 @@ if __name__ == "__main__":
             var img = new Image();
             img.src = './Flie-html/img/Tunlita.jpg';
             img.onload = function() {
-                document.getElementById('background-large').style.backgroundImage = 'url(' + img.src + ')';
-                document.getElementById('background-small').style.display = 'none';
+                document.getElementById('background-2').style.opacity = '1';
             };
         });
         window.addEventListener('load', function() {
