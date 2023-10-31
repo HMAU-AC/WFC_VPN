@@ -48,7 +48,7 @@ if __name__ == "__main__":
         filter: blur(10px);
         transition: filter 2s ease-in-out;
     }
-    .container {
+    .contion {
         opacity: 0;
         transition: opacity 2s ease-in-out;
     }
@@ -133,7 +133,7 @@ if __name__ == "__main__":
 
     js_content = """
         window.addEventListener('load', function() {
-            document.querySelector('.container').style.opacity = "1";
+            document.querySelector('.contion').style.opacity = "1";
         });
         var img = new Image();
         img.src = './Flie-html/img/Tunlita.jpg';
@@ -176,7 +176,7 @@ if __name__ == "__main__":
         {minified_css}
     </style>
 </head>
-<body>
+<body class="contion">
     <div class="container">
         <!-- 使用Bootstrap的row和col类来创建响应式布局 -->
         <div class="row">
