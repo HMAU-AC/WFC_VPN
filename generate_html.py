@@ -144,7 +144,7 @@ if __name__ == "__main__":
             var img = new Image();
             img.src = './Flie-html/img/Tunlita.jpg';
             img.onload = function() {
-                document.getElementById('background-2').style.opacity = '1';
+                document.getElementById('background-large').style.opacity = '1';
             };
         });
         window.addEventListener('load', function() {
