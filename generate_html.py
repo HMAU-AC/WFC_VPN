@@ -166,6 +166,11 @@ if __name__ == "__main__":
                     </div>
                 </div>
             </div>
+            <div class="footer">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <span class="text-muted">© 2023 爱吃素的胖子. All rights reserved.</span>
+                </div>
+            </div>
         </div>
     </div>
     <!-- 其他的HTML代码... -->
