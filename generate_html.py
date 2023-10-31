@@ -36,7 +36,7 @@ if __name__ == "__main__":
         --border-color: rgb(62 71 79 / 16%);
     }
     body {
-        background-image: url('./Flie-html/img/Tunlita.jpg');
+        background-image: url('./Flie-html/img/Tunlita.webp');
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
