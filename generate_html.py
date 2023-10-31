@@ -38,7 +38,8 @@ if __name__ == "__main__":
     body {
         user-select: none;
     }
-     #background-small, #background-large {
+
+    #background-small, #background-large {
         position: fixed;
         top: 0;
         left: 0;
@@ -53,6 +54,7 @@ if __name__ == "__main__":
         z-index: 2;
     }
     #background-large {
+        background-image: url('./Flie-html/img/Tunlita.jpg');
         opacity: 0;
         z-index: 1;
     }
