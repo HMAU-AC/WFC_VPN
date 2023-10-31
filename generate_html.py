@@ -36,25 +36,14 @@ if __name__ == "__main__":
         --border-color: rgb(62 71 79 / 16%);
     }
     body {
-        position: relative;
-        overflow: hidden;
-        user-select: none;
-    }
-    body::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
         background-image: url('./Flie-html/img/Tunlita-blur.webp');
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
-        transition: transform 2s ease-in-out;
-        z-index: -1;
+        background-attachment: fixed;
+        user-select: none;
+        transition: background-image 2s ease-in-out;
     }
-    
     .container {
         opacity: 0;
         transition: opacity 2s ease-in-out;
