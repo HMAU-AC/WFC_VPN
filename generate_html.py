@@ -44,11 +44,14 @@ if __name__ == "__main__":
             --border-color: rgb(62, 71, 79, 0.16);
             --text-color: rgb(234, 232, 232) !important;
         }
-        #background-small, #background-large, .top-img ,img {
+        #background-small, #background-large, .img-fluid ,img {
             filter: brightness(65%);
         }
-        .text-muted, .badge-primary, a.list-group-item, .flex-grow-1, .fa-copy:before, .fa-external-link-alt:before {
+        .badge-primary, a.list-group-item, .flex-grow-1, .fa-copy:before, .fa-external-link-alt:before {
             color: var(--text-color);
+        }
+        .text-muted {
+            color: #babbbb!important;
         }
     }
 
@@ -140,6 +143,9 @@ if __name__ == "__main__":
         filter: blur(20px);
         transition: filter 4s;
         margin-bottom: .5rem;
+    }
+    img {
+        border-radius: .3rem;
     }
     footer {
         -ms-flex: 1 1 auto;
