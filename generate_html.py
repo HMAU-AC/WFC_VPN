@@ -115,6 +115,21 @@ if __name__ == "__main__":
         backdrop-filter: blur(40px);
         -webkit-backdrop-filter: blur(40px);
     }
+    #rain div {
+        position: relative;
+        bottom: 100%;
+        width: 2px;
+        height: 180px;
+        background: linear-gradient(to bottom, rgba(0, 255, 0, 0.5) 0%, rgba(0, 255, 0, 0) 100%);
+        animation: fall linear infinite;
+        z-index: -1;
+    }
+    
+    @keyframes fall {
+        to {
+            transform: translateY(100vh);
+        }
+    }
 """
 
 
