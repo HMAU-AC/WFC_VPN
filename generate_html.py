@@ -68,11 +68,13 @@ if __name__ == "__main__":
         border-radius: .25rem;
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
+        z-index: -996;
     }
     .card {
         background-color: rgb(255 255 255 / 60%);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
+        z-index: -996;
         ;
     }
     .folder-label {
@@ -145,16 +147,16 @@ if __name__ == "__main__":
                 document.getElementById('background-large').style.opacity = '1';
             };
         });
-        
+
         document.addEventListener('DOMContentLoaded', () => {
             // 初始化Clipboard.js
             var clipboard = new ClipboardJS('.btn-copy');
-        
+
             // 添加复制成功的回调函数
             clipboard.on('success', e => {
                 e.clearSelection();
             });
-        
+
             // 添加复制失败的回调函数
             clipboard.on('error', () => {});
         });
