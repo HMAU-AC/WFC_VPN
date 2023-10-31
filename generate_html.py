@@ -56,10 +56,7 @@ if __name__ == "__main__":
         opacity: 0;
         z-index: 1;
     }
-    .container {
-        opacity: 0;
-        transition: opacity 2s ease-in-out;
-    }
+
     .top-img.text-center {
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
@@ -147,9 +144,7 @@ if __name__ == "__main__":
                 document.getElementById('background-large').style.opacity = '1';
             };
         });
-        window.addEventListener('load', function() {
-            document.querySelector('.container').style.opacity = "1";
-        });
+
         document.addEventListener('DOMContentLoaded', () => {
             // 初始化Clipboard.js
             var clipboard = new ClipboardJS('.btn-copy');
