@@ -77,6 +77,7 @@ if __name__ == "__main__":
         from { opacity: 0; }
         to   { opacity: 1; }
     }
+    
     .container {
         opacity: 0;
         transition: opacity 2s ease-in-out;
