@@ -137,6 +137,19 @@ if __name__ == "__main__":
                 console.log('复制失败');
             });
         });
+        window.onload = function() {
+            // 禁止拖拽<a>元素
+            var links = document.getElementsByTagName('a');
+            for (var i = 0; i < links.length; i++) {
+                links[i].ondragstart = function() { return false; };
+            }
+        
+            // 禁止拖拽<img>元素
+            var images = document.getElementsByTagName('img');
+            for (var i = 0; i < images.length; i++) {
+                images[i].ondragstart = function() { return false; };
+            }
+        };
     """
    # 使用csscompressor和jsmin压缩CSS和JavaScript内容
     # minified_css/minified_js要放在html_content = f"""之前才行
