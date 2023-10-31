@@ -46,14 +46,8 @@ if __name__ == "__main__":
         #background-small, #background-large, .top-img {
             filter: brightness(65%);
         }
-        .text-muted {
-            color: #9fa3a7!important;
-        }
-        .badge-primary {
-            color: #d5d5d5!important;
-        }
-        a.list-group-item.flex-grow-1 {
-            color: #c7c7c7;
+        .text-muted, .badge-primary, a.list-group-item, .flex-grow-1, .fa-copy:before, .fa-external-link-alt:before {
+            color: #eae8e8!important;
         }
     }
 
