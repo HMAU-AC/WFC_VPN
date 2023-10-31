@@ -36,7 +36,12 @@ if __name__ == "__main__":
         --border-color: rgb(62 71 79 / 16%);
     }
     body {
-            background-color: rgb(89, 93, 98);
+       
+        background-image: url('./Flie-html/img/Tunlita.webp');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
     .top-img.text-center {
         -ms-flex: 1 1 auto;
