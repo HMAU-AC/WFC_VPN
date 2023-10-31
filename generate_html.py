@@ -115,6 +115,7 @@ if __name__ == "__main__":
         backdrop-filter: blur(40px);
         -webkit-backdrop-filter: blur(40px);
     }
+    /* 雨滴特效start */
     #rain div {
         position: relative;
         bottom: 100%;
@@ -130,6 +131,7 @@ if __name__ == "__main__":
             transform: translateY(100vh);
         }
     }
+    /* 雨滴特效end */
 """
 
 
@@ -178,7 +180,8 @@ if __name__ == "__main__":
     </style>
 </head>
 <body>
-<div id="rain">
+<!-- rain下雨特效div -->
+<div id="rain"></div>
     <div class="container">
         <!-- 使用Bootstrap的row和col类来创建响应式布局 -->
         <div class="row">
@@ -194,7 +197,7 @@ if __name__ == "__main__":
                 <!-- 使用Bootstrap的card类来创建一个卡片 -->
                 <div class="card">
                     <div class="card-body">
-                        <!-- 使用Bootstrap的list-group类来创建一个列表 -->
+                        <!-- 使用Bootstrap的list-g roup类来创建一个列表 -->
                         <div class="list-group">
                             {links}
                         </div>
@@ -211,7 +214,6 @@ if __name__ == "__main__":
             </div>
         </div>
     </div>
-</div>
     <!-- 其他的HTML代码... -->
     <!-- 引入jQuery -->
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
