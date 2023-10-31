@@ -213,6 +213,8 @@ if __name__ == "__main__":
             </div>
         </div>
     </div>
+    <!-- rain下雨特效div -->
+    <div id="rain"></div>
     <!-- 其他的HTML代码... -->
     <!-- 引入jQuery -->
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -224,8 +226,7 @@ if __name__ == "__main__":
     <script>
         {minified_js}
     </script>
-    <!-- rain下雨特效div -->
-    <div id="rain"></div>
+
 </body>
 </html>
 """
