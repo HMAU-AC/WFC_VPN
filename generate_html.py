@@ -50,7 +50,7 @@ if __name__ == "__main__":
         transition: opacity 2s ease-in-out;
     }
     #background-small {
-        background-image: url('./Flie-html/img/Tunlita-blur.webp');
+        background-image: url('./Flie-html/img/Tunlita-blur.jpg');
         z-index: -999;
     }
     #background-large {
