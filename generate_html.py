@@ -143,14 +143,12 @@ if __name__ == "__main__":
             document.querySelector('.container').style.opacity = "1";
         });
         window.addEventListener('load', function() {
-            setTimeout(function() {
-                var img = new Image();
-                img.src = './Flie-html/img/Tunlita.jpg';
-                img.onload = function() {
-                    document.body.style.backgroundImage = 'url(' + img.src + ')';
-                    document.body.style.transform = 'scale(1.1)';
-                };
-            }, 2000); // 2秒的延迟
+            var img = new Image();
+            img.src = './Flie-html/img/Tunlita.jpg';
+            img.onload = function() {
+                document.body.style.backgroundImage = 'url(' + img.src + ')';
+                document.body.style.transform = 'scale(1.1)';
+            };
         });
         document.addEventListener('DOMContentLoaded', (event) => {
             // 初始化Clipboard.js
