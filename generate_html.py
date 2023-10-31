@@ -135,13 +135,12 @@ if __name__ == "__main__":
         window.addEventListener('load', function() {
             document.querySelector('.container').style.opacity = "1";
         });
-        window.addEventListener('load', function() {
-            var img = new Image();
-            img.src = './Flie-html/img/Tunlita.jpg';
-            img.onload = function() {
-                document.body.style.filter = 'none';
-            };
-        });
+        var img = new Image();
+        img.src = './Flie-html/img/Tunlita.jpg';
+        img.onload = function() {
+            document.body.style.backgroundImage = 'url(' + img.src + ')';
+            document.body.style.filter = 'none';
+        };
         document.addEventListener('DOMContentLoaded', (event) => {
             // 初始化Clipboard.js
             var clipboard = new ClipboardJS('.btn-copy');
