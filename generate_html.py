@@ -30,24 +30,25 @@ if __name__ == "__main__":
     # CSS和JavaScript内容
     css_content = """
     :root {
-        --primary-color: rgb(0 31 63 / 60%);
+        --primary-color: rgba(0, 31, 63, 0.6);
         --success-color: rgba(40, 167, 69, 0.6);
         --light-color: rgba(248, 249, 250, 0.6);
-        --border-color: rgb(62 71 79 / 16%);
+        --border-color: rgba(62, 71, 79, 0.16);
     }
     /* 深色主题 */
     @media (prefers-color-scheme: dark) {
         :root {
-            --primary-color: rgb(0 31 63 / 60%);
+            --primary-color: rgb(0, 31, 63, 0.6);
             --success-color: rgba(40, 167, 69, 0.6);
             --light-color: rgba(101, 101, 101, 0.6);
-            --border-color: rgb(62 71 79 / 16%);
+            --border-color: rgb(62, 71, 79, 0.16);
+            --text-color: rgb(234, 232, 232) !important;
         }
-        #background-small, #background-large, .top-img {
+        #background-small, #background-large, .top-img ,img {
             filter: brightness(65%);
         }
         .text-muted, .badge-primary, a.list-group-item, .flex-grow-1, .fa-copy:before, .fa-external-link-alt:before {
-            color: #eae8e8!important;
+            color: var(--text-color);
         }
     }
 
