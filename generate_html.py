@@ -34,8 +34,6 @@ if __name__ == "__main__":
         --success-color: rgba(40, 167, 69, 0.6);
         --light-color: rgba(248, 249, 250, 0.6);
         --border-color: rgb(62 71 79 / 16%);
-        --small-image-url: './Flie-html/img/Tunlita-blur.jpg';
-        --large-image-url: './Flie-html/img/Tunlita.jpg';
     }
     body {
         user-select: none;
@@ -52,11 +50,11 @@ if __name__ == "__main__":
         transition: opacity 2s ease-in-out;
     }
     #background-small {
-        background-image: url(var(--small-image-url));
+        background-image: url('./Flie-html/img/Tunlita-blur.jpg');
         z-index: -999;
     }
     #background-large {
-        background-image: url(var(--large-image-url));
+        background-image: url('./Flie-html/img/Tunlita.jpg');
         opacity: 0;
         z-index: -998;
     }
@@ -136,30 +134,16 @@ if __name__ == "__main__":
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
     }
-    /* 设置滚动条的背景 */
-    ::-webkit-scrollbar {
-      background-color: transparent;
-    }
-
-    /* 设置滚动条的轨道背景 */
-    ::-webkit-scrollbar-track {
-      background-color: transparent;
-    }
-
-    /* 设置滚动条的滑块背景 */
-    ::-webkit-scrollbar-thumb {
-      background-color: rgba(0, 0, 0, 0.5);
-    }
 """
 
 
     js_content = """
         window.addEventListener('load', function() {
-          var img = new Image();
-          img.src = getComputedStyle(document.documentElement).getPropertyValue('--large-image-url');
-          img.onload = function() {
-            document.getElementById('background-large').style.opacity = '1';
-          };
+            var img = new Image();
+            img.src = './Flie-html/img/Tunlita.jpg';
+            img.onload = function() {
+                document.getElementById('background-large').style.opacity = '1';
+            };
         });
         
         document.addEventListener('DOMContentLoaded', () => {
