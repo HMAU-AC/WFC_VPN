@@ -187,6 +187,8 @@ if __name__ == "__main__":
     </style>
 </head>
 <body class="contion">
+<div id="background-small"></div>
+<div id="background-large"></div>
     <div class="container">
         <!-- 使用Bootstrap的row和col类来创建响应式布局 -->
         <div class="row">
@@ -219,8 +221,7 @@ if __name__ == "__main__":
             </div>
         </div>
     </div>
-    <div id="background-small"></div>
-    <div id="background-large"></div>
+    
     <!-- 其他的HTML代码... -->
     <!-- 引入jQuery -->
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
