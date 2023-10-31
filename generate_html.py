@@ -51,14 +51,14 @@ if __name__ == "__main__":
         margin-top: .5rem;
         margin-bottom: .5rem;
         border-radius: .25rem;
-        backdrop-filter: blur(40px);
-        -webkit-backdrop-filter: blur(40px);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
     }
 
     .card {
         background-color: rgb(255 255 255 / 60%);
-        backdrop-filter: blur(40px);
-        -webkit-backdrop-filter: blur(40px);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         ;
     }
     .folder-label {
@@ -66,8 +66,8 @@ if __name__ == "__main__":
         text-align: center;
         line-height: 2.2;
         background-color: var(--primary-color);
-        backdrop-filter: blur(40px);
-        -webkit-backdrop-filter: blur(40px);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
     }
     .list-group-item {
         margin: 0;
@@ -88,15 +88,15 @@ if __name__ == "__main__":
     .btn-open {
         border-width: 1px 0;
         background-color: var(--primary-color);
-        backdrop-filter: blur(40px);
-        -webkit-backdrop-filter: blur(40px);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
     }
     .btn-copy {
         border-width: 1px 1px 1px 0;
         border-radius: 0 .25rem .25rem 0;
         background-color: var(--success-color);
-        backdrop-filter: blur(40px);
-        -webkit-backdrop-filter: blur(40px);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
     }
     .carousel.slide.rounded {
         margin-bottom: 1rem;
@@ -106,7 +106,7 @@ if __name__ == "__main__":
         height: auto;
     }
     .image-container img {
-        filter: blur(40px);
+        filter: blur(20px);
         transition: filter 4s;
         margin-bottom: .5rem;
     }
@@ -117,8 +117,8 @@ if __name__ == "__main__":
         background: var(--light-color);
         margin-top: .5rem;
         border-radius: .25rem;
-        backdrop-filter: blur(40px);
-        -webkit-backdrop-filter: blur(40px);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
     }
 """
 
