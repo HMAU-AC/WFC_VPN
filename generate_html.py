@@ -37,6 +37,7 @@ if __name__ == "__main__":
     }
     body {
         animation: fade-in 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        -webkit-animation: fade-in 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         background-image: url('./Flie-html/img/Tunlita.webp');
         background-position: center center;
         background-size: cover;
@@ -51,6 +52,16 @@ if __name__ == "__main__":
         }
         100% {
             filter: blur(0);
+            opacity: 1;
+        }
+    }
+    @-webkit-keyframes fade-in {
+        0% {
+            -webkit-filter: blur(10px);
+            opacity: 0;
+        }
+        100% {
+            -webkit-filter: blur(0);
             opacity: 1;
         }
     }
