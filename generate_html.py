@@ -56,15 +56,17 @@ if __name__ == "__main__":
         position: relative;
         display: inline-block;
     }
-    
+
     .img-wrapper::after {
         content: attr(data-caption);
         position: absolute;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(255, 255, 255, 0.6);
-        padding: .25rem;
-        border-top-right-radius: .25rem;
+        bottom: .25rem;
+        left: .25rem;
+        background-color: var(--light-color);
+        padding: .15rem;
+        border-radius: .25rem;
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
     }
 
     .card {
@@ -178,7 +180,7 @@ if __name__ == "__main__":
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <!-- 添加一张首页大图 -->
                     <div class="top-img text-center">
-                        <div class="img-wrapper" data-caption="图片来源：...">
+                        <div class="img-wrapper" data-caption="图片来源:彼岸花图库">
                             <img src="./Flie-html/img/tg1.jpg" class="img-fluid" alt="Top Image">
                         </div>
                     </div>
