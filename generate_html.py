@@ -72,7 +72,7 @@ if __name__ == "__main__":
     #background-small {
         width: 84px;
         height: 45px;
-        background: url('css_sprites.png');
+        background: url('./Flie-html/css_sprites.png');
         background-position: -10px -10px;
         z-index: -999;
     }
