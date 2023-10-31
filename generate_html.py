@@ -59,7 +59,6 @@ if __name__ == "__main__":
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
     }
-
     .card {
         background-color: rgb(255 255 255 / 60%);
         backdrop-filter: blur(20px);
@@ -135,7 +134,7 @@ if __name__ == "__main__":
         window.addEventListener('load', function() {
             setTimeout(function() {
                 var img = new Image();
-                img.src = './Flie-html/img/Tunlita.webp';
+                img.src = './Flie-html/img/Tunlita.jpg';
                 img.onload = function() {
                     document.body.style.backgroundImage = 'url(' + img.src + ')';
                 };
