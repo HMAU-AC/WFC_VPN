@@ -38,6 +38,7 @@ if __name__ == "__main__":
     body {
         background-image: url('./Flie-html/img/Tunlita-blur.webp');
         background-position: center center;
+        overflow-x: hidden;
         background-size: cover;
         background-clip: border-box;
         background-origin: border-box;
@@ -54,6 +55,7 @@ if __name__ == "__main__":
         width: 100%;
         height: 100%;
         background-image: url('./Flie-html/img/Tunlita-blur.webp');
+        overflow-x: hidden;
         background-position: center center;
         background-size: cover;
         background-clip: border-box;
