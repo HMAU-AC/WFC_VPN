@@ -116,12 +116,12 @@ if __name__ == "__main__":
         -webkit-backdrop-filter: blur(40px);
     }
     /* 雨滴特效start */
-    #rain div {
-        position: relative;
-        bottom: 100%;
+    rain {
+        position: absolute;
+        top: 100%;
         width: 2px;
         height: 180px;
-        background: linear-gradient(to bottom, rgba(0, 255, 0, 0.5) 0%, rgba(0, 255, 0, 0) 100%);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
         animation: fall linear infinite;
         z-index: -1;
     }
@@ -225,7 +225,7 @@ if __name__ == "__main__":
     <script>
         {minified_js}
     </script>
-
+    <div id="rain"></div>
 </body>
 </html>
 """
