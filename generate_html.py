@@ -164,7 +164,20 @@ if __name__ == "__main__":
                 </div>
             </div>
         </div>
-    </div>   
+        <div class="row">
+            <div class="footer mt-auto py-3 bg-light">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 footer-container">
+                    <div class="image-container">
+                        <img src="./Flie-html/img/github.webp" alt="Github">
+                    </div>
+                </div>
+                
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <span class="text-muted">© 2023 爱吃素的胖子. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- 其他的HTML代码... -->
     <!-- 引入jQuery -->
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -176,21 +189,7 @@ if __name__ == "__main__":
     <script>
         {minified_js}
     </script>
-     <div class="footertop"></div>
-    <footer class="footer mt-auto py-3 bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 footer-container">
-                <div class="image-container">
-                    <img src="./Flie-html/img/github.webp" alt="Github">
-                </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <span class="text-muted">© 2023 爱吃素的胖子. All rights reserved.</span>
-            </div>
-        </div>
-    </div>
-</footer>
+
 </body>
 </html>
 """
