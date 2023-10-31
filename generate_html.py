@@ -69,6 +69,7 @@ if __name__ == "__main__":
         background-repeat: no-repeat;
         background-attachment: fixed;
         user-select: none;
+        transition: background-image 3s ease-in-out;
     }
     .container {
         opacity: 0;
