@@ -116,7 +116,7 @@ if __name__ == "__main__":
         -webkit-backdrop-filter: blur(40px);
     }
     /* 雨滴特效start */
-    rain {
+    #rain {
         position: absolute;
         top: 100%;
         width: 2px;
