@@ -20,7 +20,7 @@ def generate_links(root_dir, repo_url, ignore_files=None):
                 continue
             if filename:  # 检查filename是否为空 检查
                 file_url = f"{repo_url}/{file_path}"  # 修改了这里
-                links.append(f'<div class="d-flex justify-content-between align-items-center mb-3"><a class="list-group-item flex-grow-1" href="javascript:void(0)" >{filename}</a><button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button><button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></div>')  # 修改了这里
+                links.append(f'<div class="d-flex justify-content-between align-items-center mb-3"><a class="list-group-item flex-grow-1" href="javascript:void(0)" draggable="false">{filename}</a><button class="btn btn-primary btn-open" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></button><button class="btn btn-success btn-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></button></div>')  # 修改了这里
     return '\n'.join(links)
 
 
@@ -137,19 +137,6 @@ if __name__ == "__main__":
                 console.log('复制失败');
             });
         });
-        window.onload = function() {
-            // 禁止拖拽<a>元素
-            var links = document.getElementsByTagName('a');
-            for (var i = 0; i < links.length; i++) {
-                links[i].ondragstart = function() { return false; };
-            }
-        
-            // 禁止拖拽<img>元素
-            var images = document.getElementsByTagName('img');
-            for (var i = 0; i < images.length; i++) {
-                images[i].ondragstart = function() { return false; };
-            }
-        };
     """
    # 使用csscompressor和jsmin压缩CSS和JavaScript内容
     # minified_css/minified_js要放在html_content = f"""之前才行
@@ -181,7 +168,7 @@ if __name__ == "__main__":
                     <div class="top-img text-center">
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                <img src="./Flie-html/img/tg1.jpg" class="img-fluid" alt="Top Image">
+                                <img src="./Flie-html/img/tg1.jpg" class="img-fluid" alt="Top Image" draggable="false">
                             </div>
                         </div>
                     </div>
