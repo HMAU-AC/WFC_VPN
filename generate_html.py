@@ -98,7 +98,7 @@ if __name__ == "__main__":
         transition: filter 4s;
         margin-bottom: .5rem;
     }
-    footer.footer.mt-auto.py-3.bg-light {
+    .footer {
         text-align: center;
         background-color: var(--light-color);
         backdrop-filter: blur(10px);
@@ -160,20 +160,18 @@ if __name__ == "__main__":
                         <div class="list-group">
                             {links}
                         </div>
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                <span class="text-muted">© 2023 爱吃素的胖子. All rights reserved.</span>
-                            </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- 添加新的row来包含footer -->
         <div class="row">
-            <div class="footer">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <footer class="text-center">
                     <span class="text-muted">© 2023 爱吃素的胖子. All rights reserved.</span>
-                </div>
+                </footer>
             </div>
-         </div>
+        </div>
     </div>
     <!-- 其他的HTML代码... -->
     <!-- 引入jQuery -->
