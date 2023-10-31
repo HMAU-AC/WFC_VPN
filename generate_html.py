@@ -70,8 +70,10 @@ if __name__ == "__main__":
         transition: opacity 2s ease-in-out;
     }
     #background-small {
-        width: 84px; height: 45px;
-        background: url('css_sprites.png') -10px -10px;
+        width: 84px;
+        height: 45px;
+        background: url('css_sprites.png');
+        background-position: -10px -10px;
         z-index: -999;
     }
     #background-large {
