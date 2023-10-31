@@ -38,7 +38,7 @@ if __name__ == "__main__":
     body {
         animation: fade-in 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         -webkit-animation: fade-in 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        background-image: url('./Flie-html/img/Tunlita.webp');
+        background-image: url('./Flie-html/img/Tunlita.jpg');
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
