@@ -44,6 +44,10 @@ if __name__ == "__main__":
         user-select: none;
         transition: background-image 2s ease-in-out;
     }
+    .container {
+        opacity: 0;
+        transition: opacity 2s ease-in-out;
+    }
     .top-img.text-center {
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
@@ -125,6 +129,9 @@ if __name__ == "__main__":
 
 
     js_content = """
+        window.addEventListener('load', function() {
+            document.querySelector('.container').style.opacity = "1";
+        });
         window.addEventListener('load', function() {
             setTimeout(function() {
                 var img = new Image();
