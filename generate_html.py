@@ -52,6 +52,20 @@ if __name__ == "__main__":
         backdrop-filter: blur(40px);
         -webkit-backdrop-filter: blur(40px);
     }
+        .img-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .img-wrapper::after {
+        content: attr(data-caption);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: .25rem;
+        border-top-right-radius: .25rem;
+    }
 
     .card {
         background-color: rgb(255 255 255 / 60%);
@@ -164,7 +178,9 @@ if __name__ == "__main__":
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <!-- 添加一张首页大图 -->
                     <div class="top-img text-center">
-                        <img src="./Flie-html/img/tg1.jpg" class="img-fluid" alt="Top Image">
+                        <div class="img-wrapper" data-caption="图片来源：...">
+                            <img src="./Flie-html/img/tg1.jpg" class="img-fluid" alt="Top Image">
+                        </div>
                     </div>
                 <!-- 使用Bootstrap的card类来创建一个卡片 -->
                 <div class="card">
