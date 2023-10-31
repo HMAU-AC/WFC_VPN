@@ -54,7 +54,7 @@ if __name__ == "__main__":
             color: #babbbb!important;
         }
     }
-
+    /* 禁止选中*/
     body {
         user-select: none;
     }
