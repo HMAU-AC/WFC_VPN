@@ -44,6 +44,29 @@ if __name__ == "__main__":
         user-select: none;
         transition: background-image 2s ease-in-out;
     }
+    body::before, body::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        transition: opacity 2s ease-in-out;
+    }
+
+    body::before {
+        background-image: url('./Flie-html/img/Tunlita-blur.webp');
+    }
+
+    body::after {
+        background-image: url('./Flie-html/img/Tunlita.jpg');
+        opacity: 0;
+    }
     .container {
         opacity: 0;
         transition: opacity 2s ease-in-out;
@@ -133,11 +156,8 @@ if __name__ == "__main__":
         });
         window.addEventListener('load', function() {
             setTimeout(function() {
-                var img = new Image();
-                img.src = './Flie-html/img/Tunlita.jpg';
-                img.onload = function() {
-                    document.body.style.backgroundImage = 'url(' + img.src + ')';
-                };
+                document.body.style.backgroundImage = 'none';
+                document.body::after.style.opacity = '1';
             }, 2000); // 2秒的延迟
         });
         document.addEventListener('DOMContentLoaded', (event) => {
