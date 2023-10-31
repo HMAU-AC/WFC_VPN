@@ -36,12 +36,22 @@ if __name__ == "__main__":
         --border-color: rgb(62 71 79 / 16%);
     }
     body {
-        background-color: rgb(89, 93, 98);
-        background-image: url('./Flie-html/img/pattern.svg');
-        background-repeat: no-repeat;
-        background-size: cover;
+            background-color: rgb(89, 93, 98);
+            background-image: url('./Flie-html/img/pattern.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
     }
-    
+    .top-img.text-center {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        padding: 1.25rem;
+        background: var(--light-color);
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        border-radius: .25rem;
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
+    }
 
     .card {
         background-color: rgb(255 255 255 / 60%);
@@ -102,7 +112,7 @@ if __name__ == "__main__":
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
         padding: 1.25rem;
-        background: rgb(255 255 255 / 60%);
+        background: var(--light-color);
         margin-top: .5rem;
         border-radius: .25rem;
         backdrop-filter: blur(40px);
@@ -152,6 +162,7 @@ if __name__ == "__main__":
         <!-- 使用Bootstrap的row和col类来创建响应式布局 -->
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <!-- 添加一张首页大图 -->
                     <div class="top-img text-center">
                         <img src="./Flie-html/img/Tunlita.jpg" class="img-fluid" alt="Top Image">
                     </div>
