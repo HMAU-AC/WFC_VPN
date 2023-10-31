@@ -37,9 +37,6 @@ if __name__ == "__main__":
     }
     body {
             background-color: rgb(89, 93, 98);
-            background-image: url('./Flie-html/img/pattern.svg');
-            background-repeat: no-repeat;
-            background-size: cover;
     }
     .top-img.text-center {
         -ms-flex: 1 1 auto;
@@ -65,6 +62,8 @@ if __name__ == "__main__":
         background-color: var(--light-color);
         padding: .15rem;
         border-radius: .25rem;
+        font-size: small;
+        color: #5f6573;
         backdrop-filter: blur(40px);
         -webkit-backdrop-filter: blur(40px);
     }
