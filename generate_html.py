@@ -39,10 +39,41 @@ if __name__ == "__main__":
         background-image: url('./Flie-html/img/Tunlita-blur.webp');
         background-position: center center;
         background-size: cover;
+        background-clip: border-box;
+        background-origin: border-box;
         background-repeat: no-repeat;
         background-attachment: fixed;
         user-select: none;
         transition: background-image 2s ease-in-out;
+    }
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('./Flie-html/img/Tunlita-blur.webp');
+        background-position: center center;
+        background-size: cover;
+        background-clip: border-box;
+        background-origin: border-box;
+        background-repeat: no-repeat;
+        transition: opacity 2s ease-in-out;
+        z-index: -1;
+    }
+
+    @supports (-webkit-mask-image: none) {
+        body::before {
+            background-image: none;
+            background-color: transparent;
+            animation: fadein 2s;
+        }
+    }
+
+    @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
     }
     .container {
         opacity: 0;
