@@ -70,10 +70,7 @@ if __name__ == "__main__":
         transition: opacity 2s ease-in-out;
     }
     #background-small {
-        width: 84px;
-        height: 45px;
-        background: url('./Flie-html/css_sprites.png');
-        background-position: -10px -10px;
+        background-image: url('./Flie-html/css_sprites.png');
         z-index: -999;
     }
     #background-large {
