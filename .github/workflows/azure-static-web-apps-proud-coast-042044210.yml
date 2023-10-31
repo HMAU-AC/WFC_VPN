@@ -13,6 +13,8 @@ on:
     types:
       - completed
       - requested
+      - failure
+      - cancelled
 
 jobs:
   build_and_deploy_job:
