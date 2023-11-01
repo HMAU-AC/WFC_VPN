@@ -67,7 +67,7 @@ if __name__ == "__main__":
         bottom: 0;
         width: 100%;
         height: 100%;
-        background-size: cover;
+        background-size: 100% 100%;
         background-position: center;
         transition: opacity 2s ease-in-out;
     }
