@@ -57,8 +57,9 @@ if __name__ == "__main__":
     /* 禁止选中*/
     body {
         user-select: none;
+        background: #352d2f;
     }
-    /* 模糊图片显示start*/
+
     #background-small, #background-large {
         position: fixed;
         top: 0;
@@ -80,8 +81,6 @@ if __name__ == "__main__":
         opacity: 0;
         z-index: -998;
     }
-    /* 模糊图片显示end*/
-    
     .top-img {
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
@@ -165,7 +164,6 @@ if __name__ == "__main__":
 
 
     js_content = """
-        //模糊图片显示js start
         window.addEventListener('load', function() {
             var img = new Image();
             img.src = './Flie-html/img/Tunlita.jpg';
@@ -173,7 +171,7 @@ if __name__ == "__main__":
                 document.getElementById('background-large').style.opacity = '1';
             };
         });
-        //模糊图片显示js send
+        
         document.addEventListener('DOMContentLoaded', () => {
             // 初始化Clipboard.js
             var clipboard = new ClipboardJS('.btn-copy');
