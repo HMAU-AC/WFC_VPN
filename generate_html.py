@@ -17,7 +17,7 @@ def generate_links(root_dir, repo_url, ignore_files=None):
                 continue
             if filename:  # 检查filename是否为空 检查
                 file_url = f"{repo_url}/{file_path}"  # 修改了这里
-                links.append(f'<li class="list-group-item">{filename}</li>')  # 修改了这里
+                links.append(f'<li class="list-group-item d-flex justify-content-between align-items-center">{filename}<span class="rounded-pill" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></span>')  # 保留待用<span class="rounded-pill bt-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></span></li>
     return '\n'.join(links)
 
 
@@ -56,29 +56,17 @@ if __name__ == "__main__":
                         </ul>
             </div>
         </div>
-    </div>    
-    <!-- 其他的HTML代码... -->
-    <!-- 引入jQuery -->
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </div> 
+
     <!-- 引入Bootstrap JavaScript -->
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- 引入Clipboard.js -->
-    <script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {{
-            // 初始化Clipboard.js
-            var clipboard = new ClipboardJS('.btn-copy');
-            // 添加复制成功的回调函数
-            clipboard.on('success', function(e) {{
-                console.log('复制成功!');
-                e.clearSelection();
-            }});
-            // 添加复制失败的回调函数
-            clipboard.on('error', function(e) {{
-                console.log('复制失败');
-            }});
-        }});
-    </script>
+    <div class="row">
+            <div class="col">
+                <footer class="text-center" style="padding: 1.75rem 1.25rem;">
+                    <span class="text-muted">© 2023 爱吃素的胖子. All rights reserved.</span>
+                </footer>
+            </div>
+        </div>
 </body>
 </html>
 """
