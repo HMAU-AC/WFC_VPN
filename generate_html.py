@@ -17,7 +17,7 @@ def generate_links(root_dir, repo_url, ignore_files=None):
                 continue
             if filename:  # 检查filename是否为空 检查
                 file_url = f"{repo_url}/{file_path}"  # 修改了这里
-                links.append(f'<li class="list-group-item d-flex justify-content-between align-items-center">{filename}<span class="rounded-pill" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="fas fa-external-link-alt"></i></span>')  # 保留待用<span class="rounded-pill bt-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></span></li>
+                links.append(f'<li class="list-group-item d-flex justify-content-between align-items-center">{filename}<span class="rounded-pill" onclick="window.open(\'{file_url}\', \'_blank\')"><i class="icofont-duotone icofont-new-tab-alt"></i></span>')  # 保留待用<span class="rounded-pill bt-copy" data-clipboard-text="{file_url}"><i class="fas fa-copy"></i></span></li>
     return '\n'.join(links)
 
 
@@ -36,12 +36,63 @@ if __name__ == "__main__":
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- 引入Font Awesome -->
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Flie-html/css/icofont.min.css">
     <style>
-
+            .ico-title {{
+				font-size: 3em;
+			}}
+			.iconlist {{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				text-align: center;
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: row;
+			}}
+			.iconlist li {{
+				position: relative;
+				margin: 5px;
+				width: 150px;
+				cursor: pointer;
+			}}
+			.iconlist li .icon-holder {{
+				position: relative;
+				text-align: center;
+				border-radius: 3px;
+				overflow: hidden;
+				padding-bottom: 5px;
+				background: #ffffff;
+				border: 1px solid #E4E5EA;
+				transition: all 0.2s linear 0s;
+			}}
+			.iconlist li .icon-holder:hover {{
+				background: #00C3DA;
+				color: #ffffff;
+			}}
+			.iconlist li .icon-holder:hover .icon i {{
+				color: #ffffff;
+			}}
+			.iconlist li .icon-holder .icon {{
+				padding: 20px;
+				text-align: center;
+			}}
+			.iconlist li .icon-holder .icon i {{
+				font-size: 3em;
+				color: #1F1142;
+			}}
+			.iconlist li .icon-holder span {{
+				font-size: 14px;
+				display: block;
+				margin-top: 5px;
+				border-radius: 3px;
+			}}
     </style>
 </head>
 <body>
     <div class="container">
+    
          <!-- 添加提示文字 -->
          <div class="alert alert-warning" role="alert">
             青山不改，绿水长流，有缘江湖再见。
@@ -57,7 +108,8 @@ if __name__ == "__main__":
             </div>
         </div>
     </div> 
-
+    <!-- 引入jQuery -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- 引入Bootstrap JavaScript -->
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <div class="row">
