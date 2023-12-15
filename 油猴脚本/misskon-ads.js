@@ -1,5 +1,3 @@
-// 你可以使用油猴脚本（Tampermonkey）来去除广告，以下是一个简单的示例：
-
 // ==UserScript==
 // @name         Ad Blocker
 // @namespace    http://tampermonkey.net/
@@ -7,10 +5,8 @@
 // @description  Block ads on the current page
 // @author       misskon去广告
 // @match        *://misskon.com/*
-// @grant        none
+// @grant        GM_webRequest
 // ==/UserScript==
-
-// 你的油猴脚本中的代码存在一些问题，应该使用 CSS 选择器来选择元素并隐藏广告。以下是修正后的写法：
 
 (function() {
     'use strict';
@@ -36,11 +32,16 @@
         }
     `;
     document.head.appendChild(style);
-    window.stop();
-    var scripts = document.getElementsByTagName('script');
-    for (var i = 0; i < scripts.length; i++) {
-        if (scripts[i].src === 'https://misskon.com/wp-content/themes/mrcong/js/tie-scripts.js') {
-            scripts[i].parentNode.removeChild(scripts[i]);
+
+    GM_webRequest({
+        urls: [
+            '*://misskon.com/wp-content/themes/mrcong/js/tie-scripts.js',
+            '*://fvcwqkkqmuv.com/aas/r45d/vki/1998889/b0d67088.js',
+            '*://cdn.ouo.io/js/full-page-script.js'
+        ],
+        onBeforeSendHeaders: function(details) {
+            return {cancel: true};
         }
-    }
+    });
+
 })();
