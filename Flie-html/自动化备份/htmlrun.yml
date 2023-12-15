@@ -5,10 +5,6 @@ on:
     branches:
       - main  # 或者你的默认分支
   workflow_dispatch:
-  workflow_run:
-    workflows: ["Azure上传静态页面"]
-    types:
-      - completed
 
 jobs:
   build:
@@ -22,11 +18,9 @@ jobs:
       with:
         python-version: 3.8
 
-    - name: Install dependencies  # 添加pip install htmlmin，pip install csscompressor jsmin humanize不使用可删除主要用于压缩html和css/js
+    - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install htmlmin
-        pip install csscompressor jsmin
 
     - name: Generate HTML
       run: python generate_html.py
@@ -36,5 +30,5 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add index.html
-        git commit -m "Generate HTML" || true
+        git commit -m "Generate HTML"
         git push
