@@ -1,4 +1,4 @@
-name: Fetch and Modify Reject List
+name: 整合广告 FOR List
 
 on:
   schedule:
