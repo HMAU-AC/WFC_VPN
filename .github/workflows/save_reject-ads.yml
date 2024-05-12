@@ -1,4 +1,4 @@
-name: Save Reject List
+name: Fetch and Modify Reject List
 
 on:
   schedule:
@@ -6,23 +6,31 @@ on:
   workflow_dispatch:  # 允许手动触发
 
 jobs:
-  download_and_save:
+  fetch-and-modify:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Create List directory if it doesn't exist
+      - name: Create List directory if not exists
         run: mkdir -p ${{ github.workspace }}/List
 
-      - name: Download and save the reject list
-        run: |
-          curl -sL https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/reject-list.txt -o ${{ github.workspace }}/List/re-ads.list
+      - name: Fetch file from remote
+        run: curl -s https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/reject-list.txt -o reject-list.txt
 
-      - name: Commit files
+      - name: Modify file
+        run: |
+          while read line; do
+            echo "DOMAIN-SUFFIX,$line" >> formatted-list.txt
+          done < reject-list.txt
+
+      - name: Rename and move file
+        run: mv formatted-list.txt ${{ github.workspace }}/List/re-ads.list
+
+      - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add List/re-ads.list
-          git commit -m "Update re-ads.list" || echo "No changes to commit"
+          git commit -m "Update re-ads.list"
           git push
