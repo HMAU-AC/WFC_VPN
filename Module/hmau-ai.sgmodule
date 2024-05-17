@@ -1,6 +1,6 @@
 [General]
 bypass-system = true
-skip-proxy = hmau.ai
+skip-proxy = %APPEND% hmau.ai
 
 [MITM]
 hostname = %APPEND% hmau.ai
