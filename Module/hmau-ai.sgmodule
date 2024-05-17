@@ -1,12 +1,12 @@
 [General]
 bypass-system = true
-skip-proxy = %APPEND% hmau.ai
+skip-proxy = %APPEND% www.gitt.top
 
 [Host]
-hmau.ai = 127.0.0.1
+www.gitt.top = 127.0.0.1
 
 [MITM]
-hostname = %APPEND% hmau.ai
+hostname = %APPEND% www.gitt.top
 
 [Script]
 http-response ^http://hmau\.ai/ script-path=https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Module/JS/hmau-ai_response.js
