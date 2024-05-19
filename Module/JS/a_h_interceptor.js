@@ -3,7 +3,7 @@ $done({
     response: {
         status: 302,
         headers: { 
-            'Location': 'https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Module/JS/index.html',
+            'Location': 'http://htmlpreview.github.io/?https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Module/JS/index.html',
             'Content-Type': 'text/html'
         }
     }
