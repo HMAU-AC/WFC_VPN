@@ -3,16 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Webpage</title>
+    <title>surge规则提取</title>
     <style>
         :root {
-            --background-color: #f9f9f9;
+            --background-color: #efefef;
+            --textbg-color: #ffffff;
             --text-color: #333;
+            --text-placeholder-color: #999;
             --border-color: #ccc;
             --primary-color: #007aff;
             --primary-hover-color: #0056b3;
             --success-color: #4CAF50;
-            --focus-border-color: #b6b6b6;
+            --focus-border-color: #262121;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background-color: #2c2c2e;
+                --text-color: #e5e4e4;
+                --text-placeholder-color: #b5b5b5;
+                --textbg-color: #1c1c1e;
+                --border-color: #444;
+                --primary-color: #0271e8;
+                --primary-hover-color: #034e9f;
+                --success-color: #419744;
+                --focus-border-color: #3e3e3e;
+            }
         }
 
         body {
@@ -27,15 +43,17 @@
             font-weight: bold;
             display: block;
             margin-bottom: 10px;
-            font-size: 1.1em;
+            font-size: 1.5em;
         }
 
         textarea {
+            background-color: var(--textbg-color);
             width: 100%;
             padding: 15px;
+            color: var(--text-color);
             margin: 10px 0;
             box-sizing: border-box;
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--textbg-color);
             border-radius: 10px;
             resize: none;
             font-size: 1em;
@@ -43,7 +61,15 @@
             -ms-overflow-style: none;  /* IE and Edge */
             scrollbar-width: none;  /* Firefox */
         }
-
+        textarea:focus {
+            border-color: var(--textbg-color);
+            background-color: var(--textbg-color); /* Light background color */
+            color: var(--text-color); /* Text color */
+            outline: none;
+        }
+        textarea::placeholder {
+            color: var(--text-placeholder-color); /* Change this to your desired color */
+        }
         /* Hide scrollbar for Chrome, Safari and Opera */
         textarea::-webkit-scrollbar {
             display: none;
@@ -84,17 +110,14 @@
             background-color: var(--success-color);
             transition: background-color 1.3s ease;
         }
-        
-        textarea:focus {
-            border-color: var(--focus-border-color); /* Light gray color */
-            outline: none; /* Remove default outline */
-        }
+
+
     </style>
 </head>
 <body>
     <div class="container">
         <label for="userInput">输入源规则:</label>
-        <textarea id="userInput" oninput="matchInput()" placeholder="Type here..." rows="4"></textarea>
+        <textarea id="userInput" oninput="matchInput()" placeholder="💖粘贴Surge规则" rows="4"></textarea>
 
         <div id="match1" class="textarea-container hidden">
             <label for="output1">代理规则:</label>
