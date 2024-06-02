@@ -13,8 +13,8 @@ const url2 = "https://e.189.cn/user/balance.do";
     let balance = await Request(url2, "post", request.headers, request.body);
   
   if (!usage || !balance  || (usage.result < 0)) $done();
-  let total = usage.total * 1024;
-  let used = usage.used * 1024;
+  let total = usage.balanceAmount * 1024;
+  let used = usage.usageAmount * 1024;
   let fee = balance.totalBalanceAvailable;
   let voice = usage.voiceBalance;
   let args = getArgs();
