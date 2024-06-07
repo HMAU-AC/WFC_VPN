@@ -1,9 +1,0 @@
-#!name=Surge HTML Interceptor
-#!desc=当访问 a.h 时，重定向到 GitHub 上的 HTML 文件
-#!icon=https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Module/JS/index.html
-
-[Script]
-a_h_interceptor = type=http-request,pattern=http:\/\/a\.h\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Module/JS/a_h_interceptor.js
-
-[MITM]
-hostname = a.h
