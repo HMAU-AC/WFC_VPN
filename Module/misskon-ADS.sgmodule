@@ -1,0 +1,19 @@
+#!name=misskon-Ads
+#!desc=misskon网站中一些反人类的广告和容易点击跳转广告的代码
+#!category=去广告
+
+[Rule]
+URL-REGEX,^https:\/\/misskon\.com\/wp-content\/themes\/mrcong\/js\/tie-scripts\.js$,REJECT
+URL-REGEX,^https:\/\/misskon\.com\/wp-content\/themes\/mrcong\/js\/postviews-cache\.js$,REJECT
+URL-REGEX,^https:\/\/misskon\.com\/wp-includes\/js\/comment-reply\.min\.js$,REJECT
+URL-REGEX,^https:\/\/misskon\.com\/wp-content\/plugins\/disqus-comment-system\/public\/js\/comment_embed\.js$,REJECT
+DOMAIN-SUFFIX,zijieapi.com,REJECT
+DOMAIN-SUFFIX,disqus.com,REJECT
+DOMAIN-SUFFIX,osharvrziafx.com,REJECT
+DOMAIN-SUFFIX,misskon.com,香港
+DOMAIN-SUFFIX,mrcong.com,香港
+
+[Script]
+misskon去广告 = type=http-response,pattern=^https:\/\/misskon\.com(\/(?!wp-includes|media|wp-content).*)?$,requires-body=1,max-size=2097152,script-path=https://raw.githubusercontent.com/HMAU-AC/WFC_VPN/main/Module/JS/misskon-script.js,binary-body-mode=0
+[MITM]
+hostname= %APPEND% misskon.com
